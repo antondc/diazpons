@@ -1,0 +1,37 @@
+<div id="der" class="fix">
+					<ul class="red">
+						<li class="anim">
+							<a href="<cms:show k_site_link/>blog.php"  >
+								<img class="rsn anim" src="<cms:show k_site_link/>img/lumen.png" alt="B" width="16">
+								<img class="rsr anim" src="<cms:show k_site_link/>img/lumer.png" alt="B" width="16">
+								<span class="rsname anim">Blog</span>
+							</a>
+						</li>	
+						
+						<cms:pages masterpage='redes.php' order='desc'>
+						<li class="anim">
+							<a href="<cms:show link />" target="_blank" >
+								<img class="rsn anim" src="<cms:show negro />" alt="" width="16">
+								<img class="rsr anim" src="<cms:show rojo />" alt="" width="16">
+								<span class="rsname anim"><cms:show k_page_title /></span>
+							</a>
+						</li>				
+						</cms:pages>
+						<cms:if "<cms:pp_count_items />" >
+						<li class="anim">
+							<a href="<cms:show k_site_link/>tienda.php" >
+								<img class="rsn anim" src="<cms:show k_site_link/>img/bln.png" alt="T" width="16">
+								<img class="rsr anim" src="<cms:show k_site_link/>img/blr.png" alt="T" width="16">
+								<cms:pp_cart_form>
+									<cms:if "<cms:pp_count_items />" >
+									<span class="rsbolsa"> <cms:pp_count_items /> libro(s): <cms:number_format "<cms:pp_total />" />€</span>
+									<cms:else />
+									<span class="rsname anim">Tienda</span>
+									</cms:if>					
+								</cms:pp_cart_form>
+							</a>
+						</li>	
+						</cms:if>
+								
+					</ul>
+				</div>

@@ -1,0 +1,6 @@
+		  <link rel="shortcut icon" href="<cms:show k_site_link />favicon.ico" /> 	
+		  <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/unslider.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/lightbox.css">

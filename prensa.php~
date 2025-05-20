@@ -1,0 +1,63 @@
+<?php require_once( 'editar/cms.php' ); ?>
+<cms:template title='Prensa' hidden='0' order='4' clonable='1' executable='0' > 
+	<cms:editable
+		name='autor'
+		label='Autor del artículo'
+		type='text'
+	/>
+	<cms:editable
+		name='medio'
+		label='Medio que lo publica'
+		type='text'
+	/>
+	<cms:editable
+		name='fecha'
+		label='Fecha en que se publica en formato xx de mes de 20xx'
+		type='text'
+	/>
+	<cms:editable
+		name='enlace'
+		label='enlace al medio'
+		type='text'
+	/>
+	<cms:editable
+		name='archivo'
+		label='archivo a enlazar'
+		type='file'
+	/>
+	<cms:editable
+		name='enlaces_prensa'
+		masterpage='libros.php'
+		type='relation'
+	/>
+	<cms:editable
+		name='foto'
+		label='imagen de prensa'
+		type='image'
+	/>
+	<cms:editable
+		name='video'
+		label='codigo del video o plugin a enlazar'
+		type='textarea'
+		no_xss_check='1' 
+	/>
+	<cms:editable
+		name='orden'
+		label='Un número para el orden en el listado, por defecto ordena por fecha'
+		type='text'
+	/>
+		
+	
+	
+</cms:template>
+
+<html>
+<head>
+</head>
+<body>
+<cms:dump_all/>
+</body>		
+</html>
+
+
+<?php COUCH::invoke(); ?>

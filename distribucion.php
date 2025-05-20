@@ -1,0 +1,218 @@
+<?php require_once( 'editar/cms.php' ); ?>
+<cms:template title='Distribución' hidden='0' order='93' clonable='1' dynamic_folders='1' > 
+	<cms:editable
+		name='calle'
+		label='calle y número'
+		type='text'
+	/>
+	<cms:editable
+		name='cp'
+		label='código postal'
+		type='text'
+	/>
+	<cms:editable
+		name='ciudad'
+		label='ciudad'
+		type='text'
+	/>
+	<cms:editable
+		name='telefono'
+		label='teléfono'
+		type='text'
+	/>
+	<cms:editable
+		name='mail'
+		label='mail'
+		type='text'
+	/>
+	<cms:editable
+		name='web'
+		label='web'
+		type='text'
+	/>
+
+</cms:template> 
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Díaz & Pons · <cms:show k_template_title /></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <cms:embed 'css.html' />
+        <script src="<cms:show k_site_link/>js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="<cms:show k_site_link/>js/jquery-1.11.0.min.js"></script>
+        <script src="<cms:show k_site_link/>js/lightbox.min.js"></script>
+        <script type="text/javascript" src="<cms:show k_site_link/>js/unslider.js"></script>	
+    </head>
+    <body>
+        <cms:embed 'explorer.html' />
+
+        <!-- Add your site or application content here -->
+        
+       
+			<cms:embed 'cabaceira.html' />
+			
+			<div id="corpo" class="rel">
+				<cms:embed 'blogindex.html' />
+				<cms:embed 'panelesq.html' />
+				<div id="centro">
+					<div class="espanha distros">
+					<h2 class="anim">España</h2><span class="vacio anim click1">Latinoamérica</span><span class="vacio vacio2 anim click2">Otros países</span>
+					<ul>
+					<cms:folders childof='espana'>
+						<cms:if k_folder_pagecount> 
+						<li class="distri">
+						<h3 class=""><cms:show k_folder_title /></h3>
+						<ul>
+							<cms:pages>
+							<cms:if k_folder_name = k_page_foldername >
+							<li class="lista">
+								<ul>
+									<li><b><cms:show k_page_title /></b></li>						
+									<li><cms:show calle /> <cms:show cp />, <cms:show ciudad /></li>						
+									<li><cms:show telefono /></li>						
+									<li><a href="mailto:<cms:show mail />"><i><cms:show mail /></i></a></li>						
+									<li><a href="<cms:show web />" target="_blank"><i><cms:show web /></i></a></li>						
+								</ul>
+							</li>
+							</cms:if>
+							</cms:pages>
+						</ul>
+					</li>	
+					</cms:if>
+					</cms:folders>
+					
+					</ul>
+					</div>
+					
+					<div class="latinoamerica distros">
+					<span class=" vacio anim click1">España</span><h2 class="anim">Latinoamérica</h2><span class="vacio vacio2 anim click2">Otros países</span>
+					<ul>
+					<cms:folders childof='latinoamerica'>
+						<cms:if k_folder_pagecount> 
+						<li class="distri">
+						<h3 class=""><cms:show k_folder_title /></h3>
+						<ul>
+							<cms:pages>
+							<cms:if k_folder_name = k_page_foldername >
+							<li class="lista">
+								<ul>
+									<li><b><cms:show k_page_title /></b></li>						
+									<li><cms:show calle /> <cms:show cp />, <cms:show ciudad /></li>						
+									<li><cms:show telefono /></li>						
+									<li><a href="mailto:<cms:show mail />"><i><cms:show mail /></i></a></li>						
+									<li><a href="<cms:show web />" target="_blank"><i><cms:show web /></i></a></li>						
+								</ul>
+							</li>
+							</cms:if>
+							</cms:pages>
+						</ul>
+					</li>	
+					</cms:if>
+					</cms:folders>
+					
+					</ul>
+					</div>
+					<div class="mundo distros">
+					<span class=" vacio anim click1">España</span><span class="vacio anim click2">Latinoamérica</span><h2 class=" anim">Otros países</h2>
+					<ul>
+					<cms:folders childof='otros-paises'>
+						<cms:if k_folder_pagecount> 
+						<li class="distri">
+						<h3 class=""><cms:show k_folder_title /></h3>
+						<ul>
+							<cms:pages>
+							<cms:if k_folder_name = k_page_foldername >
+							<li class="lista">
+								<ul>
+									<li><b><cms:show k_page_title /></b></li>						
+									<li><cms:show calle /> <cms:show cp />, <cms:show ciudad /></li>						
+									<li><cms:show telefono /></li>						
+									<li><a href="mailto:<cms:show mail />"><i><cms:show mail /></i></a></li>						
+									<li><a href="<cms:show web />" target="_blank"><i><cms:show web /></i></a></li>						
+								</ul>
+							</li>
+							</cms:if>
+							</cms:pages>
+						</ul>
+					</li>	
+					</cms:if>
+					</cms:folders>
+					
+					</ul>
+					</div>
+					
+
+					<div class="arriba"><a href="#arriba"><img src="<cms:show k_site_link/>img/arriba.png" alt="subir" title="Arriba"></img></a></div>
+				</div>
+				<cms:embed 'panelder.html' />
+			</div>
+			<cms:embed 'slidelateral.html' />
+			<cms:embed 'pe.html' />
+			<cms:embed 'grella.html' />
+			
+			 
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="<cms:show k_site_link/>js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="<cms:show k_site_link/>js/plugins.js"></script>
+        <script src="<cms:show k_site_link/>js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+        <cms:embed 'javas.html' />
+        <script type="text/javascript">
+        		var latin = function () {
+        			$(".espanha .click1").click(function () {
+						$(".espanha").hide(0);
+						$(".latinoamerica").show(0);
+						$(".mundo").hide(0);
+        			})
+        			$(".espanha .click2").click(function () {
+						$(".espanha").hide(0);
+						$(".latinoamerica").hide(0);
+						$(".mundo").show(0);
+        			})
+        			$(".latinoamerica .click1").click(function () {
+						$(".latinoamerica").hide(0);
+						$(".mundo").hide(0);
+						$(".espanha").show(0);
+        			})
+        			$(".latinoamerica .click2").click(function () {
+						$(".latinoamerica").hide(0);
+						$(".espanha").hide(0);
+						$(".mundo").show(0);
+        			})
+        			$(".mundo .click1").click(function () {
+						$(".latinoamerica").hide(0);
+						$(".espanha").show(0);
+						$(".mundo").hide(0);
+        			})
+        			$(".mundo .click2").click(function () {
+						$(".latinoamerica").show(0);
+						$(".espanha").hide(0);
+						$(".mundo").hide(0);
+        			})
+        		}
+        		(document).ready(latin);
+        </script>
+        
+        
+    </body>
+</html>
+<?php COUCH::invoke(); ?>

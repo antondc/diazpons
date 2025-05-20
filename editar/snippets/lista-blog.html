@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Díaz & Pons Libros · Blog</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		 
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <cms:embed 'css.html' />
+        <script src="<cms:show k_site_link/>js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="<cms:show k_site_link/>js/jquery-1.11.0.min.js"></script>
+        <script src="<cms:show k_site_link/>js/lightbox.min.js"></script>
+        <script type="text/javascript" src="<cms:show k_site_link/>js/unslider.js"></script>	
+    </head>
+    <body>
+    		<cms:embed 'explorer.html' />
+        
+
+        <!-- Add your site or application content here -->
+        
+       
+			<cms:embed 'cabaceira.html' />
+			
+			<div id="corpo" class="rel">
+				<!--<cms:embed 'blogindex.html' />-->
+				<cms:embed 'panelesq.html' />
+				<div id="centro" class="listado">
+					
+					<cms:query
+					    sql="SELECT p.id, p.template_id
+					        FROM <cms:php>echo K_TBL_PAGES;</cms:php> p
+					        inner join <cms:php>echo K_TBL_TEMPLATES;</cms:php> t
+					        on p.template_id = t.id
+					        WHERE (t.name='noticias.php' or t.name='blog.php')
+					        AND publish_date < '<cms:date format='Y-m-d H:i:s' />'
+					        AND NOT publish_date = '0000-00-00 00:00:00'
+					        ORDER BY publish_date desc;"
+					    fetch_pages='1'
+					    >
+							<!-- <cms:zebra 'bloizq' 'blocen' 'bloder'/> -->
+					   <div class="listar anim">
+							<a class="abs" href="<cms:show k_page_link/>">
+							<div class="lafotito abs">
+							<img class="foton indice anim" src="<cms:show miniaturamovil/>" alt="">
+							<img class="foton mobil anim" src="<cms:show miniaturamovil/>" alt="">
+							</div>
+							</a>
+							<a class="abs" href="<cms:show k_page_link/>">
+							<!-- <span class="linya abs"></span> -->
+							<!-- <p class="fecha anim"><cms:date k_page_date locale='spanish' format='%e|%m|%G'/></p> -->
+							<div class="cacho">
+							<h1 class="gancho anim"><cms:show k_page_title/></h1>
+							</div>
+							</a>
+							<div class="excerpt abs">
+								<span><cms:excerpt count='62'><cms:show contenido/></cms:excerpt> <a href="<cms:show k_page_link/>"><span class="leermas anim">  leer más</span></a></span>
+							</div>
+							
+						</div>
+					   	
+					
+					    
+
+					</cms:query> 					
+					
+					<!--					
+					<cms:pages masterpage='blog.php' folder=k_folder_name start_on=k_archive_date stop_before=k_next_archive_date>
+					<cms:if tipo != '0'>					
+					<div class="listar anim <cms:zebra 'bloizq' 'blocen' 'bloder'/>">
+					<a href="<cms:show k_page_link/>">
+					<img class="foton indice anim" src="<cms:show miniaturaindex/>" alt="">
+					<img class="foton mobil anim" src="<cms:show miniaturamovil/>" alt="">
+					<p class="fecha anim"><cms:date k_page_date locale='spanish' format='%e|%m|%G'/></p>
+					<div class="cacho">
+					<h1 class="gancho anim"><cms:show k_page_title/></h1>
+					</div>
+					</a>
+					</div>
+					</cms:if>
+					</cms:pages>
+					-->
+					<div class="clear" style="height:42px;"></div>
+					
+					
+					<!--<cms:dump_all/>-->
+					
+					<div class="arriba"><a href="#arriba"><img src="<cms:show k_site_link/>img/arriba.png" alt="subir" title="Arriba"></img></a></div>
+				</div>
+				<cms:embed 'panelder.html' />
+			</div>
+				<cms:embed 'slidelateral.html' />
+				<cms:embed 'pe.html' />
+				<cms:embed 'grella.html' />
+				
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="<cms:show k_site_link/>js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="<cms:show k_site_link/>js/plugins.js"></script>
+        <script src="<cms:show k_site_link/>js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+      	<cms:embed 'javas.html' />
+        
+    </body>
+</html>

@@ -1,0 +1,1851 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #ffcccc;
+    text-shadow: none;
+    color: #292e26;
+}
+
+::selection {
+    background: #ffcccc;
+    text-shadow: none;
+    color: #292e26;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+/* ==========================================================================
+   Font-face
+   ========================================================================== */
+
+	@font-face{
+				font-family: 'PlayfairR'; 
+				src: url('../fonts/PlayfairR.otf') format('opentype');
+				src: url('../fonts/PlayfairR.eot');
+    			src: url('../fonts/PlayfairR.eot?#iefix') format('embedded-opentype'),
+         			 url('../fonts/PlayfairR.woff') format('woff'),
+         			 url('../fonts/PlayfairR.ttf') format('truetype'),
+        			 url('../fonts/PlayfairR.svg#PlayfairR') format('svg');
+    			font-weight: normal;
+    			font-style: normal;
+			
+			}
+	@font-face{
+				font-family: 'PTSN'; 
+				src: url('../fonts/PTSN.otf') format('opentype');
+				src: url('../fonts/PTSN.eot');
+    			src: url('../fonts/PTSN.eot?#iefix') format('embedded-opentype'),
+         			 url('../fonts/PTSN.woff') format('woff'),
+         			 url('../fonts/PTSN.ttf') format('truetype'),
+        			 url('../fonts/PTSN.svg#PTSN') format('svg');
+    			font-weight: normal;
+    			font-style: normal;
+			}
+			
+			@font-face{
+				font-family: 'FuturaLC'; 
+				src: url('../fonts/FuturaLC.otf') format('opentype');
+				src: url('../fonts/FuturaLC.eot');
+    			src: url('../fonts/FuturaLC.eot?#iefix') format('embedded-opentype'),
+         			 url('../fonts/FuturaLC.woff') format('woff'),
+         			 url('../fonts/FuturaLC.ttf') format('truetype'),
+        			 url('../fonts/FuturaLC.svg#FuturaLC') format('svg');
+    			font-weight: normal;
+    			font-style: normal;
+			}
+			
+			@font-face{
+				font-family: 'FontinR'; 
+				src: url('../fonts/FontinR.otf') format('opentype');
+				src: url('../fonts/FontinR.eot');
+    			src: url('../fonts/FontinR.eot?#iefix') format('embedded-opentype'),
+         			 url('../fonts/FontinR.woff') format('woff'),
+         			 url('../fonts/FontinR.ttf') format('truetype'),
+        			 url('../fonts/FontinR.svg#FontinR') format('svg');
+    			font-weight: normal;
+    			font-style: normal;
+			}
+			
+			@font-face{
+				font-family: 'FuturaM'; 
+				src: url('../fonts/FuturaM.otf') format('opentype');
+				src: url('../fonts/FuturaM.eot');
+    			src: url('../fonts/FuturaM.eot?#iefix') format('embedded-opentype'),
+         			 url('../fonts/FuturaM.woff') format('woff'),
+         			 url('../fonts/FuturaM.ttf') format('truetype'),
+        			 url('../fonts/FuturaM.svg#FuturaM') format('svg');
+    			font-weight: normal;
+    			font-style: normal;
+			}
+			
+			@font-face{
+				font-family: 'FuturaMC'; 
+				src: url('../fonts/FuturaMC.otf') format('opentype');
+				src: url('../fonts/FuturaMC.eot');
+    			src: url('../fonts/FuturaMC.eot?#iefix') format('embedded-opentype'),
+         			 url('../fonts/FuturaMC.woff') format('woff'),
+         			 url('../fonts/FuturaMC.ttf') format('truetype'),
+        			 url('../fonts/FuturaMC.svg#FuturaMC') format('svg');
+    			font-weight: normal;
+    			font-style: normal;
+			}
+			
+			@font-face{
+				font-family: 'FuturaBC'; 
+				src: url('../fonts/FuturaBC.otf') format('opentype');
+				src: url('../fonts/FuturaBC.eot');
+    			src: url('../fonts/FuturaBC.eot?#iefix') format('embedded-opentype'),
+         			 url('../fonts/FuturaBC.woff') format('woff'),
+         			 url('../fonts/FuturaBC.ttf') format('truetype'),
+        			 url('../fonts/FuturaBC.svg#FuturaBC') format('svg');
+    			font-weight: normal;
+    			font-style: normal;
+			}
+			
+			
+			@font-face{
+				font-family: 'FuturaL'; 
+				src: url('../fonts/FuturaL.otf') format('opentype');
+				src: url('../fonts/FuturaL.eot');
+    			src: url('../fonts/FuturaL.eot?#iefix') format('embedded-opentype'),
+         			 url('../fonts/FuturaL.woff') format('woff'),
+         			 url('../fonts/FuturaL.ttf') format('truetype'),
+        			 url('../fonts/FuturaL.svg#FuturaL') format('svg');
+    			font-weight: normal;
+    			font-style: normal;
+			}
+			
+			@font-face{
+				font-family: 'Arial'; 
+         			 url('../fonts/Arial.ttf') format('truetype'),
+    			font-weight: normal;
+    			font-style: normal;
+			}
+	
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+html{
+	font-family: FuturaM;	
+	}
+body{
+	overflow-y: scroll;
+	background-color: #fffffa;
+	}
+.esq{float: left;}
+.der{float: right;}
+.clear{clear: both;}
+.negro{color: #292e26;}
+.roxo{color: #f00000;}
+.branco{background-color: #fffffa;}
+.spacing{letter-spacing: 0.05em;}
+.abs{position: absolute;}
+.rel{position: relative;}
+.fix{position: fixed;}
+.cent{text-align: center;}
+.anim{
+	-webkit-transition: all .3s ease; 
+	-moz-transition: all .3s ease; 
+	-o-transition: all .3s ease; 
+	transition: all .3s ease;  
+	}
+ul{
+	list-style: none;
+	padding-left: 0;	
+	margin: 0;
+	}
+a, a:focus, a:active, a.selected, a:visited, a:checked{
+	text-decoration: none;
+	color: inherit;	
+	-webkit-transition: all .3s ease; 
+	-moz-transition: all .3s ease; 
+	-o-transition: all .3s ease; 
+	transition: all .3s ease;  
+	border: none;
+	}
+a:hover{
+	color: #f00000;	
+	}
+#grella{
+	display: none;
+	position: fixed;
+	left: 50%;
+	margin-left: -450px;
+	top: 0;
+	width: 900px;
+	background-color: #ccc;
+	opacity: .5;
+	box-shadow: 0 0 0 1px black;
+	z-index: 999999;
+	}
+	.cadro{
+		width: 170px;
+		height: 170px;
+		margin: 5px;
+		float: left;	
+		background-color: whitesmoke;	
+		box-shadow: 0 0 0 1px black;
+		}
+		.cada{
+			width: 42.5px;
+			height: 42.5px;
+			background-color: #aaa;
+			float: left;		
+			}
+		.cadb{
+			width: 42.5px;
+			height: 42.5px;
+			background-color: #888;
+			float: left;		
+			}
+h1,h2,h3,h4{margin:0;}
+#cabeceira{
+	width: 100%;
+	top: 0;
+	padding-top: 5px;
+	text-align: center;	
+	background-color: #fffffa;
+	padding-bottom: 0px;
+	z-index: 555;
+	/*box-shadow: 0 0 3px 3px #fffffa;*/
+	}
+	.logopeq{
+		width: 42px;
+		margin-left: 5px;		
+		}
+	.menupeq{
+		width: 42px;
+		margin-right: 5px;		
+		}
+		.logopeq img, .menupeq img{width: 100%;}
+	.titucabe{
+		height: 22px;
+		margin-top: 10px;
+		}
+	.subtitulo{
+		margin-top: 0px;
+		height: 34.5px;
+		padding-top:7px;
+		border-bottom: 1px solid #292e26;
+		width: 95%;
+		margin-left: 2.5%;
+		}
+		.subtitulo h2{
+			text-transform: uppercase;
+			font-family: FuturaMC;	
+			font-weight: normal;		
+			}
+		.linha{
+			width: 95%;
+			height: 1px;
+			background-color: 	#292e26;	
+			margin-left: 2.5%;
+			margin-top: 20px;
+			}
+#corpo{
+	margin-top: 131px;
+	width: 95%;
+	margin-left: 2.5%;
+	}
+	.slide{
+		width: 100%;
+		text-align: center;
+		vertical-align: middle;
+		/*border: 1px dotted #f00;*/
+		}
+	.libro{
+		width: 100%;	
+		border-bottom: 1px dotted #292e26;
+		padding-bottom: 10px;
+		margin-bottom: 15px;
+		min-height: 260px;
+		}
+		.libro h3{
+			font-family: FuturaMC;
+			font-size: 20px;
+			line-height: 20px;	
+			text-transform: uppercase;	
+			letter-spacing: 0.05em;	
+			}
+		.libro p{
+			line-height: 16px;
+			font-size: 14px;	
+			margin: 4px 0px 0px 0px;		
+			}
+		.libro .colec{
+			width: 170px;	
+			font-size: 30px;
+			line-height: 30px;
+			}
+			.libro .codesc p{
+			font: 400 12px/1.4em "Arial";
+			margin-top: 42px;
+			}
+			.resumo{
+				width: 100%;
+				margin-top: 8px;	
+				}
+				.portadita{
+					margin-right: 10px;
+					width: 34.3%;	
+					max-height: 180px;
+					max-width: 116px;
+					margin-top: 8px;
+					}
+				.libro .desc p{
+					font: 400 12px/1.4em "Arial";
+					margin-top: 5px;	
+					}
+	.book{
+		margin-bottom: 25px;
+		}
+		.book .entrada{
+			max-width: none;
+			}
+		.book .entrada h3{
+			font: bold 35px/36px "FuturaMC";	
+			text-transform: uppercase;
+			}
+		.book .entrada > p{
+			margin-top: 0px !important;
+			font: 400 15px/18px "FuturaM";
+			margin-bottom: 5px !important;
+			}
+		.book .entrada .spacing p{
+			font: normal 400 20px/1em "FuturaM";
+			margin:0;
+			}
+		.book .portadita{
+			width: 100%;
+			max-width: none;
+			max-height: none;
+			margin-bottom: 5px;
+			}
+		.book .pieportada{
+			font: 400 12px/16px "Arial";
+			margin-bottom: 10px;
+			}
+			.book .pieportada form{
+				height: 16px;
+				display: inline-block;
+				vertical-align: text-bottom;
+				margin-left: 5px;
+				margin-bottom: 1px;
+				margin-top: -2px;
+				}
+				
+					
+			.book .pieportada #cantidad{
+				font-size: 12px;
+				display: inline;
+				line-height: 1.2em;
+				float: none;
+				}
+			.book .pieportada .sumar{
+				background-image: url(../img/blr.png);
+				width: 12px;
+				height: 12px;
+				background-color: transparent;
+				color: #292e26;
+				background-repeat: no-repeat;
+				background-size: 100%;
+				}
+			.book .pieportada .sumarnuar{
+				background-image: url(../img/bln.png);
+				width: 12px;
+				height: 12px;
+				background-color: transparent;
+				color: #292e26;
+				background-repeat: no-repeat;
+				background-size: 100%;
+				margin-left: -15px;
+				opacity: 1;
+				}
+				.pieportada form:hover .sumarnuar{opacity: 0}
+		.book .desc{
+			font: 400 13px "Arial";
+			text-align: justify;
+			line-height: 1.4em;
+			}
+		.book .librautor{
+			margin-top: 42px;
+			}
+		.book .autor{
+			margin-bottom: 42px;
+			}
+		.book .prensa{
+			font-weight: bold;
+			letter-spacing: 0.03em;
+			text-transform: uppercase;
+			font-size: 13px;
+			font-family: "Arial";
+			display: block;
+			margin-top: 42px;
+			}
+		.book .lanzamiento{
+			text-align: right;
+			font-weight: bold;
+			color: #297BDA;
+			letter-spacing: 0.03em;
+			display: block;
+			font-size: 13px;
+			font-family: "Arial";
+			}
+		.book .obras{
+			font-family: "Arial";
+			font-size: 13px;
+			font-weight: bold;
+			margin-top: 42px;
+			margin-bottom: 42px;
+			}
+			.book .obras li{
+				font-weight: normal;
+				padding-left: 42px;
+				margin-top: 10px;
+				}
+			.book .obras li a:hover{
+				padding-left: 0.5px;
+				}
+	
+		.bloc{}
+			.bloc .fecha{
+				font-size: 16px;
+				}
+			.bloc .foton{
+				width: 100%;
+				}
+			.bloc .gancho{
+				font-family: FuturaMC;
+				text-transform: uppercase;
+				line-height: 35px;
+				font-size: 35px;
+				margin-top: 10px;
+				letter-spacing: 0.05em;
+				}
+			.bloc .subti{
+				font-family: FuturaM;
+				font-size: 15px;
+				line-height: 1.2em;
+				margin-top: 5px;
+				}
+			.bloc .quien{
+				font-family: FuturaLC;
+				font-size: 15px;
+				line-height: 25px;
+				}
+			.bloc .fecha, .bloc .carp{
+				font-size: 16px;
+				line-height: 20px;
+				font-family: FuturaLC;
+				}
+			.bloc .lacosa{
+				font-family: Arial;
+				font-size: 13px;
+				line-height: 1.4em;
+				text-align: justify;
+				}
+			.bloc .frasaca{
+				font-family: FuturaM;
+				font-style: italic;
+				font-size: 16px;
+				line-height: 1.2em;
+				}
+			.bloc .delado, .bloc .frasaca, .bloc .piefoto{display: none;}
+		.listar{
+			width: 100%;
+			position: relative;
+			overflow: hidden;
+			float: left;
+			margin-bottom: 21px;
+			font-family: FuturaMC;
+			}
+		.listar:before{
+			content: '';
+			display: block;
+			padding-top: 100%;
+			overflow: hidden;
+			}
+			.listar .foton{
+				height: 101%;
+				width: 101%;
+				position: absolute;
+				top: -0.5%;
+				left: -0.5%;
+				}
+				.listar:hover .foton{
+					height: 110%;
+					top: -5%;
+					left: -5%;
+					width: 110%;
+					}
+			.listar .indice{display: none;}
+			.listar .gancho{
+				position: absolute;
+				bottom: 0;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+				font-size: 30px;
+				line-height: 30px;
+				color: #fffffa;
+				text-shadow: 1px 1px 5px #292e26;
+				}
+			.listar .fecha{
+				position: absolute;
+				top: 0px;
+				margin: 0px;
+				text-align: right;
+				line-height: 20px;
+				background-color: #f00000;
+				padding:2%;
+				right: 0;
+				}
+				.listar:hover .fecha{color: #fffffa;}
+		.blogfin{
+			font-family: FuturaMC;
+			font-size: 20px;
+			text-transform: uppercase;
+			margin-top: 31px;
+			margin-bottom: 10px;
+			padding-left: 10%;
+			padding-right: 10%;
+			width: 80%;
+			border-top: 1px dotted #292e26;
+			padding-top: 11px; 	
+			}
+		.listin{
+			width: 80%;
+			margin-left: 10%;
+			margin-bottom: 84px;
+			float: left;
+			}
+			.listin .listar{margin-bottom: 10px;}
+		.listin .gancho{
+			font-size: 25px;
+			line-height: 25px;
+			}
+	.latinoamerica, .mundo{display: none;}
+	.distros h2{
+		border-top: 1px dotted #292e26;
+		border-right: 1px dotted #292e26;
+		border-left: 1px dotted #292e26;
+		width: 48%;
+		display: inline-block;
+		text-align: center;
+		margin-bottom: 42px;
+		font-family: FuturaMC;
+		font-size: 20px;
+		line-height: 42px;	
+		text-transform: uppercase;	
+		letter-spacing: 0.05em;
+		cursor: pointer;
+		}
+	.distros h2:hover, .vacio:hover{color: #f00000;}
+	.distros .vacio{
+		width: 48%;
+		border-bottom: 1px dotted #292e26;
+		display: inline-block;
+		text-align: center;
+		font-family: FuturaMC;
+		font-size: 20px;
+		line-height: 42px;	
+		text-transform: uppercase;	
+		letter-spacing: 0.05em;
+		cursor: pointer;
+		}
+	.distros .vacio2{display: none !important;cursor: default !important;}
+		
+				
+	#centro ul li.distri{
+		border-bottom: 1px dotted	 #292e26;
+		}
+	#centro ul li.distri:last-child{
+		border-bottom: 0px;		
+		}
+	.distri{
+		margin-bottom: 10px;
+		}
+		.distri h3{
+			font-family: FuturaMC;
+			font-size: 20px;
+			line-height: 20px;	
+			text-transform: uppercase;	
+			letter-spacing: 0.05em;
+			margin-bottom: 10px;
+			}
+		.distri .lista{
+			font: 400 12px/1.4em "Arial";
+			margin-top: 5px;		
+			}
+		.distri  ul  li.lista{
+			border-bottom: 1px dotted	 #292e26;	
+			padding: 5px 0px 10px 0px;
+			}
+		.distri ul li.lista:last-child{
+			border-bottom: 0px;
+			}
+	#centro ul li:last-child{
+		border: 0px;
+		}
+	.medios{margin-top: 42px;}
+	.medios h4{
+		font-weight: bold;
+		font-size: 13px;
+		font-family: "Arial";
+		}
+	.medios ul li{
+		font: 400 13px "Arial";
+		margin: 20px 42px;
+		}
+		.medios img{
+			max-width:236px;
+			}
+		.medios iframe{max-width: 236px !important;}
+	.related{
+		width: 100%;
+		margin-bottom: 42px;
+		}
+		.related h4{
+			font-weight: bold;
+			font-size: 13px;
+			font-family: "Arial";		
+			}
+		.related ul{
+			width: 60%;
+			margin-left: auto;
+			margin-right: auto;
+			}
+		.related ul li{
+			width: 100%;
+			margin: 1%;
+			text-align: center;
+			padding: 21px 0px;
+			border-bottom: 1px dotted #292e26;
+			}
+		.related ul li:last-child{
+			border-bottom: 0px;
+			}
+			.related li img{
+				height: 170px;	
+				margin-left: auto;
+				margin-right: auto;	
+				margin-bottom: 5px;
+				}
+			.related li h5{
+				font-family: FuturaMC;
+				font-size: 16px;
+				line-height: 20px;
+				letter-spacing: 0.05em;
+				margin: 0;
+				}
+			.related li .tit{
+				text-transform: uppercase;		
+				}
+			.related li .aut{
+				font-size: 14px;		
+				}
+	.arriba{
+		width: 42px;
+		height: 42px;
+		margin-left: auto;
+		margin-right: auto;
+		overflow: 
+		}
+		.arriba img{width: 100%;}
+		.anclarriba{
+			top: -200px;			
+			}
+	.cesto{
+		width: 95%;
+		margin-left: 2.5%;
+		margin-bottom: 67px;
+		}
+		.cesto table{width: 100%;margin-bottom: 10px;}
+		.cesto .encab{
+			font-family: FuturaMC;
+			font-size: 20px;
+			text-transform: uppercase;
+			border-bottom: 1px solid #292e26;
+			}
+		.cesto .concepto{
+			font-family: FuturaLC;
+			font-size: 16px;
+			border-bottom: 1px solid #292e26;
+			}
+			.cesto .compra:hover{background-color: #eeeeee;}
+		.cesto .compra{
+			font-family: FuturaMC;
+			font-size: 16px;
+			border-bottom: 1px dotted #292e26;
+			}
+		.cesto .total{
+			font-family: FuturaMC;
+			font-size: 18px;
+			border-top: 1px solid #292e26;
+			border-bottom: 1px solid #292e26;
+			text-transform: uppercase;
+			}
+		.cesto .dix{
+			width: 4%;
+			}
+			.dix img{width: 12px;}
+			.dix .flos{margin-left: -12px;}
+		.cesto .fif{
+			width: 54%;
+			padding-left: 2%;
+			}
+		.cesto .six{
+			width: 16.6666666%;
+			text-align: center;
+			}
+		.cesto .dix a:hover .flos{opacity: 0;}
+		
+		.cesto .gris{background-color: #eee;}
+		.cesto input, .pieportada input{
+			border: none;
+			font-size: 16px;
+			padding: 2px 0;
+			text-transform: uppercase;
+			font-family: FuturaMC;
+			background-color: #292e26;
+			color: #fffffa;
+			}
+		.compra .six .canti{
+			color: #292e26;
+			background-color: transparent;
+			height: 20px;
+			font-family: FuturaMC;
+			font-size: 18px;
+			border: none;
+			text-align: center;
+			padding: 0;
+			width: 30px;
+			margin-left: 14px;
+			}
+			.compra .six .canti:hover{
+				border: 1px solid #f00000;
+				}
+		.cesto input.borra{
+			width: 49%;
+			float: left;
+			}
+		.cesto input.cash{
+			width: 49%;
+			float: right;
+			}
+			.cesto input:hover, .pieportada input:hover{background-color: #f00000; }
+	.producto{
+		width: 95%;	
+		float: left;
+		margin-left: 2.5%;
+		padding-bottom: 15px;
+		padding-top: 10px;
+		text-align: center;
+		}
+		.producto:hover{background-color: #eee;}
+		.producto img{
+			width: 130px;
+			}
+		.producto .textienda{
+			width: 130px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: left;
+			}
+			.producto .textienda input:hover{background-color: #f00000;}
+		.producto h3{
+			font-family: FuturaMC;
+			text-transform: uppercase;
+			font-size: 16px;
+			line-height: 16px;
+			margin-top: 5px;
+			width: 130px;
+			}
+		.producto p{
+			font-size: 14px;
+			line-height: 14px;
+			margin-top: 0px;
+			margin-bottom: 2px;
+			width: 130px;
+			}
+		.producto h2{
+			font-size: 16px;
+			line-height: 20px;
+			float: left;
+			margin-top: 10px;
+			font-family: FuturaL;
+			}
+		#cantidad{
+			display: inline;
+			color: #292e26;
+			background-color: transparent;
+			width: 40px;
+			height: 20px;
+			float: right;
+			font-family: FuturaL;
+			font-size: 16px;
+			margin-top: 10px;
+			font-weight: bold;
+			border: none;
+			text-align: center;
+			padding: 0;
+			}
+		.producto .sumar{
+			font-family: FuturaMC;
+			text-transform: uppercase;
+			font-size: 14px;
+			width: 130px;
+			background-color: #292E26;
+			color: #fffffa;
+			border: none;
+			text-align: center;
+			padding: 5px 0;
+			margin-top: 10px;
+			}
+			#cantidad:hover{outline: 1px solid #f00000;}
+.editorial{
+	width: 100%;
+	}
+	.editorial li:first-child h3{
+		font: 400 30px "FuturaMC","Helvetica";
+		text-transform: uppercase;
+		}
+	.editorial li:first-child p{
+		margin: 0;
+		font: 400 12px/18px "Arial","Helvetica";
+		}
+	.editorial li:last-child{
+		margin-top: 12px;
+		text-align: justify;
+		}
+	.editorial li:last-child p{
+		font: 400 13px/1.4em "Arial";
+		margin: 0 0 12px 0;
+		}
+	.blog{
+			width: 135px;
+			margin-left: 35px;
+			position: fixed;
+			bottom: 62px;
+			padding: 0px;
+			z-index: 999;
+			font-family: arial;
+			font-weight: bold;
+			font-size: 12px;
+			text-transform: uppercase;
+			}
+		.blog ul{}
+		.blog li{
+			font-weight: normal;
+			text-transform: none;
+			margin-top: 10px;
+			line-height: 14px;
+			display: inline;
+			}
+#pe{
+	position: relative;
+	border-top: 1px dotted #292e26;
+	border-bottom: 1px dotted #292e26;	
+	font-family: FuturaMC;
+	font-size: 12px;
+	text-align: center;
+	line-height: 24px;
+	margin-bottom: 10px;
+	margin-top: 42px;
+	padding: 5px 0px;
+	width: 95%;
+	margin-left: 2.5%;	
+	}
+	.pe1, .pe2, .pe5, .pe6, .pe7, .pe3{display: none !important;}
+.menumini{
+	width: 95%;
+	margin-left: 2.5%;	
+	font-family: FuturaMC;
+	text-transform: uppercase;
+	border-bottom: 1px solid #292e26;
+	text-align: center;
+	margin-top: 57px;
+	}
+		.menumini > li{
+			border-top: 1px solid #292e26;
+			height: 36px;	
+			padding-top: 6px;		
+			}
+		.menumini .colec{
+			height: auto;
+			}
+			.colec h2{margin-bottom: 2px;cursor: pointer;}
+			.colec ul{
+				border-top: 1px dotted #292e26;	
+				width: 100%;	
+				display: none;		
+				}
+			.colec ul li{
+				display: inline-block;
+				list-style-type: none;
+				font-family: Arial;
+				font-size: 12px;
+				font-weight: normal !important;	
+				text-transform: none;
+				width: 100%;
+				height: 42px;
+				border-top: 1px dotted #292e26;
+				}
+			.colec ul li:first-child{border-top: none;}
+				.colec ul li a{width: 50%; vertical-align: middle;}
+				.colec ul li a h3{
+					margin-top: 13px;
+					font-weight: normal;
+					vertical-align: middle;
+					}
+				.pincho:focus, .pincho:active, .pincho.selected, .pincho:visited, .pincho:checked {
+				border: 0px;				
+				}
+		.menumini h2{
+			font-size: 24px;
+			font-weight: normal;			
+			}
+			.menumini .blo{
+				height: auto;		
+				}
+			.menumini .blo ul{
+				margin-top: 6px;
+				}
+			.menumini .blo li{
+			border-top: 1px dotted #292e26;		
+			text-transform: none;
+			font-weight: normal !important;
+			font-family: Arial;
+			font-size: 14px;
+			line-height: 14px;
+			padding-top: 14px;
+			padding-bottom: 14px;
+			}
+.redes{
+	width: 90%;
+	margin-left: 5%;
+	bottom: 8px;	
+	text-align: right;
+	margin-top: 20px;
+	
+	}
+	.redes li{
+		display: inline-block;		
+		margin-left: 20px;
+		}
+		.redes li .rsr{
+			margin-top: 0px;
+			display: inline;
+			margin-right: -27px;
+			}
+		.redes li .rsn{
+			margin-top: 0px;
+			opacity: 1;
+			display: inline;
+			}
+			.redes li .rsn:hover{opacity: 0;}
+		
+		
+@media all and (max-width: 559px){
+	#grella, #cabeceiragrande, #esq, #der, .blog, .slidelateral{display: none !important;}
+	
+	}
+
+@media all and (min-width: 560px) and (max-width: 909px){
+	#grella{
+		width: 550px;
+		margin-left: -275px;		
+		}
+		.cadro{
+			width: 100px;
+			height: 100px;			
+			}
+			.cada, .cadb{
+				width: 25px;
+				height: 25px;				
+				}
+	#cabeceira{display: none;}
+	#cabeceiragrande{
+		width: 540px;
+		margin-left: -275px;
+		height: 110px;
+		left: 50%;
+		padding: 5px;
+		top: 0;
+		z-index: 999;
+		background-color: #fffffa;
+		}
+		.menugrande li{
+			display: inline-block;
+			float: left;
+			width: 100px;
+			margin-right: 10px;
+			margin-top: 50px;
+			text-transform: uppercase;
+			}
+		.menugrande li:last-child{margin-right: 0px;}
+		.menugrande li .logo img{
+			width: 100px;
+			margin-top: -12px;
+			}
+		.menugrande li .boton{
+			position: absolute;
+			border-top: 1px dotted #292e26;
+			border-bottom: 1px dotted #292e26;
+			top: 49px;
+			width: 100px;
+			text-align: center;
+			font: 300 20px/30px "FuturaMC",serif;
+			}
+		.menugrande .mailcab{
+			text-align: right;
+			font: 300 10px/15px "FuturaMC",serif;
+			text-transform: uppercase;
+			letter-spacing: 0.18em;		
+			right: 5px;
+			top: 25px;
+			}
+	#corpo{
+		width: 540px;		
+		margin-left: auto;
+		margin-right: auto;
+		top: 0;
+		margin-top: 127px;
+		}
+		.portadita{
+			max-width: 100px;
+			}
+		
+		#esq{
+			width: 90px;
+			padding: 5px;
+			margin-right: 10px;
+			float: left;
+			}
+			#esq h4{
+				color: #292E26;
+				text-align: justify;
+				font: 400 18px "FuturaMC";
+				text-transform: uppercase;
+				margin-bottom: 8px;
+				}
+			#esq li{
+				font: 400 12px/1.2em "Arial";
+				margin: 6px 0px;
+				}
+		#centro{
+			width: 320px;
+			margin-left: 110px;
+			float: left;
+			padding-bottom: 85px;
+			}
+		#der{
+			width: 110px;
+			float: right;
+			padding: 5px;
+			margin-left: 445px;
+			}
+			#der ul.red{ margin-top: 5px; overflow: visible;}
+			#der ul.red li{
+			-webkit-transition: all .3s ease; 
+			-moz-transition: all .3s ease; 
+			-o-transition: all .3s ease; 
+			transition: all .3s ease;  
+			cursor: pointer;
+			font: 400 12px/22px "Arial";
+			margin-left: 10px;
+			}
+			#der ul.red li .rsn{z-index: 555;opacity: 1;margin-top: -5px;}
+			#der ul.red li .rsr{margin-left: -19px; z-index: 444;opacity: 0;margin-top: -5px;}
+			#der ul.red li:hover .rsr{opacity: 1;}
+			#der ul.red li:hover .rsn{opacity: 0;}
+			#der ul.red li .rsname{
+				opacity: 0;
+				margin-left: 6px;
+				letter-spacing: -7px;
+				color: #f00000;
+				font-family: FuturaMC;
+				text-transform: uppercase;
+				font-size: 16px;
+				}
+			#der ul.red li:hover .rsname{
+				opacity: 1;
+				letter-spacing: 0.05em;
+				
+				}
+			#der ul.red li .rsbolsa{
+				font-family: FuturaMC;
+				font-size: 16px;
+				}
+		.blog{
+			margin-left: 5px;
+			width: 90px;
+			}
+				
+	#pe{
+		width: 540px;
+		margin-left: -275px;
+		position: fixed;
+		left: 50%;
+		background-color: #fffffa;	
+		padding: 5px;
+		bottom: 0px;	
+		box-shadow: 0 -5px 0px 15px #fffffa;
+		}
+		#pe ul li{
+			display: inline-block;	
+			margin-right: 10px;
+			margin-left: 10px;
+			}
+			.pe5, .pe6,{display: inline-block !important;}
+		
+	}
+	
+@media all and (min-width: 910px){
+#cabeceira{display: none;}
+#cabeceiragrande{
+	width: 890px;
+	padding: 5px;
+	left: 50%;
+	margin-left: -450px;
+	top: 0;
+	height: 170px;
+	background-color: #fffffa;
+	z-index: 999;
+	}
+	.menugrande li{
+		display: inline-block;
+		width: 170px;
+		height: 170px;
+		margin-right: 5px;
+		vertical-align: middle;
+		font-family: FuturaMC;
+		text-transform: uppercase;
+		}
+	.menugrande li:last-child{
+		margin-right: 0;		
+		}
+		.menugrande li .boton{
+			position: absolute;
+			height: 42px;
+			border-top: 1px dotted #292e26;
+			border-bottom: 1px dotted #292e26;
+			top: 61px;
+			width: 170px;
+			font: 300 20px/42px "FuturaMC",serif;
+			text-align: center;
+			z-index: 999;
+			}
+		.menugrande li .logo{
+			position: absolute;
+			top: 36px;
+			}
+			.menugrande li .logo img{
+			width: 150px;
+			margin-left: 10px;
+			}
+		.menugrande .mailcab{
+			text-align: right;
+			font: 300 10px/60px "FuturaMC",serif;
+			text-transform: uppercase;
+			letter-spacing: 0.3em;		
+			right: 5px;
+			top: 19px;	
+			}
+#corpo{
+	width: 890px;
+	padding: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 180px;
+	}
+	#esq{
+		float: left;
+		width: 135px;
+		margin-right: 10px;	
+		padding-left: 35px;
+		/*border-right: 1px dotted #292e26;*/
+		}
+		#esq h4{
+			color: #292E26;
+			text-align: justify;
+			font: 400 18px "FuturaMC";
+			text-transform: uppercase;
+			margin-bottom: 6px;
+			letter-spacing: 0.05em;
+			}
+		#esq a{
+			font: 400 12px/1.2em "Arial";
+			margin-bottom: 6px;
+			}
+		/*#esq a:hover{
+			margin-left: 5.5px;
+			}*/
+	#centro{
+		float: left;
+		width: 530px;
+		margin-right: 10px;	
+		padding-bottom: 100px;
+		margin-left: 180px;
+		overflow: hidden;
+		}
+		.slide{
+			width: 528px;
+			height: 348px;
+			}
+		.libro{
+			width: 100%;	
+			min-height: 180px;
+			}
+			.libro .entrada{
+			margin-left: 180px;	
+			height: 60px;		
+			}
+			.escribe .entrada {
+			height: 20px !important;
+			}
+			.portadita{
+			float left;
+			margin-top: -60px;
+			}
+			.centur{margin-left: 27px;}
+			.autor{margin-top: -20px !important;}
+			.libro .desc{
+			font: 400 12px/1.4em "Arial";
+			margin-left: 180px;
+			}
+			.libro .colec{
+			width: 170px;	
+			font-size: 30px;
+			line-height: 30px;
+			}
+			.libro .codesc p{
+			margin-left: 180px;	
+			font: 400 12px/1.4em "Arial";
+			margin-top: 0;
+			text-align: justify;
+			}
+		.book .portadita{
+			width: 50%;
+			margin-top: 0px;
+			margin-bottom: 42px;
+			min-height: 400px;
+			}
+		.book .pieportada{
+			position: absolute;
+			top: 314px;
+			left: 51.3%;
+			height: 100px;
+			}
+			.book .pieportada ul{
+			position: absolute;
+			width: 200px;
+			bottom: 0px;
+			}
+			.book .pieportada input{
+			width: 130px;
+			text-align: center;
+			margin-top: 3px;
+			}
+		.book .entrada{
+			margin-left: 29.4%;
+			padding-left: 10px;
+			position: absolute;
+			max-width: 256px;
+			}
+		.book .desc{
+			clear: both;
+			font: 400 13px "Arial";
+			text-align: justify;
+			line-height: 1.4em;
+			}
+		.bloc{}
+			.bloc .cacho{
+				width: 350px;
+				float: left;
+				}
+			.bloc .datitos{
+				float: right;
+				text-align: right;
+				font-size: 18px;
+				line-height: 35px;
+				font-family: FuturaLC;
+				margin-top: 17px;
+				}
+			.bloc .quien{
+				font-size: 18px;
+				line-height: 35px;
+				}
+			.bloc iframe{
+				max-width: 350px;
+				}
+			.bloc .corpinho{
+				position: relative;
+				float: left;
+				width: 530px;
+				}
+				.bloc .corpinho .grueso{
+					width: 350px;
+					float: left;
+					text-align: justify;
+					height: auto;	
+					}
+				.bloc .corpinho .fino{
+					width: 170px;
+					float: right;
+					
+					}
+				.bloc .corpinho .imagina{
+					bottom: 0px;
+					height: auto;
+					position: absolute;
+					margin-left: 10px;
+					}
+			.bloc .delado{
+				width: 150px;
+				display: block;
+				}
+			.bloc .piefoto{
+				display: block;
+				font-family: FuturaL;
+				font-size: 12px;
+				line-height: 1.2em;
+				margin-top: 2px;
+				width: 150px;
+				}
+				.bloc .corpinho .frasaca{
+					display: block;
+					width: 150px;
+					margin-left: 10px;
+					margin-top: 11px;
+					}
+				.bloc .corpinho .imagina{
+					margin-left: 10px;
+					vertical-align: bottom;
+					}
+			.listar{
+				width: 170px;
+				float: left;
+				margin-right: 5px;
+				margin-bottom: 10px;
+				}
+			.listar .gancho{
+				font-size: 18px;
+				line-height: 18px;
+				}
+			.listar .fecha{
+				font-size: 14px;
+				line-height: 1.2em;
+				}
+			.listar .mobil{display: none;}
+			.listar .indice{display: block;}
+			.listado .bloizq{
+				margin-right: 190px;
+				}
+			.listado .blocen{
+				margin: 0 !important;
+				}
+			.listado .bloder{
+				margin-left: 180px;
+				margin-right: 170px;
+				}
+		.blogfin{
+			margin-left: 0px;
+			width: 100%;
+			padding-right: 0;
+			padding-left: 0;
+			}
+		.listin{
+			width: 100%;
+			margin-left: 0
+			}
+			.listin .uno{margin-right: 10px;}
+			.listin .dos{margin-right: 10px;}
+			.listin .tres{margin-right: 0px;}
+		.distros{margin-bottom: 42px;}
+		.distros h2{width: 168px;}
+		.distros .vacio{width: 179px;}
+		.distros .vacio2 {display: inline-block !important; line-height: 42px;}
+		.distri {
+			}
+		.distri h3{
+			width: 170px;
+			height: 60px;
+			margin-left: 4px;
+			}
+		.distri > ul{
+			width: 350px;
+			margin-left: 184px;
+			margin-top: -77px;
+			}
+		.prodesq{
+			width: 170px;
+			margin-left: 0;
+			float: left;
+			margin-bottom: 21px;
+			}
+		.prodcen{
+			width: 170px;
+			margin-left: 10px;
+			float: left;
+			margin-bottom: 21px;
+			}
+		.proder{
+			width: 170px;
+			margin-left: 10px;
+			margin-bottom: 21px;
+			}
+		.producto{height: 378px;}
+		.nametienda{}
+		.pastaca{}
+		.cesto{width: 100%;margin-left: 0;}
+		.cesto .compra, .cesto .concepto{font-size: 18px; }
+		.cesto .fif{
+			width: 60%;
+			padding-left: 2%
+			}
+		.cesto .six{
+			width: 11.111111%;
+			text-align: center;
+			}
+		.cesto .dix{width: 4.66666666666%;text-align: center;}
+			.cesto .dix img{width: 16px; margin-top: -4px;}
+			.dix .flos{margin-left: -16px;}
+		.cesto .dix a:hover .flos{opacity: 0;}
+		.cesto input.borra{
+			width: 170px;
+			float: left;
+			margin-left: 180px;
+			}
+		.cesto input.cash{
+			width: 170px;
+			float: right;
+			}
+	.related{
+		height: 230px;
+		margin-top: 42px;
+		}
+	.related ul{
+		width: 100%;		
+		}
+		.related ul li{
+			width: 170px;
+			margin: 0 5px;
+			float: left;
+			border: 0px;
+			height: 212px;
+			color: #f00000;
+			}
+			/*.related ul li .tit{
+				width: 109px;
+				position: relative;
+				top: -175px;
+				margin-left: auto;
+				margin-right: auto;
+				height: 0px;
+				background-color: rgba(255, 255, 255, 0.75);
+				padding-top: 0px;	
+				overflow: hidden;
+				margin-bottom: -40px;	
+				}
+		.related ul li:hover .tit{
+				height: 85px;
+				padding-top: 5px;
+				}*/
+		.related ul li img{
+				/*outline: 1px solid #fffffa;*/
+				opacity: .7;
+				}
+		.related ul li:hover img{
+				/*outline: 1px solid #f00000;*/
+				opacity: 1;
+				}
+			.tit, .aut{display: none;}
+			/*.related ul li .aut{
+				position: relative;
+				width: 109px;
+				margin-left: auto;
+				margin-right: auto;
+				height: 0px;
+				top: 35px;
+				vertical-align: bottom;
+				background-color: rgba(255,255,255,0.75);
+				padding-top: 0px;
+				overflow: hidden;
+				}
+			.related ul li:hover .aut{
+				height: 40px;
+				padding-top: 40px;
+				top: -135px;
+				margin-bottom: -80px;
+				}*/
+		.related ul li:first-child{
+			margin-left: 0;
+			}
+		.related ul li:last-child{
+			margin-right: 0;
+			}
+		.medios img{max-width: 446px;}
+		.medios iframe{max-width: 446px !important;}
+	.editorial li:first-child{
+		float: left;
+		width: 170px;
+		text-align: right;
+		}
+	.editorial li:last-child{
+		float: left;
+		margin-left: 10px;
+		width: 350px;
+		padding-top: 36px;
+		margin-top: 0;
+		}
+		.editorial li:last-child p{
+			margin: 0 0 12px 0;
+			}
+	#der{
+		float: left;
+		width: 170px;
+		margin-left: 720px;
+		/*border-left: 1px dotted #292e26;*/
+		}
+		#der ul.red{margin-top: 2px;}
+		#der ul.red li{
+			-webkit-transition: all .3s ease; 
+			-moz-transition: all .3s ease; 
+			-o-transition: all .3s ease; 
+			transition: all .3s ease;  
+			cursor: pointer;
+			font: 400 12px/22px "Arial";
+			margin-left: 35px;
+			margin-bottom: 6px;
+			}
+			#der ul.red li .rsn{z-index: 555;opacity: 1; margin-top: -5px;}
+			#der ul.red li .rsr{margin-left: -19px; z-index: 444;opacity: 0;margin-top: -5px;}
+			#der ul.red li:hover .rsr{opacity: 1;}
+			#der ul.red li:hover .rsn{opacity: 0;}
+			#der ul.red li .rsname{
+				opacity: 0;
+				margin-left: 6px;
+				letter-spacing: -7px;
+				color: #f00000;
+				font-family: FuturaMC;
+				text-transform: uppercase;
+				font-size: 16px;
+				}
+			#der ul.red li form{display: inline-block;}
+			#der ul.red li .rsbolsa{
+				font-family: FuturaMC;
+				font-size: 16px;
+				margin-left: 6px;
+				}
+			#der ul.red li:hover .rsname{
+				opacity: 1;
+				letter-spacing: 0.05em;
+				}
+			#der ul.blog{
+				margin-left: 35px;
+				width: 100px;
+				text-align: center;
+				margin-top: 42px;
+				}
+			#der ul.blog li h2{
+				font-family: FuturaMC;
+				font-size: 20px;
+				text-transform: uppercase;
+				}
+			#der ul.blog li img{
+				width: 55px;
+				}
+		
+#pe{
+	position: fixed;
+	width: 900px;
+	margin-left: -450px;
+	left: 50%;
+	bottom: 0;	
+	background-color: #fffffa;
+	box-shadow: 0 -5px 0px 15px #fffffa;
+	}
+	#pe ul li{
+		display: inline-block;	
+		margin-right: 10px;
+		margin-left: 10px;
+		}
+		.pe2, .pe5, .pe6, .pe7{display: inline-block !important;}
+	/*#pe ul li:last-child{
+		margin-right: 0px;
+		}*/
+	}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

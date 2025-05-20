@@ -1,0 +1,79 @@
+<?php require_once( 'editar/cms.php' ); ?>
+<cms:template title='Menu' hidden='1' order='9999' /> 
+<html>
+<head>
+	<title>Díaz & Pons libros</title>
+	<meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="<cms:show k_site_link/>css/normalize.css">
+	<link rel="stylesheet" href="<cms:show k_site_link/>css/main.css">
+	<script src="<cms:show k_site_link/>js/vendor/modernizr-2.6.2.min.js"></script>
+	<script src="<cms:show k_site_link/>js/jquery-1.11.0.min.js"></script>
+</head>
+<body>	
+	<cms:embed 'explorer.html' />
+			<div id="cabeceira" class="fix">
+				
+				<a class="esq logopeq" href="<cms:show k_site_link/>index.php"><img src="<cms:show k_site_link/>img/logopeq.png" alt="logo" title="Ir al inicio"></img></a>
+				<a class="der menupeq" href="<cms:show k_site_link/>menu.php"><img src="<cms:show k_site_link/>img/menupeq.png" alt="logo" title="Menú"></img></a>				
+				<a href="<cms:show k_site_link/>index.php" ><img class="titucabe" src="<cms:show k_site_link/>img/texto.png" alt="Díaz & Pons" /></a>
+				
+			</div>
+			<ul class="menumini negro">
+					<li><a href="<cms:show k_site_link/>libros.php" ><h2>Catálogo</h2></a></li>				
+					<li><a href="<cms:show k_site_link/>autores.php" ><h2>Autores</h2></a></li>				
+					<li><a href="<cms:show k_site_link/>distribucion.php" ><h2>Distribución</h2></a></li>				
+					<li><a href="<cms:show k_site_link/>editorial.php" ><h2>Editorial</h2></a></li>				
+					<li><a href="<cms:show k_site_link/>tienda.php" ><h2>Tienda</h2></a></li>			
+					<!--<li><a href="#" ><h2>Blogs</h2></a></li>	-->		
+					<li class="colec rel">
+						<a href="#"><h2 class="pincho">Colecciones</h2></a>
+						<ul class="listcolec">
+							<cms:folders masterpage='libros.php'>
+							<li><a href="<cms:show k_folder_link />" ><h3><cms:show k_folder_title /></h3></a></li>							
+							</cms:folders>						
+						</ul>
+					</li>	
+					<li class="blo rel">
+						<a href="<cms:show k_site_link/>blog.php"><h2 class="">Blog</h2></a>
+						<!--<ul>
+						<li><a href="#">El titulo del último post.</a></li>				
+						<li><a href="#">El titulo de uno de los posts del blog.</a></li>				
+						<li><a href="#">El titulo de uno de los posts del blog.</a></li>				
+						<li><a href="#">El titulo de uno de los posts del blog.</a></li>				
+						<li><a href="#">El titulo del primer post.</a></li>				
+					</ul>-->
+					</li>					
+				</ul>
+				<ul class="redes">
+					<cms:pages masterpage='redes.php' order='desc'>
+						<li class="anim">
+							<a href="<cms:show link />" target="_blank" >
+								<img class="rsr anim" src="<cms:show rojo />" alt="" width="16">
+								<img class="rsn anim" src="<cms:show negro />" alt="" width="16">
+							</a>
+						</li>				
+					</cms:pages>		
+				</ul>
+	
+		<!--<script>
+				var colec = function () {
+					$(".colec").click(function () {
+						$(".colec ul").hide();
+					})
+				}  
+				(document).ready(colec);      
+        </script>-->
+         <script type="text/javascript">
+        		var colec = function () {
+        			$(".colec h2").click(function () {
+						$(".colec ul").toggle();
+        			})
+        			
+        		}
+        		(document).ready(colec);
+        </script>
+        
+</body>	
+</html>
+<?php COUCH::invoke(); ?>

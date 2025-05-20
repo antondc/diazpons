@@ -1,0 +1,11 @@
+				<cms:if k_template_name == 'blog.php' >
+				<div class="blog">
+					<h4>secciones</h4>
+					<ul>
+					<cms:folders masterpage='blog.php'>
+						<cms:if k_folder_pagecount ><li><a href="<cms:show k_folder_link/>">[<cms:show k_folder_title/>]</a></li></cms:if>		
+					</cms:folders>		
+						<li><a href="<cms:show k_site_link/>blog.php">[todas]</a></li>		
+					</ul>
+				</div>
+				</cms:if>

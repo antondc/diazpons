@@ -1,0 +1,21 @@
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+		  <script src="js/slideshow.js"></script>
+        <script type="text/javascript" src="js/scrollAnchor.js"></script>
+        <script type="text/javascript" src="js/cabesa.js"></script>
+        <script>
+				var grella = function () {
+					$("#pe").click(function () {
+						$("#grella").toggle();
+					});
+				}  
+				(document).ready(grella);      
+        </script>
+        <script type="text/javascript">
+        		$(function(){
+					$('#Fader').easyFader({
+					slideDur: 6000,
+					fadeDur: 800
+					});
+					});
+        </script>
+        <script type="text/javascript"> setInterval(irderecha, 3000); </script> 

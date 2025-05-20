@@ -1,0 +1,11 @@
+<div id="esq" class="fix">
+					<h4>Colecciones</h4>
+						<ul>
+							<cms:folders masterpage='libros.php' >
+							<li>.<a href="<cms:show k_folder_link />"><cms:show k_folder_title /></a></li>						
+							</cms:folders>	
+							<li><cms:date locale='spanish' format='%e | %m | %G'/></li>				
+						</ul>
+						
+					
+				</div>
