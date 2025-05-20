@@ -1,8 +1,0 @@
-$(document).ready(function () {
-	$('.fix h4').click(function () {
-		$('.logo, .boton, .mailcab').animate({top: '-=42px'},'fast');
-		});
-	$('.fix ul li').click(function () {
-		$('.logo, .boton, .mailcab').animate({top: '+=42px'},'fast');
-		});
-	});

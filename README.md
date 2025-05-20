@@ -1,71 +1,120 @@
-# DIAZPONS
+# Web for diazpons.es
 
-Legacy site de diazpons.es.
+Web client for diazpons.
 
-## Instalación en Dinahosting
+## Install and run
 
-Archivos en /www/diazpons
-Dominios > Subdominios > Activar subdominio diazpons.antoniodiaz.me
-Dominios > Subdominios > Activar certificado Let's encrypt para acceder a https
-Servidor > PHP > Versión PHP 5.6.38
-Desactivar pretty urls `/www/diazpons/editar/config.php`:
+### Install dependencies
 
-    define( 'K_PRETTY_URLS', 0);
+### Install runtime environment, dependencies and run
 
-## [HTML5 Boilerplate](http://html5boilerplate.com)
+## Create certificate
 
-HTML5 Boilerplate is a professional front-end template for building fast,
-robust, and adaptable web apps or sites.
+### Generate ssl certificates with Subject Alt Names on OSX
 
-This project is the product of many years of iterative development and combined
-community knowledge. It does not impose a specific development philosophy or
-framework, so you're free to architect your code in the way that you want.
+### Create `ssl.conf` file
 
-- Source: [https://github.com/h5bp/html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
-- Homepage: [http://html5boilerplate.com](http://html5boilerplate.com)
-- Twitter: [@h5bp](http://twitter.com/h5bp)
+      [ req ]
+      default_bits       = 4096
+      distinguished_name = req_distinguished_name
+      req_extensions     = req_ext
 
-## Quick start
+      [ req_distinguished_name ]
+      countryName                 = ES
+      countryName_default         = MA
+      stateOrProvinceName         = MA
+      stateOrProvinceName_default = MA
+      localityName                = MA
+      localityName_default        = MA
+      organizationName            = diazpons
+      organizationName_default    = diazpons
+      commonName                  = diazpons.es
+      commonName_max              = 64
+      commonName_default          = localhost
 
-Choose one of the following options:
+      [ req_ext ]
+      subjectAltName = @alt_names
 
-1. Download the latest stable release from
-   [html5boilerplate.com](http://html5boilerplate.com/) or a custom build from
-   [Initializr](http://www.initializr.com).
-2. Clone the git repo — `git clone
-https://github.com/h5bp/html5-boilerplate.git` - and checkout the tagged
-   release you'd like to use.
+      [alt_names]
+      DNS.1   = diazpons.es
+      DNS.2   = dev.diazpons.es
 
-## Features
+Create a directory `./ssl` for your project close to server, and place `ssl.conf` within it.
+Open this folder.
 
-- HTML5 ready. Use the new elements with confidence.
-- Cross-browser compatible (Chrome, Opera, Safari, Firefox 3.6+, IE6+).
-- Designed with progressive enhancement in mind.
-- Includes [Normalize.css](http://necolas.github.com/normalize.css/) for CSS
-  normalizations and common bug fixes.
-- The latest [jQuery](http://jquery.com/) via CDN, with a local fallback.
-- The latest [Modernizr](http://modernizr.com/) build for feature detection.
-- IE-specific classes for easier cross-browser control.
-- Placeholder CSS Media Queries.
-- Useful CSS helpers.
-- Default print CSS, performance optimized.
-- Protection against any stray `console.log` causing JavaScript errors in
-  IE6/7.
-- An optimized Google Analytics snippet.
-- Apache server caching, compression, and other configuration defaults for
-  Grade-A performance.
-- Cross-domain Ajax and Flash.
-- "Delete-key friendly." Easy to strip out parts you don't need.
-- Extensive inline and accompanying documentation.
+### Generate a private key
 
-## Documentation
+    openssl genrsa -out private.key 4096
 
-Take a look at the [documentation table of contents](doc/TOC.md). This
-documentation is bundled with the project, which makes it readily available for
-offline reading and provides a useful starting point for any documentation you
-want to write about your project.
+### Generate a Certificate Signing Request
 
-## Contributing
+    openssl req -new -sha256 \
+        -out private.csr \
+        -key private.key \
+        -config ssl.conf
 
-Anyone and everyone is welcome to [contribute](CONTRIBUTING.md). Hundreds of
-developers have helped make the HTML5 Boilerplate what it is today.
+(You will be asked a series of questions about your certificate. Answer however you like, but for 'Common name' enter the name of your project, e.g. `my_project`)
+
+### Now check the CSR
+
+    openssl req -text -noout -in private.csr
+
+You should see this:
+
+    `X509v3 Subject Alternative Name: DNS:my-project.site` and
+    `Signature Algorithm: sha256WithRSAEncryption`
+
+### Generate the certificate
+
+    openssl x509 -req \
+        -sha256 \
+        -days 3650 \
+        -in private.csr \
+        -signkey private.key \
+        -out private.crt \
+        -extensions req_ext \
+        -extfile ssl.conf
+
+### Add the certificate to Mac keychain and trust it
+
+    sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain private.crt
+
+(Alternatively, double click on the certificate file `private.crt` to open Keychain Access. Your project name `my_project` will be listed under the login keychain. Double click it and select 'Always trust' under the 'Trust' section.)
+
+## Set domain
+
+Add domain to `hosts` file:
+
+    ##
+    # Host Database
+    ##
+    127.0.0.1       localhost
+    255.255.255.255 broadcasthost
+    ::1             localhost
+    127.0.0.1       dev.diazpons.es # Added
+
+Add local domain where app is accessed to `ENDPOINT_CLIENTS` at `config.test.json`:
+
+    "ENDPOINT_CLIENTS": ["http://dev.diazpons.es", "https://dev.diazpons.es"],
+
+## Conventions
+
+### Naming conventions
+
+    [I(nterface)][Module][Action][ModuleSubtype][ModuleType]
+
+E. g.:
+
+- `ILinkCreateResponse`
+- `UserFollowingDeleteController`
+- `LinkGetOneUseCase`
+- `ILinkRepo`
+- `StateRepo`
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2025 Antonio Díaz
+
+[0]

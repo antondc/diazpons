@@ -1,7 +1,0 @@
-<?php require_once 'editar/cms.php'; ?>
-    <cms:no_cache />
-    <cms:pp_payment_gateway 
-       shipping_address="<cms:if "<cms:pp_count_shippable_items />" >1<cms:else />0</cms:if>"
-       empty_cart='0' 
-    />
-<?php COUCH::invoke(); ?>
