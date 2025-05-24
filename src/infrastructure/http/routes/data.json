@@ -1,0 +1,7 @@
+{
+  "title": "Diazpons Publishing",
+  "books": [
+    { "title": "Rust for Writers", "author": "Ferris" },
+    { "title": "Axum in Action", "author": "Diaz" }
+  ]
+}
