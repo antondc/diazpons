@@ -1,0 +1,198 @@
+@import './constants.less';
+
+/* eslint-disable */
+
+//  http://meyerweb.com/eric/tools/css/reset/
+//    v2.0 | 20110126
+//    License: none (public domain)
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  border: 0;
+  vertical-align: top;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Custom styles
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  background: none;
+  border: none;
+}
+
+div,
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+button:focus,
+input:focus {
+  outline: 0;
+}
+
+/* Hack to delay the change of chrome background color on inputs */
+
+input:-internal-autofill-previewed,
+input:-internal-autofill-selected,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0) inset !important;
+  -webkit-transition: color @td-infinite, background-color @td-infinite;
+  -webkit-transition-delay: @td-infinite;
+}
+

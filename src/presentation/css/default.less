@@ -1,0 +1,35 @@
+@import './typography.less';
+@import './constants.less';
+@import './breakpoints.less';
+@import './mixins.less';
+
+body {
+  .hideScrollbar();
+
+  font-family: @ff-sans;
+  font-weight: @fw-medium;
+  color: @c-base;
+
+  // No transitions on load
+  &.preload * {
+    transition: none !important;
+  }
+
+  &.isLoaded {
+    opacity: 1 !important;
+  }
+
+  &.scrollLocked {
+    overflow: hidden !important;
+  }
+
+  &.scrollMobileLocked {
+    @media @br-mobile {
+      overflow: hidden !important;
+    }
+  }
+}
+
+html {
+  scrollbar-width: none !important;
+}

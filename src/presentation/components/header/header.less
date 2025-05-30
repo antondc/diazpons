@@ -1,0 +1,29 @@
+@import '../../css/imports.less';
+
+@c: .Header;
+
+@{c} {
+  padding: 10px;
+
+  &-list {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+  }
+
+  &-logo {
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &-item {
+    border-top: 1px dotted @c-base;
+    border-bottom: 1px dotted @c-base;
+
+    font: 300 20px/42px "FuturaMC",serif;
+    text-align: center;
+  }
+}

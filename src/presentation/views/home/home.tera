@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title class="Home-title">{{ data.title }}</title>
-    <style>
-      {{ css | safe }}
-    </style>
-  </head>
-  <body>
-    <h1 class="Home-title">{{ data.title }}</h1>
-    <ul>
-      {% for book in data.books %}
-      <li>{{ book.title }} by {{ book.author }}</li>
-      {% endfor %}
-    </ul>
-    <script>
-      {{ js | safe }}
-    </script>
-  </body>
-</html>
+<div class="Home" id="home">
+  <h1 class="Home-title">{{ data.title }}</h1>
+  <ul class="Home-list">
+    {% for book in data.books %}
+    <li>{{ book.title }} by {{ book.author }}</li>
+    {% endfor %}
+  </ul>
+</div>

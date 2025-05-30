@@ -1,0 +1,61 @@
+/* stylelint-disable */
+
+// Local gradients
+@gradientColors: {
+  blue-1: #3c80f1;
+  blue-2: #72a4f6;
+  blue-3: #97c1ff;
+  blue-4: #c7ddff;
+  blue-5: #d4e4fc;
+  blue-6: #f3f8ff;
+  green-1: #40e0d0;
+  green-2: #6df8eb;
+  green-3: #98fef4;
+  green-4: #b7fff8;
+  green-5: #d6fffb;
+  green-6: #eafffd;
+  red-1: #ff3e33;
+  red-2: #ff625d;
+  red-3: #fc8f8b;
+  red-4: #ffb8b8;
+  red-5: #ffd9d7;
+  red-6: #fff8f8;
+  yellow-1: #ffd354;
+  yellow-2: #ffe393;
+  yellow-3: #ffebb2;
+  yellow-4: #fff5d8;
+  yellow-5: #fefaee;
+  yellow-6: #fffff9;
+  black-1: #272727;
+  black-2: #4c4c4c;
+  black-3: #999;
+  black-4: #c1c1c1;
+  black-5: #f8f8f8;
+  black-6: #fcfcfc;
+};
+
+// Exported colors
+@c-brand: @gradientColors[blue-1];
+@c-base: @gradientColors[black-1];
+@c-background: @gradientColors[black-6];
+@c-background-traslucid: fade(@gradientColors[yellow-6], 5%);
+@c-background-traslucidMedium: fade(@gradientColors[yellow-6], 30%);
+@c-background-traslucidHard: fade(@gradientColors[yellow-6], 60%);
+@c-traslucid--ultralight: fade(@gradientColors[black-1], 1.5%);
+@c-traslucid--lightest: fade(@gradientColors[black-1], 3%);
+@c-traslucid--light: fade(@gradientColors[black-1], 5%);
+@c-traslucid: fade(@gradientColors[black-1], 15%);
+@c-traslucid--hard: fade(@gradientColors[black-1], 30%);
+@c-traslucid--hardest: fade(@gradientColors[black-1], 50%);
+@c-accent: @gradientColors[black-2];
+@c-accentEnhanced: fade(@gradientColors[blue-5], 40%);
+@c-accentLight: @gradientColors[black-3];
+@c-accentLight-hard: @gradientColors[black-4];
+@c-accentLight-hardest: @gradientColors[black-5];
+@c-success: @gradientColors[blue-2];
+@c-alert: @gradientColors[yellow-1];
+@c-errorAccent: tint(@gradientColors[red-2], 10%);
+@c-error: @gradientColors[red-2];
+@c-disabled: @c-accentLight;
+@c-transparent: transparent;
+@c-shadow: fade(@gradientColors[black-1], 6%);

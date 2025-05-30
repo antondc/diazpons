@@ -1,8 +1,9 @@
 use super::constants;
 use std::env;
 
-use super::routes::{book, home};
+use super::routes::home;
 use axum::{routing::get, Router};
+use tower_http::services::ServeDir;
 
 #[tokio::main]
 pub async fn main() {
@@ -12,7 +13,8 @@ pub async fn main() {
 
     let app = Router::new()
         .route("/", get(home))
-        .route("/book", get(book));
+        .nest_service("/static", ServeDir::new("dist"));
+
     let listener = tokio::net::TcpListener::bind(&address_port).await.unwrap();
     axum::serve(listener, app).await.unwrap();
 }

@@ -1,0 +1,1355 @@
+/*!********************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/presentation/views/home/home.less ***!
+  \********************************************************************************************************************************/
+/* eslint-disable */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  border: 0;
+  vertical-align: top;
+}
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ul {
+  list-style-type: none;
+}
+button {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  background: none;
+  border: none;
+}
+div,
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+button:focus,
+input:focus {
+  outline: 0;
+}
+/* Hack to delay the change of chrome background color on inputs */
+input:-internal-autofill-previewed,
+input:-internal-autofill-selected,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0) inset !important;
+  -webkit-transition: color 3600s, background-color 3600s;
+  -webkit-transition-delay: 3600s;
+}
+/* stylelint-disable */
+/* Typography */
+/* stylelint-disable */
+/* Durations */
+/* Easings */
+/* Z-index */
+/* SVG sizes */
+@keyframes hearthBeat {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.05);
+  }
+  10% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* stylelint-disable */
+/* stylelint-disable */
+/* Devices */
+/* Media queries breakpoints */
+body {
+  scrollbar-width: none;
+  /* Firefox */
+  font-family: serif;
+  font-weight: 500;
+  color: #272727;
+}
+body::-webkit-scrollbar {
+  display: none;
+  /* Chrome Safari */
+  width: 0;
+  background: transparent;
+}
+body.preload * {
+  transition: none !important;
+}
+body.isLoaded {
+  opacity: 1 !important;
+}
+body.scrollLocked {
+  overflow: hidden !important;
+}
+@media (max-width: 376px), mobileIphone6or7or8Vertical, (max-width: 414px) and (max-height: 896px), mobileIphone12ProVertical, (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+  body.scrollMobileLocked {
+    overflow: hidden !important;
+  }
+}
+html {
+  scrollbar-width: none !important;
+}
+/* stylelint-disable */
+/* Utils */
+.Home {
+  margin-top: 300px;
+  padding: 50px;
+  border: 1px solid;
+}
+.Home-title {
+  color: blue;
+  font-weight: bold;
+}
+
+/*!****************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/presentation/layouts/layout_five_columns/layout_five_columns.less ***!
+  \****************************************************************************************************************************************************************/
+/* eslint-disable */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  border: 0;
+  vertical-align: top;
+}
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ul {
+  list-style-type: none;
+}
+button {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  background: none;
+  border: none;
+}
+div,
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+button:focus,
+input:focus {
+  outline: 0;
+}
+/* Hack to delay the change of chrome background color on inputs */
+input:-internal-autofill-previewed,
+input:-internal-autofill-selected,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0) inset !important;
+  -webkit-transition: color 3600s, background-color 3600s;
+  -webkit-transition-delay: 3600s;
+}
+/* stylelint-disable */
+/* Typography */
+/* stylelint-disable */
+/* Durations */
+/* Easings */
+/* Z-index */
+/* SVG sizes */
+@keyframes hearthBeat {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.05);
+  }
+  10% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* stylelint-disable */
+/* stylelint-disable */
+/* Devices */
+/* Media queries breakpoints */
+body {
+  scrollbar-width: none;
+  /* Firefox */
+  font-family: serif;
+  font-weight: 500;
+  color: #272727;
+}
+body::-webkit-scrollbar {
+  display: none;
+  /* Chrome Safari */
+  width: 0;
+  background: transparent;
+}
+body.preload * {
+  transition: none !important;
+}
+body.isLoaded {
+  opacity: 1 !important;
+}
+body.scrollLocked {
+  overflow: hidden !important;
+}
+@media (max-width: 376px), mobileIphone6or7or8Vertical, (max-width: 414px) and (max-height: 896px), mobileIphone12ProVertical, (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+  body.scrollMobileLocked {
+    overflow: hidden !important;
+  }
+}
+html {
+  scrollbar-width: none !important;
+}
+/* stylelint-disable */
+/* Utils */
+.LayoutFiveColumns {
+  border: 5px dotted blue;
+}
+
+/*!**************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/presentation/css/utils.less ***!
+  \**************************************************************************************************************************/
+/* Utils */
+/* stylelint-disable */
+
+/*!*******************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/presentation/css/typography.less ***!
+  \*******************************************************************************************************************************/
+/* stylelint-disable */
+/* Typography */
+
+/*!**************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/presentation/css/reset.less ***!
+  \**************************************************************************************************************************/
+/* stylelint-disable */
+/* Durations */
+/* Easings */
+/* Z-index */
+/* SVG sizes */
+@keyframes hearthBeat {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.05);
+  }
+  10% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* eslint-disable */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  border: 0;
+  vertical-align: top;
+}
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ul {
+  list-style-type: none;
+}
+button {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  background: none;
+  border: none;
+}
+div,
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+button:focus,
+input:focus {
+  outline: 0;
+}
+/* Hack to delay the change of chrome background color on inputs */
+input:-internal-autofill-previewed,
+input:-internal-autofill-selected,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0) inset !important;
+  -webkit-transition: color 3600s, background-color 3600s;
+  -webkit-transition-delay: 3600s;
+}
+
+/*!***************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/presentation/css/mixins.less ***!
+  \***************************************************************************************************************************/
+/* stylelint-disable */
+/* Devices */
+/* Media queries breakpoints */
+/* stylelint-disable */
+/* Typography */
+/* stylelint-disable */
+/* Durations */
+/* Easings */
+/* Z-index */
+/* SVG sizes */
+@keyframes hearthBeat {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.05);
+  }
+  10% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* stylelint-disable */
+
+/*!***************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/presentation/css/layout.less ***!
+  \***************************************************************************************************************************/
+/* stylelint-disable */
+
+/*!****************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/presentation/css/imports.less ***!
+  \****************************************************************************************************************************/
+/* eslint-disable */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  border: 0;
+  vertical-align: top;
+}
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ul {
+  list-style-type: none;
+}
+button {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  background: none;
+  border: none;
+}
+div,
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+button:focus,
+input:focus {
+  outline: 0;
+}
+/* Hack to delay the change of chrome background color on inputs */
+input:-internal-autofill-previewed,
+input:-internal-autofill-selected,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0) inset !important;
+  -webkit-transition: color 3600s, background-color 3600s;
+  -webkit-transition-delay: 3600s;
+}
+/* stylelint-disable */
+/* Typography */
+/* stylelint-disable */
+/* Durations */
+/* Easings */
+/* Z-index */
+/* SVG sizes */
+@keyframes hearthBeat {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.05);
+  }
+  10% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* stylelint-disable */
+/* stylelint-disable */
+/* Devices */
+/* Media queries breakpoints */
+body {
+  scrollbar-width: none;
+  /* Firefox */
+  font-family: serif;
+  font-weight: 500;
+  color: #272727;
+}
+body::-webkit-scrollbar {
+  display: none;
+  /* Chrome Safari */
+  width: 0;
+  background: transparent;
+}
+body.preload * {
+  transition: none !important;
+}
+body.isLoaded {
+  opacity: 1 !important;
+}
+body.scrollLocked {
+  overflow: hidden !important;
+}
+@media (max-width: 376px), mobileIphone6or7or8Vertical, (max-width: 414px) and (max-height: 896px), mobileIphone12ProVertical, (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+  body.scrollMobileLocked {
+    overflow: hidden !important;
+  }
+}
+html {
+  scrollbar-width: none !important;
+}
+/* stylelint-disable */
+/* Utils */
+
+/*!**************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/presentation/css/fonts.less ***!
+  \**************************************************************************************************************************/
+
+/*!****************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/presentation/css/default.less ***!
+  \****************************************************************************************************************************/
+/* stylelint-disable */
+/* Typography */
+/* stylelint-disable */
+/* Durations */
+/* Easings */
+/* Z-index */
+/* SVG sizes */
+@keyframes hearthBeat {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.05);
+  }
+  10% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* stylelint-disable */
+/* Devices */
+/* Media queries breakpoints */
+/* stylelint-disable */
+body {
+  scrollbar-width: none;
+  /* Firefox */
+  font-family: serif;
+  font-weight: 500;
+  color: #272727;
+}
+body::-webkit-scrollbar {
+  display: none;
+  /* Chrome Safari */
+  width: 0;
+  background: transparent;
+}
+body.preload * {
+  transition: none !important;
+}
+body.isLoaded {
+  opacity: 1 !important;
+}
+body.scrollLocked {
+  overflow: hidden !important;
+}
+@media (max-width: 376px), mobileIphone6or7or8Vertical, (max-width: 414px) and (max-height: 896px), mobileIphone12ProVertical, (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+  body.scrollMobileLocked {
+    overflow: hidden !important;
+  }
+}
+html {
+  scrollbar-width: none !important;
+}
+
+/*!******************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/presentation/css/constants.less ***!
+  \******************************************************************************************************************************/
+/* stylelint-disable */
+/* Durations */
+/* Easings */
+/* Z-index */
+/* SVG sizes */
+@keyframes hearthBeat {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.05);
+  }
+  10% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*!***************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/presentation/css/colors.less ***!
+  \***************************************************************************************************************************/
+/* stylelint-disable */
+
+/*!********************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/presentation/css/breakpoints.less ***!
+  \********************************************************************************************************************************/
+/* stylelint-disable */
+/* Devices */
+/* Media queries breakpoints */
+
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/presentation/components/header/header.less ***!
+  \*****************************************************************************************************************************************/
+/* eslint-disable */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  border: 0;
+  vertical-align: top;
+}
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ul {
+  list-style-type: none;
+}
+button {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  background: none;
+  border: none;
+}
+div,
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+button:focus,
+input:focus {
+  outline: 0;
+}
+/* Hack to delay the change of chrome background color on inputs */
+input:-internal-autofill-previewed,
+input:-internal-autofill-selected,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0) inset !important;
+  -webkit-transition: color 3600s, background-color 3600s;
+  -webkit-transition-delay: 3600s;
+}
+/* stylelint-disable */
+/* Typography */
+/* stylelint-disable */
+/* Durations */
+/* Easings */
+/* Z-index */
+/* SVG sizes */
+@keyframes hearthBeat {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.05);
+  }
+  10% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* stylelint-disable */
+/* stylelint-disable */
+/* Devices */
+/* Media queries breakpoints */
+body {
+  scrollbar-width: none;
+  /* Firefox */
+  font-family: serif;
+  font-weight: 500;
+  color: #272727;
+}
+body::-webkit-scrollbar {
+  display: none;
+  /* Chrome Safari */
+  width: 0;
+  background: transparent;
+}
+body.preload * {
+  transition: none !important;
+}
+body.isLoaded {
+  opacity: 1 !important;
+}
+body.scrollLocked {
+  overflow: hidden !important;
+}
+@media (max-width: 376px), mobileIphone6or7or8Vertical, (max-width: 414px) and (max-height: 896px), mobileIphone12ProVertical, (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+  body.scrollMobileLocked {
+    overflow: hidden !important;
+  }
+}
+html {
+  scrollbar-width: none !important;
+}
+/* stylelint-disable */
+/* Utils */
+.Header {
+  padding: 10px;
+}
+.Header-list {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+.Header-logo img {
+  height: 100%;
+  width: 100%;
+}
+.Header-item {
+  border-top: 1px dotted #272727;
+  border-bottom: 1px dotted #272727;
+  font: 300 20px/42px "FuturaMC", serif;
+  text-align: center;
+}
+

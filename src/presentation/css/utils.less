@@ -1,0 +1,58 @@
+/* Utils */
+@import './colors.less';
+
+.u-whiteBars () {
+  background: -webkit-linear-gradient(-45deg, @c-transparent 49%, white 50%, @c-transparent 51%) repeat;
+  background: linear-gradient(-45deg, @c-transparent 49%, white 50%, @c-transparent 51%) repeat;
+  background-size: 5px 5px;
+}
+
+.u-blackBars () {
+  background: -webkit-linear-gradient(-45deg, @c-transparent 49%, @c-base 50%, @c-transparent 51%) repeat;
+  background: linear-gradient(-45deg, @c-transparent 49%, @c-base 50%, @c-transparent 51%) repeat;
+  background-size: 5px 5px;
+}
+
+.u-grayBars () {
+  background: -webkit-linear-gradient(-45deg, @c-transparent 49%, @c-traslucid 50%, @c-transparent 51%) repeat;
+  background: linear-gradient(-45deg, @c-transparent 49%, @c-traslucid 50%, @c-transparent 51%) repeat;
+  background-size: 5px 5px;
+}
+
+.u-alertBars () {
+  background: -webkit-linear-gradient(45deg, @c-transparent 49%, @c-alert 50%, @c-transparent 51%) repeat;
+  background: linear-gradient(45deg, @c-transparent 49%, @c-alert 50%, @c-transparent 51%) repeat;
+  background-size: 5px 5px;
+}
+
+.u-errorBars () {
+  background: -webkit-linear-gradient(45deg, @c-transparent 49%, @c-error 50%, @c-transparent 51%) repeat;
+  background: linear-gradient(45deg, @c-transparent 49%, @c-error 50%, @c-transparent 51%) repeat;
+  background-size: 5px 5px;
+}
+
+.u-accentBars () {
+  background: -webkit-linear-gradient(-45deg, @c-transparent 49%, @c-accent 50%, @c-transparent 51%) repeat;
+  background: linear-gradient(-45deg, @c-transparent 49%, @c-accent 50%, @c-transparent 51%) repeat;
+  background-size: 5px 5px;
+}
+
+.u-goldBack () {
+  opacity: 0.9;
+  background: @c-alert;
+}
+
+.u-errorBack () {
+  opacity: 0.9;
+  background-color: @c-error;
+}
+
+.u-accentBack () {
+  opacity: 0.9;
+  background-color: @c-accent;
+}
+
+.u-grayBack () {
+  opacity: 0.9;
+  background-color: @c-traslucid;
+}
