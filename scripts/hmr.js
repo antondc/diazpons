@@ -1,7 +1,7 @@
 const livereload = require("livereload");
 const path = require("path");
 
-const RELOAD_DELAY = 3000;
+const RELOAD_DELAY = 4000;
 
 const server = livereload.createServer({
   exts: ["html", "js", "css", "less"],

@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "link": "node ./scripts/linker.js && webpack --config ./webpack/webpack.config.js",
+    "linker": "node ./scripts/linker.js",
     "webpack": "webpack --config ./webpack/webpack.config.js",
-    "build": "npm run link && npm run webpack"
+    "build::js": "npm run linker && npm run webpack",
+    "hmr": "node ./scripts/hmr.js",
+    "build::all": "concurrently \"npm run hmr\" \"cargo watch -w src/ -s 'npm run build::js && cargo run'\""
   },
   "author": "",
   "license": "ISC",
@@ -15,11 +17,11 @@
     "@svgr/webpack": "^8.1.0",
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
     "compression-webpack-plugin": "^11.1.0",
+    "concurrently": "^9.1.2",
     "glob": "^11.0.2",
     "html-webpack-plugin": "^5.6.3",
     "node-polyfill-webpack-plugin": "^4.1.0",
-    "path": "^0.12.7",
-    "ts-loader": "^9.5.2"
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "@babel/core": "^7.27.4",
@@ -27,13 +29,11 @@
     "@babel/preset-typescript": "^7.27.1",
     "babel-loader": "^10.0.0",
     "clean-webpack-plugin": "^4.0.0",
-    "connect-livereload": "^0.6.1",
     "css-loader": "^7.1.2",
     "less": "^4.3.0",
     "less-loader": "^12.3.0",
     "livereload": "^0.9.3",
     "mini-css-extract-plugin": "^2.9.2",
-    "style-loader": "^4.0.0",
     "webpack-cli": "^6.0.1"
   }
 }

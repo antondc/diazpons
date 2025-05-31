@@ -11,8 +11,7 @@ Web client for diazpons.
 
 ### Install runtime environment, dependencies and run
 
-    cargo watch -w src/ -s "npm run build && cargo run"
-    node ./scripts/hmr.js
+    build::all
 
 ## Create certificate
 
