@@ -5,11 +5,11 @@
     <%= htmlWebpackPlugin.tags.headTags %>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Diazpons.es</title>
+    <title>{% block title %}Default Title{% endblock %}</title>
   </head>
-  <body id="body" style="opacity: 0; transition: opacity 0.3s ease">
-    <!--CONTENT-->
-    <%= htmlWebpackPlugin.tags.bodyTags %>
+  <body id="body" style="opacity: 1; transition: opacity 0.3s ease">
+    {% block layout %} {% block content %} {% endblock %} {% endblock %} <%=
+    htmlWebpackPlugin.tags.bodyTags %>
   </body>
   <script src="http://localhost:35729/livereload.js?snipver=1"></script>
 </html>

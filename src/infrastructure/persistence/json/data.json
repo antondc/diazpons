@@ -1,7 +1,4 @@
-{
-  "title": "Diazpons Publishing",
-  "books": [
-    { "title": "Rust for Writers", "author": "Ferris" },
-    { "title": "Axum in Action", "author": "Diaz" }
-  ]
-}
+[
+  { "title": "Dune", "author": "Frank Herbert" },
+  { "title": "Foundation", "author": "Isaac Asimov" }
+]

@@ -2,8 +2,10 @@
 name = "diazpons"
 version = "0.1.0"
 edition = "2021"
+build = "build.rs"
 
 [dependencies]
+askama = "0.14.0"
 axum = "0.8.4"
 dotenvy = "0.15.7"
 serde = "1.0.219"

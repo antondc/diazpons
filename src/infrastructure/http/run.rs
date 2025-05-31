@@ -1,8 +1,6 @@
-use super::constants;
-use std::env;
-
-use super::routes::home;
+use super::{constants, routes::home};
 use axum::{routing::get, Router};
+use std::env;
 use tower_http::services::ServeDir;
 
 #[tokio::main]

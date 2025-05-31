@@ -12,6 +12,7 @@ use dotenvy::dotenv;
 mod infrastructure;
 use infrastructure::http::run_http;
 mod presentation;
+mod domain;
 
 fn main() {
     dotenv().ok();

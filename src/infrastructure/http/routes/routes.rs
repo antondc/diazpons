@@ -1,13 +1,13 @@
-use serde_json::Value;
-use std::fs;
-
+use crate::domain::Book;
 use crate::presentation::views::home_view;
 use axum::response::Html;
+use serde_json;
+use std::fs;
 
 pub async fn home() -> Html<String> {
-    let data_str = fs::read_to_string("src/infrastructure/persistence/json/data.json")
+    let json_str = fs::read_to_string("src/infrastructure/persistence/json/data.json")
         .expect("Failed to read JSON");
-    let json: Value = serde_json::from_str(&data_str).expect("Invalid JSON");
+    let books: Vec<Book> = serde_json::from_str(&json_str).expect("Invalid JSON");
 
-    home_view(json).await
+    home_view(books).await
 }

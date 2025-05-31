@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "link": "node ./scripts/generate-entry.js && webpack --config ./webpack/webpack.config.js --profile --json > stats.json",
-    "webpack": "webpack --config ./webpack/webpack.config.js --profile --json > stats.json",
+    "link": "node ./scripts/linker.js && webpack --config ./webpack/webpack.config.js",
+    "webpack": "webpack --config ./webpack/webpack.config.js",
     "build": "npm run link && npm run webpack"
   },
   "author": "",
