@@ -2,6 +2,10 @@
 
 {% block layout %}
 <div class="LayoutFiveColumns" id="LayoutFiveColumns">
+  {% block header %}
+    {% include "components/header/header.html" %}
+  {% endblock %}
+
   {% block content %}{% endblock %}
 </div>
 {% endblock %}
