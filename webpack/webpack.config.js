@@ -4,8 +4,8 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CaseSensitivePathsPlugin = require("case-sensitive-paths-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const WEBPACK_BUILD = path.resolve(process.cwd(), "webpack");
 const WEBPACK_DIST = path.resolve(process.cwd(), "dist");
@@ -72,19 +72,21 @@ module.exports = {
       chunkFilename: "[name]-[fullhash:4].css",
     }),
     new CaseSensitivePathsPlugin(),
-    new CopyWebpackPlugin([
-      {
-        from: path.join(WEBPACK_ASSETS, "img"),
-        to: path.join(WEBPACK_DIST, "img"),
-      },
-      {
-        from: path.join(WEBPACK_ASSETS, "svg"),
-        to: path.join(WEBPACK_DIST, "svg"),
-      },
-      {
-        from: path.join(WEBPACK_ASSETS, "favicon"),
-        to: path.join(WEBPACK_DIST, "favicon"),
-      },
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.join(WEBPACK_ASSETS, "img"),
+          to: path.join(WEBPACK_DIST, "img"),
+        },
+        {
+          from: path.join(WEBPACK_ASSETS, "svg"),
+          to: path.join(WEBPACK_DIST, "svg"),
+        },
+        {
+          from: path.join(WEBPACK_ASSETS, "favicon"),
+          to: path.join(WEBPACK_DIST, "favicon"),
+        },
+      ],
+    }),
   ],
 };
