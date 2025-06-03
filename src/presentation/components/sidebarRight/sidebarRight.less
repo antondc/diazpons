@@ -15,14 +15,13 @@
       cursor: pointer;
 
       @{c}-itemText {
-        color: @c-accent;
         opacity: 1;
       }
 
       @{c}-itemImage {
-        svg,
-        .background {
-          fill: @c-accent !important;
+        svg {
+          fill: @c-accent;
+          transition: fill @td-fast ease;
         }
       }
     }
@@ -33,14 +32,17 @@
     font-size: @fs-medium;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    color: @c-accent;
     opacity: 0;
-    transition: color @td-fast ease, opacity @td-fast ease;
+    transition: color @td-fast ease @td-fast, opacity @td-fast ease @td-fast;
   }
 
   &-itemImage {
+    display: flex;
+
     svg {
       width: 16px;
-      transition: fill @td-fast ease;
+      transition: fill @td-fast ease @td-fast;
     }
   }
 }
