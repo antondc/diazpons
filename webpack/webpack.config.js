@@ -45,10 +45,10 @@ module.exports = {
         use: ["@svgr/webpack"],
       },
       {
-        test: /\.(woff|woff2|eot|ttf)$/,
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
         type: "asset/resource",
         generator: {
-          filename: "fonts/[name].[ext]",
+          filename: "fonts/[name][ext]",
         },
       },
     ],

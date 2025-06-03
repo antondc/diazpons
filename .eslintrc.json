@@ -1,0 +1,59 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["plugin:@typescript-eslint/recommended"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "simple-import-sort", // sorts our imports
+    "import" // additional formatting for imports
+  ],
+  "rules": {
+    "import/newline-after-import": "error", // Add newline after imports section
+    "simple-import-sort/sort": [
+      "error",
+      {
+        "groups": [
+          ["^[^(A-Z|.]"], // Not starting with uppercase or a dot
+          ["^[A-Z]", "^@?\\w", "^\\."], // Starting with uppercase, starring with at, starting with dot
+          ["(\\.less|\\.css|\\.sass)$"] // Ending with .less, .css, .sass
+        ]
+      }
+    ],
+    "sort-imports": 0, // disables eslint's default sort imports rule
+    "linebreak-style": ["error", "unix"],
+    "semi": ["warn", "always"],
+    "no-console": 0,
+    "no-undef": 0,
+    "arrow-parens": ["error", "always"],
+    "quote-props": ["error", "as-needed"],
+    "no-duplicate-imports": ["error", { "includeExports": false }],
+    "no-redeclare": 0,
+    "no-dupe-keys": 0,
+    "no-debugger": 1,
+    "newline-before-return": "error",
+    "no-multi-spaces": "error",
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "arrow-body-style": ["error", "as-needed"],
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "prefer-spread": 0,
+    "@typescript-eslint/interface-name-prefix": 0,
+    "@typescript-eslint/ban-ts-ignore": 0,
+    "@typescript-eslint/no-empty-function": 0
+  }
+}
