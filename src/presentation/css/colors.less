@@ -14,7 +14,7 @@
   green-4: #b7fff8;
   green-5: #d6fffb;
   green-6: #eafffd;
-  red-1: #ff3e33;
+  red-1: #f00000;
   red-2: #ff625d;
   red-3: #fc8f8b;
   red-4: #ffb8b8;
@@ -26,6 +26,7 @@
   yellow-4: #fff5d8;
   yellow-5: #fefaee;
   yellow-6: #fffff9;
+  yellow-7: #fffffa;
   black-1: #272727;
   black-2: #4c4c4c;
   black-3: #999;
@@ -36,8 +37,8 @@
 
 // Exported colors
 @c-brand: @gradientColors[blue-1];
-@c-base: @gradientColors[black-1];
-@c-background: @gradientColors[black-6];
+@c-base: @gradientColors[black-2];
+@c-background: @gradientColors[yellow-7];
 @c-background-traslucid: fade(@gradientColors[yellow-6], 5%);
 @c-background-traslucidMedium: fade(@gradientColors[yellow-6], 30%);
 @c-background-traslucidHard: fade(@gradientColors[yellow-6], 60%);
@@ -47,7 +48,7 @@
 @c-traslucid: fade(@gradientColors[black-1], 15%);
 @c-traslucid--hard: fade(@gradientColors[black-1], 30%);
 @c-traslucid--hardest: fade(@gradientColors[black-1], 50%);
-@c-accent: @gradientColors[black-2];
+@c-accent: @gradientColors[red-1];
 @c-accentEnhanced: fade(@gradientColors[blue-5], 40%);
 @c-accentLight: @gradientColors[black-3];
 @c-accentLight-hard: @gradientColors[black-4];

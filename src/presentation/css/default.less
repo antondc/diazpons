@@ -9,6 +9,7 @@ body {
   font-family: @ff-sans;
   font-weight: @fw-medium;
   color: @c-base;
+  background-color: @c-background;
 
   // No transitions on load
   &.preload * {
@@ -36,5 +37,10 @@ html {
 
 .Link {
   text-decoration: none;
-  color: inherit
+  color: inherit;
+  transition: color @td-fast ease;
+
+  &:hover {
+    color: @c-accent;
+  }
 }

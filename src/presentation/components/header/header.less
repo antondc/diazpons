@@ -14,12 +14,12 @@
 
   &-logo {
     img {
-      height: 100%;
-      width: 100%;
+      width: 150px;
     }
   }
 
   &-item {
+    position: relative;
     font-family: @ff-sans-display;
     font-size: @fs-big;
     font-weight: @fw-medium;
@@ -27,5 +27,15 @@
     text-align: center;
     border-top: 1px dotted @c-base;
     border-bottom: 1px dotted @c-base;
+  }
+
+  &-email {
+    position: absolute;
+    top: -35px;
+    right: 0;
+    font-family: @ff-sans-display;
+    font-size: @fs-micro;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
   }
 }
