@@ -2,3 +2,5 @@
 dist/*
 .env
 webpack/index.js
+src/presentation/index.html
+src/presentation/index.gz
