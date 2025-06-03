@@ -14,26 +14,32 @@
     &:hover {
       cursor: pointer;
 
-      &-itemText {
+      @{c}-itemText {
         color: @c-accent;
+        opacity: 1;
       }
 
-      &-itemImage {
-        fill: @c-accent !important;
+      @{c}-itemImage {
+        svg {
+          fill: @c-accent !important;
+        }
       }
     }
   }
 
-  &-itemText {
+  &-itemText:not(.noClass) {
     font-family: @ff-sans-display;
     font-size: @fs-medium;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    transition: color @td-fast ease;
+    opacity: 0;
+    transition: color @td-fast ease, opacity @td-fast ease;
   }
 
   &-itemImage {
-    width: 16px;
-    transition: opacity @td-fast ease;
+    svg {
+      width: 16px;
+      transition: fill @td-fast ease;
+    }
   }
 }

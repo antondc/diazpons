@@ -1,14 +1,14 @@
 <ul class="SidebarRight">
   <li class="SidebarRight-item">
-    <img class="SidebarRight-itemImage" src="static/svg/twitter-logo.svg" />
+    <div class="SidebarRight-itemImage">{{ twitter_svg | safe }}</div>
     <a class="SidebarRight-itemText Link" href="https://x.com/DiazyPons">Twitter</a>
   </li>
   <li class="SidebarRight-item">
-    <img class="SidebarRight-itemImage" src="static/svg/facebook-logo.svg" />
+    <div class="SidebarRight-itemImage">{{ facebook_svg | safe }}</div>
     <a class="SidebarRight-itemText Link" href="https://www.facebook.com/diazponseditores">Facebook</a>
   </li>
   <li class="SidebarRight-item">
-    <img class="SidebarRight-itemImage" src="static/svg/instagram-logo.svg" />
-    <a class="SidebarRight-itemText Link" href="https://www.instagram.com/diazponsediciones/">Instagram</a>
+    <div class="SidebarRight-itemImage">{{ instagram_svg | safe }}</div>
+    <a class="Link SidebarRight-itemText" href="https://www.instagram.com/diazponsediciones/">Instagram</a>
   </li>
 </ul>
