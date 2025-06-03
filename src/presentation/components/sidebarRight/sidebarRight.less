@@ -3,5 +3,37 @@
 @c: .SidebarRight;
 
 @{c} {
-  //
+  display: grid;
+  padding: 0 10px;
+  gap: 12px;
+
+  &-item {
+    display: flex;
+    gap: 8px;
+
+    &:hover {
+      cursor: pointer;
+
+      &-itemText {
+        color: @c-accent;
+      }
+
+      &-itemImage {
+        fill: @c-accent !important;
+      }
+    }
+  }
+
+  &-itemText {
+    font-family: @ff-sans-display;
+    font-size: @fs-medium;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color @td-fast ease;
+  }
+
+  &-itemImage {
+    width: 16px;
+    transition: opacity @td-fast ease;
+  }
 }
