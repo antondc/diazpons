@@ -3,7 +3,30 @@
 @c: .LayoutFiveColumns;
 
 @{c} {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 50px;
   max-width: @lay-maxWidth;
   margin: 0 auto;
-  padding-top: 30px;
+  padding: 30px 20px;
+
+  &-columns {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+  }
+
+  &-sidebarLeft {
+    grid-column: 1 / span 1;
+  }
+
+  &-main {
+    grid-column: 2 / span 3;
+  }
+
+  &-sidebarRight {
+    grid-column: 5 / span 1;
+  }
 }
