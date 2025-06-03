@@ -1,0 +1,21 @@
+@import '../../css/imports.less';
+
+@c: .Footer;
+
+@{c} {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5px 0;
+  font-family: @ff-sans-display;
+  text-align: center;
+  border-top: 1px dotted @c-base;
+  border-bottom: 1px dotted @c-base;
+  gap: 10px;
+
+  &-item {
+    font-family: @ff-sans-display;
+    font-size: @fs-small;
+  }
+}
