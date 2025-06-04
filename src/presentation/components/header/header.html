@@ -1,10 +1,16 @@
 <header class="Header">
+  <div class="Header-logo">
+    <a class="Link" href="/">
+      <img class="Header-logoRegular" src="static/img/logo/logo.png" />
+      <img class="Header-logoSmall" src="static/img/logo/logo-small.png" />
+    </a>
+  </div>
+  <div class="Header-logoText">
+    <a class="Link" href="/">
+      <img src="static/img/logo/logo-text.png" />
+    </a>
+  </div>
   <ul class="Header-list">
-    <li class="Header-logo">
-      <a class="Link" href="/">
-        <img src="static/img/logo.png" />
-      </a>
-    </li>
     <li class="Header-item">
       <a class="Link" href="/catalog">CATÁLOGO</a>
     </li>
@@ -19,4 +25,16 @@
       <a class="Link" href="/something">SOMETHING</a>
     </li>
   </ul>
+  <div class="Header-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="Header-socialMedia">
+   <div class="Header-socialMediaInner">
+      <a class="Header-socialMediaIcon"href="https://x.com/DiazyPons">{{ twitter_svg | safe }}</a>
+      <a class="Header-socialMediaIcon"href="https://www.facebook.com/diazponseditores">{{ facebook_svg | safe }}</a>
+      <a class="Header-socialMediaIcon" href="https://www.instagram.com/diazponsediciones"/>{{ instagram_svg | safe }}</a>
+    </div>
+  </div>
 </header>
