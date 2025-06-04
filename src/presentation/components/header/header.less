@@ -75,12 +75,17 @@
     font-family: @ff-sans-display;
     font-size: @fs-big;
     font-weight: @fw-medium;
-    line-height: 30px;
+    line-height: 42px;
     text-align: center;
     border-top: 1px dotted @c-base;
     border-bottom: 1px dotted @c-base;
 
+    @media @br-tablet {
+      line-height: 30px;
+    }
+
     @media @br-mobile {
+      line-height: 42px;
       border-bottom: 0;
 
       &:last-of-type {
