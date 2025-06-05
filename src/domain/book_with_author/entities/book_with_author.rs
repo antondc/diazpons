@@ -1,4 +1,4 @@
-use super::{Author, Book};
+use super::super::super::{Author, Book};
 
 #[allow(dead_code)]
 #[derive(serde::Deserialize, Clone)]

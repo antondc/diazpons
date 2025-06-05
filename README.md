@@ -58,7 +58,7 @@ Open this folder.
         -key private.key \
         -config ssl.conf
 
-(You will be asked a series of questions about your certificate. Answer however you like, but for 'Common name' enter the name of your project, e.g. `my_project`)
+(You will be asked a serie of questions about your certificate. Answer however you like, but for 'Common name' enter the name of your project, e.g. `my_project`)
 
 ### Now check the CSR
 

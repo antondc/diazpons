@@ -14,6 +14,7 @@ mod infrastructure;
 use infrastructure::http::run_http;
 mod domain;
 mod presentation;
+mod application;
 
 fn main() {
     dotenv().ok();

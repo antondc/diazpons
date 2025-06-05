@@ -1,6 +1,6 @@
 #[allow(dead_code)]
 #[derive(serde::Deserialize, Clone)]
-pub struct Series {
+pub struct Serie {
     pub id: String,
     pub name: String,
 }

@@ -1,2 +1,4 @@
 mod entities;
-pub use entities::{Author, Book, Series, BookWithAuthor};
+mod repositories;
+pub use entities::Book;
+pub use repositories::IBookRepository;
