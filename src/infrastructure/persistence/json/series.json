@@ -1,6 +1,6 @@
 [
-  { "seriesId": "modelos-para-armar", "seriesName": "Modelos para armar" },
-  { "seriesId": "vita-aesthetica", "seriesName": "Vita æesthetica" },
-  { "seriesId": "kritik", "seriesName": "Kritik" },
-  { "seriesId": "proyectos", "seriesName": "Proyectos" }
+  { "id": "modelos-para-armar", "name": "Modelos para armar" },
+  { "id": "vita-aesthetica", "name": "Vita æesthetica" },
+  { "id": "kritik", "name": "Kritik" },
+  { "id": "proyectos", "name": "Proyectos" }
 ]

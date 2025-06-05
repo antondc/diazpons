@@ -1,2 +1,2 @@
 mod book;
-pub use book::Book;
+pub use book::{Book, Author, Series, BookWithAuthor};

@@ -5,14 +5,15 @@
     clippy::too_many_arguments,
     clippy::module_inception,
     clippy::redundant_pattern_matching,
-    clippy::needless_collect
+    clippy::needless_collect,
+    unused_imports
 )]
 
 use dotenvy::dotenv;
 mod infrastructure;
 use infrastructure::http::run_http;
-mod presentation;
 mod domain;
+mod presentation;
 
 fn main() {
     dotenv().ok();

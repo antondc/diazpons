@@ -1,2 +1,2 @@
 mod entities;
-pub use entities::Book;
+pub use entities::{Author, Book, Series, BookWithAuthor};

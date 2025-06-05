@@ -1,63 +1,63 @@
 [
   {
-    "authorName": "José Manuel Naredo",
-    "authorId": "jose-manuel-naredo",
+    "id": "jose-manuel-naredo",
+    "name": "José Manuel Naredo",
     "image": "example.com",
     "biography": "...",
     "books": ["economia-poder-y-politica"]
   },
   {
-    "authorName": "José Manuel Querol",
-    "authorId": "jose-manuel-querol",
+    "id": "jose-manuel-querol",
+    "name": "José Manuel Querol",
     "image": "example.com",
     "biography": "...",
     "books": ["postfascismos", "fronteras"]
   },
   {
-    "authorName": "José Luis Ferreira",
-    "authorId": "jose-luis-ferreira",
+    "id": "jose-luis-ferreira",
+    "name": "José Luis Ferreira",
     "image": "example.com",
     "biography": "...",
     "books": ["economia-y-pseudociencia"]
   },
   {
-    "authorName": "Jorge Riechmann",
-    "authorId": "jorge-riechmann",
+    "id": "jorge-riechmann",
+    "name": "Jorge Riechmann",
     "image": "example.com",
     "biography": "...",
     "books": ["moderar-extremistan"]
   },
   {
-    "authorName": "Fernando Gaja i Díaz",
-    "authorId": "fernando-gaja-i-diaz",
+    "id": "fernando-gaja-i-diaz",
+    "name": "Fernando Gaja i Díaz",
     "image": "example.com",
     "biography": "...",
     "books": ["futuropolis"]
   },
   {
-    "authorName": "Oriol Nel·lo",
-    "authorId": "oriol-nel-lo",
+    "id": "oriol-nel-lo",
+    "name": "Oriol Nel·lo",
     "image": "example.com",
     "biography": "...",
     "books": ["la-ciudad-en-movimiento"]
   },
   {
-    "authorName": "Espido Freire",
-    "authorId": "espido-freire",
+    "id": "espido-freire",
+    "name": "Espido Freire",
     "image": "example.com",
     "biography": "...",
     "books": ["la-vida-frente-al-espejo"]
   },
   {
-    "authorName": "Manuel Toharia",
-    "authorId": "manuel-toharia",
+    "id": "manuel-toharia",
+    "name": "Manuel Toharia",
     "image": "example.com",
     "biography": "...",
     "books": ["la-sociedad-del-desperdicio"]
   },
   {
-    "authorName": "Antonio Valdecantos",
-    "authorId": "antonio-valdecantos",
+    "id": "antonio-valdecantos",
+    "name": "Antonio Valdecantos",
     "image": "example.com",
     "biography": "...",
     "books": ["la-excepcion-permanente"]
