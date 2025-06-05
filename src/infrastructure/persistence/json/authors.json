@@ -1,0 +1,65 @@
+[
+  {
+    "authorName": "José Manuel Naredo",
+    "authorId": "jose-manuel-naredo",
+    "image": "example.com",
+    "biography": "...",
+    "books": ["economia-poder-y-politica"]
+  },
+  {
+    "authorName": "José Manuel Querol",
+    "authorId": "jose-manuel-querol",
+    "image": "example.com",
+    "biography": "...",
+    "books": ["postfascismos", "fronteras"]
+  },
+  {
+    "authorName": "José Luis Ferreira",
+    "authorId": "jose-luis-ferreira",
+    "image": "example.com",
+    "biography": "...",
+    "books": ["economia-y-pseudociencia"]
+  },
+  {
+    "authorName": "Jorge Riechmann",
+    "authorId": "jorge-riechmann",
+    "image": "example.com",
+    "biography": "...",
+    "books": ["moderar-extremistan"]
+  },
+  {
+    "authorName": "Fernando Gaja i Díaz",
+    "authorId": "fernando-gaja-i-diaz",
+    "image": "example.com",
+    "biography": "...",
+    "books": ["futuropolis"]
+  },
+  {
+    "authorName": "Oriol Nel·lo",
+    "authorId": "oriol-nel-lo",
+    "image": "example.com",
+    "biography": "...",
+    "books": ["la-ciudad-en-movimiento"]
+  },
+  {
+    "authorName": "Espido Freire",
+    "authorId": "espido-freire",
+    "image": "example.com",
+    "biography": "...",
+    "books": ["la-vida-frente-al-espejo"]
+  },
+  {
+    "authorName": "Manuel Toharia",
+    "authorId": "manuel-toharia",
+    "image": "example.com",
+    "biography": "...",
+    "books": ["la-sociedad-del-desperdicio"]
+  },
+  {
+    "authorName": "Antonio Valdecantos",
+    "authorId": "antonio-valdecantos",
+    "image": "example.com",
+    "biography": "...",
+    "books": ["la-excepcion-permanente"]
+  }
+]
