@@ -1,18 +1,43 @@
-use super::{constants, routes::home};
-use axum::{routing::get, Router};
-use std::env;
-use tower_http::services::ServeDir;
+use super::constants::{HTTP_PORT, IP_STRING, TLS_CERTIFICATE_PATH, TLS_KEY_PATH};
+use super::routes;
+use crate::constants::STATIC_FILES_PATH;
+use crate::infrastructure::http::routes::{catchers, home};
+use crate::shared::utils::parse_ip;
+use rocket::config::{CipherSuite, Config, TlsConfig};
+extern crate dotenv;
+use rocket::fs::FileServer;
+use rocket::{catchers, routes};
+use std::path::Path;
 
-#[tokio::main]
+#[rocket::main]
 pub async fn main() {
-    let http_address = env::var(constants::HTTP_ADDRESS).unwrap();
-    let http_port = env::var(constants::HTTP_PORT).unwrap();
-    let address_port = http_address + ":" + &http_port;
+  let parsed_ip = parse_ip(IP_STRING).unwrap();
 
-    let app = Router::new()
-        .route("/", get(home))
-        .nest_service("/static", ServeDir::new("dist"));
+  // Check that the TLS certificate and key files exists to run on https;
+  let tls_certificate_path = Path::new(TLS_CERTIFICATE_PATH);
+  let tls_certificate_file_exits = tls_certificate_path.exists();
+  let tls_key_path = Path::new(TLS_KEY_PATH);
+  let tls_key_file_exits = tls_key_path.exists();
+  let tls_config: Option<TlsConfig> = match (tls_certificate_file_exits, tls_key_file_exits) {
+    (true, true) => Some(
+      TlsConfig::from_paths(TLS_CERTIFICATE_PATH, TLS_KEY_PATH)
+        .with_ciphers(CipherSuite::TLS_V13_SET)
+        .with_preferred_server_cipher_order(true),
+    ),
+    _ => None,
+  };
 
-    let listener = tokio::net::TcpListener::bind(&address_port).await.unwrap();
-    axum::serve(listener, app).await.unwrap();
+  let config = Config {
+    port: HTTP_PORT,
+    address: parsed_ip,
+    tls: tls_config,
+    ..Config::debug_default()
+  };
+
+  let _ = rocket::custom(&config)
+    .mount("/", routes![home::home_route])
+    .mount("/static", FileServer::from(STATIC_FILES_PATH))
+    .register("/", catchers![catchers::not_found_error, catchers::default_error])
+    .launch()
+    .await;
 }

@@ -11,10 +11,13 @@
 
 use dotenvy::dotenv;
 mod infrastructure;
-use infrastructure::http::run_http;
+use infrastructure::http::run as run_http;
+mod application;
+mod constants;
 mod domain;
 mod presentation;
-mod application;
+mod shared;
+mod types;
 
 fn main() {
     dotenv().ok();

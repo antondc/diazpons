@@ -1,0 +1,41 @@
+[
+  {
+    "id": "test",
+    "slug": "test",
+    "name": "test",
+    "is_default": true,
+    "glossary": {
+      "home": "test",
+      "login": "test",
+      "logout": "test",
+      "control": "test",
+      "not_found": "test",
+      "since": "test",
+      "server_error": "test",
+      "created_at": "test",
+      "updated_at": "test"
+    }
+  },
+  {
+    "id": "test",
+    "slug": "test",
+    "name": "test",
+    "is_default": true,
+    "glossary": {
+      "home": "test",
+      "login": "test",
+      "logout": "test",
+      "control": "test",
+      "not_found": "test",
+      "tags": "test",
+      "my_user": "test",
+      "users": "test",
+      "followers": "test",
+      "following": "test",
+      "since": "test",
+      "server_error": "test",
+      "created_at": "test",
+      "updated_at": "test"
+    }
+  }
+]

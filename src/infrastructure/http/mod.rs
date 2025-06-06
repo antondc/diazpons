@@ -1,5 +1,8 @@
 mod run;
-pub use run::main as run_http;
-mod adapters;
+mod types;
+pub use run::main as run;
+pub mod adapters;
+pub use types::HttpError;
 mod constants;
+mod middlewares;
 mod routes;

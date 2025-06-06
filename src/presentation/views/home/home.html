@@ -1,24 +1,25 @@
 {% extends "layouts/layout_five_columns/layout_five_columns.html" %}
 
-{% block title %}Libros{% endblock %} {% block content %}
+{% block title %}Libros{% endblock %}
 
-<div class="Home">
-  <ul>
-    {% for book_with_author in books_with_authors %}
-    <li class="Home-book">
-      <div class="Home-title">{{ book_with_author.book.title }}</div>
-      <div class="Home-subtitle">{{ book_with_author.book.subtitle }}</div>
-      <div class="Home-author">{{ book_with_author.author.name }}</div>
-      <div class="Home-data">
-        <div><span class="Home-dataEntry">Colección</span>:<span class="Home-dataValue"> {{ book_with_author.book.series_id }}</span></div>
-        <div><span class="Home-dataEntry">Páginas</span>:<span class="Home-dataValue"> {{ book_with_author.book.pages }}</span></div>
-        <div><span class="Home-dataEntry">Formato</span>:<span class="Home-dataValue"> {{ book_with_author.book.format }}</span></div>
-        <div><span class="Home-dataEntry Home-isbn">isbn</span>:<span class="Home-dataValue"> {{ book_with_author.book.isbn }}</span></div>
-      </div>
-      <img class="Home-image" src="{{ book_with_author.book.image_horizontal }}" />
-      <div class="Home-description">{{ book_with_author.book.description_short }}</div>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+{% block content %}
+  <div class="Home">
+    <ul>
+      {% for book_with_author in books_with_authors %}
+      <li class="Home-book">
+        <div class="Home-title">{{ book_with_author.book.title }}</div>
+        <div class="Home-subtitle">{{ book_with_author.book.subtitle }}</div>
+        <div class="Home-author">{{ book_with_author.author.name }}</div>
+        <div class="Home-data">
+          <div><span class="Home-dataEntry">Colección</span>:<span class="Home-dataValue"> {{ book_with_author.book.series_id }}</span></div>
+          <div><span class="Home-dataEntry">Páginas</span>:<span class="Home-dataValue"> {{ book_with_author.book.pages }}</span></div>
+          <div><span class="Home-dataEntry">Formato</span>:<span class="Home-dataValue"> {{ book_with_author.book.format }}</span></div>
+          <div><span class="Home-dataEntry Home-isbn">isbn</span>:<span class="Home-dataValue"> {{ book_with_author.book.isbn }}</span></div>
+        </div>
+        <img class="Home-image" src="{{ book_with_author.book.image_horizontal }}" />
+        <div class="Home-description">{{ book_with_author.book.description_short }}</div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 {% endblock %}

@@ -1,2 +1,2 @@
-mod routes;
-pub use routes::home;
+pub mod home;
+pub mod catchers;
