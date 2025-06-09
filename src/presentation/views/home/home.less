@@ -3,38 +3,50 @@
 @c: .Home;
 
 @{c} {
+  &-books {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
   &-book {
-    margin-bottom: 50px;
-    padding-bottom: 20px;
-    border-bottom: 1px dotted @c-base;
-  }
-
-  &-title {
-    font-weight: bold;
-    color: @c-accent;
-  }
-
-  &-data {
-    //
-  }
-
-  &-dataEntry {
-    font-weight: bold;
-  }
-
-  &-dataValue {
-    //
-  }
-
-  &-isbn {
-    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1.6rem 1.4rem 1.5rem auto;
+    column-gap: 10px;
   }
 
   &-image {
-    //
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 4;
+    width: 100%;
+  }
+
+  &-title {
+    grid-column: 2 / span 3;
+    font-family: @ff-sans-display--condensed;
+    font-size: @fs-big;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+
+  &-subtitle {
+    grid-column: 2 / span 3;
+    font-family: @ff-sans-display;
+    font-size: @fs-normal;
+  }
+
+  &-author {
+    grid-column: 2 / span 3;
+    font-family: @ff-sans-display;
+    font-size: @fs-normal;
+    font-weight: @fw-semibold;
   }
 
   &-description {
-    //
+    grid-column: 2 / span 3;
+    font-family: @ff-sans;
+    font-size: @fs-small;
+    line-height: @fh-small;
   }
 }
