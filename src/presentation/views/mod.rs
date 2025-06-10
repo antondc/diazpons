@@ -6,3 +6,6 @@ mod book;
 pub use book::{book_view, BookTemplate};
 mod books;
 pub use books::{books_view, BooksTemplate};
+
+mod authors;
+pub use authors::{authors_view, AuthorsTemplate};

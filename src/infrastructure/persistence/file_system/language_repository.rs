@@ -1,4 +1,4 @@
-use crate::domain::language::{Glossary, ILanguageRepository, Language};
+use crate::domain::{Glossary, ILanguageRepository, Language};
 use crate::shared::services::get_file_content;
 use crate::types::{Errors, Meta, Result};
 use async_trait::async_trait;

@@ -1,6 +1,6 @@
 use crate::{
   application::ILanguageGetOneOrDefaultUseCase,
-  domain::{language::ILanguageRepository, BookWithAuthor, IAuthorRepository, IBookRepository},
+  domain::{BookWithAuthor, IAuthorRepository, IBookRepository, ILanguageRepository},
   types::{Errors, Result},
 };
 use async_trait::async_trait;

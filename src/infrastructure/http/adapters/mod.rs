@@ -5,3 +5,6 @@ mod book_http_adapter;
 pub use book_http_adapter::BookHttpAdapter;
 mod books_http_adapter;
 pub use books_http_adapter::BooksHttpAdapter;
+
+mod authors_http_adapter;
+pub use authors_http_adapter::AuthorsHttpAdapter;

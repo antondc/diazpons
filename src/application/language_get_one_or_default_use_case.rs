@@ -1,5 +1,5 @@
 use crate::{
-  domain::language::{ILanguageRepository, Language},
+  domain::{ILanguageRepository, Language},
   types::{Errors, Result},
 };
 use async_trait::async_trait;

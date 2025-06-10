@@ -8,3 +8,6 @@ pub use book_get_data_use_case::{BookGetDataUseCase, IBookGetDataUseCase};
 
 mod books_get_data_use_case;
 pub use books_get_data_use_case::{BooksGetDataUseCase, IBooksGetDataUseCase};
+
+mod authors_get_data_use_case;
+pub use authors_get_data_use_case::{AuthorsGetDataUseCase, IAuthorsGetDataUseCase};
