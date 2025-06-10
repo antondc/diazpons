@@ -5,3 +5,6 @@ pub use language_get_one_or_default_use_case::{ILanguageGetOneOrDefaultUseCase, 
 
 mod book_get_data_use_case;
 pub use book_get_data_use_case::{BookGetDataUseCase, IBookGetDataUseCase};
+
+mod books_get_data_use_case;
+pub use books_get_data_use_case::{BooksGetDataUseCase, IBooksGetDataUseCase};
