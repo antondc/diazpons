@@ -7,10 +7,10 @@
   <ul class="Home-books">
     {% for book_with_author in books_with_authors %}
     <li class="Home-book">
-      <img class="Home-image" src="{{ book_with_author.book.image_vertical }}" alt="{{ book_with_author.book.image_vertical }}""/>
-      <div class="Home-title"><a class="Link" href="/books/{{ book_with_author.book.id }}">{{ book_with_author.book.title }}</a></div>
-      <div class="Home-subtitle">{{ book_with_author.book.subtitle }}</div>
+      <h3 class="Home-title"><a class="Link" href="/books/{{ book_with_author.book.id }}">{{ book_with_author.book.title }}</a></h3>
+      <h4 class="Home-subtitle">{{ book_with_author.book.subtitle }}</h4>
       <div class="Home-author"><a class="Link" href="/authors/{{ book_with_author.author.id }}">{{ book_with_author.author.name }}</a></div>
+      <a class="Link" href="/books/{{ book_with_author.book.id }}"><img class="Home-image" src="{{ book_with_author.book.image_vertical }}" alt="{{ book_with_author.book.image_vertical }}""/></a>
       <div class="Home-description">{{ book_with_author.book.description_short }}</div>
     </li>
     {% endfor %}
