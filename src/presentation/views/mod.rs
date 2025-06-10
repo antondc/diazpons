@@ -1,11 +1,12 @@
+mod about;
+mod authors;
+mod book;
+mod books;
 mod home;
 mod server_error;
+pub use about::{about_view, AboutTemplate};
+pub use authors::{authors_view, AuthorsTemplate};
+pub use book::{book_view, BookTemplate};
+pub use books::{books_view, BooksTemplate};
 pub use home::{home_view, HomeTemplate};
 pub use server_error::{server_error_view, ServerErrorTemplate};
-mod book;
-pub use book::{book_view, BookTemplate};
-mod books;
-pub use books::{books_view, BooksTemplate};
-
-mod authors;
-pub use authors::{authors_view, AuthorsTemplate};

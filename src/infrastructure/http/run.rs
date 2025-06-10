@@ -1,7 +1,7 @@
 use super::constants::{HTTP_PORT, IP_STRING, TLS_CERTIFICATE_PATH, TLS_KEY_PATH};
 use super::routes;
 use crate::constants::STATIC_FILES_PATH;
-use crate::infrastructure::http::routes::{authors, book, books, catchers, home};
+use crate::infrastructure::http::routes::{about, authors, book, books, catchers, home};
 use crate::shared::utils::parse_ip;
 use rocket::config::{CipherSuite, Config, TlsConfig};
 extern crate dotenv;
@@ -35,7 +35,16 @@ pub async fn main() {
   };
 
   let _ = rocket::custom(&config)
-    .mount("/", routes![home::home_route, book::book_route, books::books_route, authors::authors_route])
+    .mount(
+      "/",
+      routes![
+        home::home_route,
+        book::book_route,
+        books::books_route,
+        authors::authors_route,
+        about::about_route
+      ],
+    )
     .mount("/static", FileServer::from(STATIC_FILES_PATH))
     .register("/", catchers![catchers::not_found_error, catchers::default_error])
     .launch()

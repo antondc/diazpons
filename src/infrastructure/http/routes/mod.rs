@@ -3,3 +3,4 @@ pub mod catchers;
 pub mod home;
 pub mod books;
 pub mod authors;
+pub mod about;

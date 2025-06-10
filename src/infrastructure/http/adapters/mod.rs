@@ -1,10 +1,10 @@
-mod home_http_adapter;
-pub use home_http_adapter::HomeHttpAdapter;
-
-mod book_http_adapter;
-pub use book_http_adapter::BookHttpAdapter;
-mod books_http_adapter;
-pub use books_http_adapter::BooksHttpAdapter;
-
+mod about_http_adapter;
 mod authors_http_adapter;
+mod book_http_adapter;
+mod books_http_adapter;
+mod home_http_adapter;
+pub use about_http_adapter::AboutHttpAdapter;
 pub use authors_http_adapter::AuthorsHttpAdapter;
+pub use book_http_adapter::BookHttpAdapter;
+pub use books_http_adapter::BooksHttpAdapter;
+pub use home_http_adapter::HomeHttpAdapter;

@@ -37,8 +37,8 @@ impl<K: ILanguageGetOneOrDefaultUseCase> IAuthorsGetDataUseCase for AuthorsGetDa
   }
 
   async fn execute(&self, slug: Option<String>) -> Result<Vec<AuthorWithBooks>> {
-    let (_, books) = self.book_repository.book_get_all().await.unwrap();
-    let (_, authors) = self.author_repository.author_get_all().await.unwrap();
+    let (_, _books) = self.book_repository.book_get_all().await.unwrap();
+    let (_, _authors) = self.author_repository.author_get_all().await.unwrap();
 
     // Get language from slug, or default if it doesnt exists
     // TODO: select books by language
