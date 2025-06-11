@@ -1,6 +1,7 @@
+pub mod about;
+pub mod authors;
 pub mod book;
+pub mod books;
 pub mod catchers;
 pub mod home;
-pub mod books;
-pub mod authors;
-pub mod about;
+pub mod press;
