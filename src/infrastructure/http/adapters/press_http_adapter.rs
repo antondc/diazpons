@@ -1,5 +1,5 @@
 use crate::application::IPressGetDataUseCase;
-use crate::infrastructure::http::middlewares::QueryParams;
+use crate::presentation::types::ViewData;
 use crate::presentation::views::press_view;
 use crate::presentation::views::server_error_view;
 use crate::presentation::views::PressTemplate;
@@ -17,14 +17,22 @@ impl<T: IPressGetDataUseCase> PressHttpAdapter<T> {
     PressHttpAdapter { press_use_case }
   }
 
-  pub async fn execute(&self, query_params: QueryParams) -> Result<PressTemplate, ServerErrorTemplate> {
+  pub async fn execute(&self, slug: Option<String>, current_path: String) -> Result<PressTemplate, ServerErrorTemplate> {
     if let Ok(press_data) = self
       .press_use_case
-      .execute(query_params.lang.clone())
+      .execute(slug.clone())
       .await
       .map_err(|error| rocketStatus::Custom(Status::new(error.status), Json(error)))
     {
-      Ok(press_view(press_data).await)
+      let view_data = ViewData {
+        data: press_data.data,
+        language: press_data.language.clone(),
+        current_path,
+        current_slug: slug.unwrap_or(press_data.language.slug),
+      };
+      let rendered = press_view(view_data).await;
+
+      Ok(rendered)
     } else {
       Err(server_error_view().await)
     }

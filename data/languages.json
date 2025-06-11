@@ -1,41 +1,34 @@
 [
   {
-    "id": "test",
-    "slug": "test",
-    "name": "test",
+    "id": "es",
+    "slug": "es",
+    "name": "Español",
     "is_default": true,
     "glossary": {
-      "home": "test",
-      "login": "test",
-      "logout": "test",
-      "control": "test",
-      "not_found": "test",
-      "since": "test",
-      "server_error": "test",
-      "created_at": "test",
-      "updated_at": "test"
+      "home": "Home",
+      "catalog": "Catálogo",
+      "authors": "Autores",
+      "about_us": "Editorial",
+      "press": "Prensa",
+      "series": "Colecciones",
+      "not_found": "Not Found",
+      "server_error": "Server Error"
     }
   },
   {
-    "id": "test",
-    "slug": "test",
-    "name": "test",
+    "id": "en",
+    "slug": "en",
+    "name": "English",
     "is_default": true,
     "glossary": {
-      "home": "test",
-      "login": "test",
-      "logout": "test",
-      "control": "test",
-      "not_found": "test",
-      "tags": "test",
-      "my_user": "test",
-      "users": "test",
-      "followers": "test",
-      "following": "test",
-      "since": "test",
-      "server_error": "test",
-      "created_at": "test",
-      "updated_at": "test"
+      "home": "Home",
+      "catalog": "Books",
+      "authors": "Authors",
+      "about_us": "About",
+      "press": "Press",
+      "series": "Series",
+      "not_found": "Not Found",
+      "server_error": "Server Error"
     }
   }
 ]

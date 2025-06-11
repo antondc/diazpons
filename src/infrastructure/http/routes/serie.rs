@@ -1,6 +1,6 @@
-use super::super::middlewares::QueryParams;
 use crate::application::{ILanguageGetOneOrDefaultUseCase, ISerieGetDataUseCase, LanguageGetOneOrDefaultUseCase, SerieGetDataUseCase};
 use crate::infrastructure::http::adapters::SerieHttpAdapter;
+use crate::infrastructure::http::middlewares::CurrentPath;
 use crate::infrastructure::http::types::HtmlTemplate;
 use crate::infrastructure::persistence::{FileSystemAuthorRepository, FileSystemBookRepository, FileSystemLanguageRepository, FileSystemSerieRepository};
 use crate::presentation::views::{SerieTemplate, ServerErrorTemplate};
@@ -9,8 +9,8 @@ use rocket::response::{Responder, Response};
 use rocket::{http::ContentType, Request};
 use std::sync::Arc;
 
-#[get("/series/<serie_id>")]
-pub async fn serie_route(query_params: QueryParams, serie_id: String) -> HtmlTemplate<SerieTemplate, ServerErrorTemplate> {
+#[get("/<slug>/serie/<serie_id>", rank = 7)]
+pub async fn serie_route_with_lang(slug: String, serie_id: String, current_path: CurrentPath) -> HtmlTemplate<SerieTemplate, ServerErrorTemplate> {
   let language_repository = FileSystemLanguageRepository {};
   let serie_repository = FileSystemSerieRepository {};
   let book_repository = FileSystemBookRepository {};
@@ -23,7 +23,7 @@ pub async fn serie_route(query_params: QueryParams, serie_id: String) -> HtmlTem
     language_get_one_or_default_use_case,
   );
   let serie_http_adapter = SerieHttpAdapter::new(serie_use_case);
-  let serie_data_result = serie_http_adapter.execute(query_params, serie_id).await;
+  let serie_data_result = serie_http_adapter.execute(Some(slug), serie_id, current_path.0).await;
 
   HtmlTemplate::new(serie_data_result)
 }

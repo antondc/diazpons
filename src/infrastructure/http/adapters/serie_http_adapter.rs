@@ -1,5 +1,6 @@
 use crate::application::ISerieGetDataUseCase;
-use crate::infrastructure::http::middlewares::QueryParams;
+use crate::infrastructure::http::routes::serie;
+use crate::presentation::types::ViewData;
 use crate::presentation::views::serie_view;
 use crate::presentation::views::server_error_view;
 use crate::presentation::views::SerieTemplate;
@@ -17,14 +18,22 @@ impl<T: ISerieGetDataUseCase> SerieHttpAdapter<T> {
     SerieHttpAdapter { serie_use_case }
   }
 
-  pub async fn execute(&self, query_params: QueryParams, serie_id: String) -> Result<SerieTemplate, ServerErrorTemplate> {
+  pub async fn execute(&self, slug: Option<String>, serie_id: String, current_path: String) -> Result<SerieTemplate, ServerErrorTemplate> {
     if let Ok(serie_data) = self
       .serie_use_case
-      .execute(query_params.lang.clone(), serie_id)
+      .execute(slug.clone(), serie_id)
       .await
       .map_err(|error| rocketStatus::Custom(Status::new(error.status), Json(error)))
     {
-      Ok(serie_view(serie_data).await)
+      let view_data = ViewData {
+        data: serie_data.data,
+        language: serie_data.language.clone(),
+        current_path,
+        current_slug: slug.unwrap_or(serie_data.language.slug),
+      };
+      let rendered = serie_view(view_data).await;
+
+      Ok(rendered)
     } else {
       Err(server_error_view().await)
     }

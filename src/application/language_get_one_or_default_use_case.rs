@@ -8,7 +8,7 @@ use std::sync::Arc;
 #[async_trait]
 pub trait ILanguageGetOneOrDefaultUseCase: Send + Sync {
   fn new(language_repository: Arc<dyn ILanguageRepository>) -> LanguageGetOneOrDefaultUseCase;
-  async fn execute(&self, language_slug: Option<String>) -> Result<Language>;
+  async fn execute(&self, slug: Option<String>) -> Result<Language>;
 }
 
 pub struct LanguageGetOneOrDefaultUseCase {
@@ -21,7 +21,7 @@ impl ILanguageGetOneOrDefaultUseCase for LanguageGetOneOrDefaultUseCase {
     LanguageGetOneOrDefaultUseCase { language_repository }
   }
 
-  async fn execute(&self, language_slug: Option<String>) -> Result<Language> {
+  async fn execute(&self, slug: Option<String>) -> Result<Language> {
     // 1.
     let (_, languages) = self
       .language_repository
@@ -37,7 +37,7 @@ impl ILanguageGetOneOrDefaultUseCase for LanguageGetOneOrDefaultUseCase {
       .ok_or_else(|| Errors::new(Errors::NotFound, Some(String::from("Default language not found"))))?;
 
     // 3.
-    let language_to_set = match language_slug {
+    let language_to_set = match slug {
       None => default_language, // 4.
       Some(slug) => {
         let language_to_set = languages.into_iter().find(|language| language.slug == slug);

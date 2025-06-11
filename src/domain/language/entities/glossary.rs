@@ -5,12 +5,11 @@ use serde::{Deserialize, Serialize};
 #[serde(rename_all(deserialize = "snake_case", serialize = "camelCase"))]
 pub struct Glossary {
   pub home: String,
-  pub login: String,
-  pub logout: String,
-  pub control: String,
+  pub catalog: String,
+  pub authors: String,
+  pub about_us: String,
+  pub press: String,
+  pub series: String,
   pub not_found: String,
-  pub since: String,
   pub server_error: String,
-  pub created_at: String,
-  pub updated_at: String,
 }

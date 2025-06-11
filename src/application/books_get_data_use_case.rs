@@ -1,6 +1,7 @@
 use crate::{
   application::ILanguageGetOneOrDefaultUseCase,
   domain::{BookWithAuthor, IAuthorRepository, IBookRepository, ILanguageRepository},
+  infrastructure::http::DataWithLanguage,
   types::{Errors, Result},
 };
 use async_trait::async_trait;
@@ -13,7 +14,7 @@ pub trait IBooksGetDataUseCase {
     author_repository: Arc<dyn IAuthorRepository>,
     language_get_one_or_default_use_case: K,
   ) -> BooksGetDataUseCase<K>;
-  async fn execute(&self, slug: Option<String>) -> Result<Vec<BookWithAuthor>>;
+  async fn execute(&self, slug: Option<String>) -> Result<DataWithLanguage<Vec<BookWithAuthor>>>;
 }
 
 pub struct BooksGetDataUseCase<K> {
@@ -36,13 +37,13 @@ impl<K: ILanguageGetOneOrDefaultUseCase> IBooksGetDataUseCase for BooksGetDataUs
     }
   }
 
-  async fn execute(&self, slug: Option<String>) -> Result<Vec<BookWithAuthor>> {
+  async fn execute(&self, slug: Option<String>) -> Result<DataWithLanguage<Vec<BookWithAuthor>>> {
     let (_, books) = self.book_repository.book_get_all().await.unwrap();
     let (_, authors) = self.author_repository.author_get_all().await.unwrap();
 
     // Get language from slug, or default if it doesnt exists
     // TODO: select books by language
-    let _language_or_default = self
+    let language_or_default = self
       .language_get_one_or_default_use_case
       .execute(slug)
       .await
@@ -60,6 +61,9 @@ impl<K: ILanguageGetOneOrDefaultUseCase> IBooksGetDataUseCase for BooksGetDataUs
       })
       .collect();
 
-    Ok(books_data)
+    Ok(DataWithLanguage {
+      language: language_or_default,
+      data: books_data,
+    })
   }
 }

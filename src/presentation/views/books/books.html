@@ -8,13 +8,13 @@
     {% for book_with_author in books_with_authors %}
     <li class="Books-book">
       <h3 class="Books-title">
-        <a class="Link" href="/books/{{ book_with_author.book.id }}">{{ book_with_author.book.title }}</a>
+        <a class="Hover" href="/books/{{ book_with_author.book.id }}">{{ book_with_author.book.title }}</a>
       </h3>
       <h4 class="Books-subtitle">{{ book_with_author.book.subtitle }}</h4>
       <div class="Books-author">
-        <a class="Link" href="/authors/{{ book_with_author.author.id }}">{{ book_with_author.author.name }}</a>
+        <a class="Hover" href="/authors/{{ book_with_author.author.id }}">{{ book_with_author.author.name }}</a>
       </div>
-      <a class="Link Books-image" href="/books/{{ book_with_author.book.id }}">
+      <a class="Hover Books-image" href="/books/{{ book_with_author.book.id }}">
         <img src="{{ book_with_author.book.image_vertical }}" alt="{{ book_with_author.book.image_vertical }}" />
       </a>
       <div class="Books-description">{{ book_with_author.book.description_short }}</div>

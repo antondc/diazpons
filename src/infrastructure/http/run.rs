@@ -35,19 +35,20 @@ pub async fn main() {
   };
 
   let _ = rocket::custom(&config)
+    .mount("/static", FileServer::from(STATIC_FILES_PATH))
     .mount(
       "/",
       routes![
-        home::home_route,
-        book::book_route,
-        books::books_route,
-        authors::authors_route,
-        about::about_route,
-        press::press_route,
-        serie::serie_route
+        home::domain_to_home_route,
+        home::home_route_with_lang,
+        book::book_route_with_lang,
+        books::books_route_with_lang,
+        authors::authors_route_with_lang,
+        about::about_route_with_lang,
+        press::press_route_with_lang,
+        serie::serie_route_with_lang,
       ],
     )
-    .mount("/static", FileServer::from(STATIC_FILES_PATH))
     .register("/", catchers![catchers::not_found_error, catchers::default_error])
     .launch()
     .await;

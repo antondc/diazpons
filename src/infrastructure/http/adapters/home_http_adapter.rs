@@ -1,5 +1,5 @@
 use crate::application::IHomeGetDataUseCase;
-use crate::infrastructure::http::middlewares::QueryParams;
+use crate::presentation::types::ViewData;
 use crate::presentation::views::home_view;
 use crate::presentation::views::server_error_view;
 use crate::presentation::views::HomeTemplate;
@@ -17,14 +17,22 @@ impl<T: IHomeGetDataUseCase> HomeHttpAdapter<T> {
     HomeHttpAdapter { home_use_case }
   }
 
-  pub async fn execute(&self, query_params: QueryParams) -> Result<HomeTemplate, ServerErrorTemplate> {
+  pub async fn execute(&self, slug: Option<String>, current_path: String) -> Result<HomeTemplate, ServerErrorTemplate> {
     if let Ok(home_data) = self
       .home_use_case
-      .execute(query_params.lang.clone())
+      .execute(slug.clone())
       .await
       .map_err(|error| rocketStatus::Custom(Status::new(error.status), Json(error)))
     {
-      Ok(home_view(home_data).await)
+      let view_data = ViewData {
+        data: home_data.data,
+        language: home_data.language.clone(),
+        current_path,
+        current_slug: slug.unwrap_or(home_data.language.slug),
+      };
+      let rendered = home_view(view_data).await;
+
+      Ok(rendered)
     } else {
       Err(server_error_view().await)
     }

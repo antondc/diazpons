@@ -1,5 +1,5 @@
 use crate::application::IBookGetDataUseCase;
-use crate::infrastructure::http::middlewares::QueryParams;
+use crate::presentation::types::ViewData;
 use crate::presentation::views::book_view;
 use crate::presentation::views::server_error_view;
 use crate::presentation::views::BookTemplate;
@@ -17,14 +17,22 @@ impl<T: IBookGetDataUseCase> BookHttpAdapter<T> {
     BookHttpAdapter { book_use_case }
   }
 
-  pub async fn execute(&self, query_params: QueryParams, book_id: String) -> Result<BookTemplate, ServerErrorTemplate> {
+  pub async fn execute(&self, slug: Option<String>, book_id: String, current_path: String) -> Result<BookTemplate, ServerErrorTemplate> {
     if let Ok(book_data) = self
       .book_use_case
-      .execute(query_params.lang.clone(), book_id)
+      .execute(slug.clone(), book_id)
       .await
       .map_err(|error| rocketStatus::Custom(Status::new(error.status), Json(error)))
     {
-      Ok(book_view(book_data).await)
+      let view_data = ViewData {
+        data: book_data.data,
+        language: book_data.language.clone(),
+        current_path,
+        current_slug: slug.unwrap_or(book_data.language.slug),
+      };
+      let rendered = book_view(view_data).await;
+
+      Ok(rendered)
     } else {
       Err(server_error_view().await)
     }
