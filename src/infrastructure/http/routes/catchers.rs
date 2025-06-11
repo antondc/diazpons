@@ -7,7 +7,7 @@ use rocket::serde::json::Json;
 
 #[catch(404)]
 pub async fn not_found_error() -> HttpError {
-  let error = Errors::new(Errors::NotFound, Some(String::from("Endpoint not found")));
+  let error = Errors::new(Errors::NotFound, Some(String::from("404 Not Found")));
 
   status::Custom(Status::new(error.status), Json(error))
 }
@@ -15,7 +15,7 @@ pub async fn not_found_error() -> HttpError {
 // Catching rest of errors
 #[catch(default)]
 pub fn default_error() -> HttpError {
-  let error = Errors::new(Errors::UnprocessableEntity, Some(String::from("Unknown error")));
+  let error = Errors::new(Errors::UnprocessableEntity, Some(String::from("500 Server Error")));
 
   status::Custom(Status::new(error.status), Json(error))
 }

@@ -5,3 +5,4 @@ pub mod books;
 pub mod catchers;
 pub mod home;
 pub mod press;
+pub mod serie;
