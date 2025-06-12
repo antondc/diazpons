@@ -2,64 +2,71 @@
   {
     "id": "jose-manuel-naredo",
     "name": "José Manuel Naredo",
-    "image": "example.com",
-    "biography": "...",
+    "image": "/static/img/authors/jose-manuel-naredo.jpg",
+    "biography": "Con una dilatada carrera dedicada a la filología y a los Estudios Culturales, José Manuel Querol tiene entre sus principales intereses las relaciones de alteridad cultural y los procesos de transformación semántica e ideológica del mundo. Fruto de este trabajo son Del ágora al caos: cultura y geopolítica en el mediterráneo, que figura en esta misma colección (2013), o La imagen de la Antigüedad en tiempos de la Revolución Francesa (Trea, 2015). Su obra más reciente es Postfascismos: el lado oscuro de la democracia, en esta misma editorial (2015). Actualmente imparte clase en la Universidad Carlos III de Madrid.",
     "books": ["economia-poder-y-politica"]
   },
   {
     "id": "jose-manuel-querol",
     "name": "José Manuel Querol",
-    "image": "example.com",
-    "biography": "...",
+    "image": "/static/img/authors/jose-manuel-querol.jpg",
+    "biography": "José Manuel Querol es especialista en Teoría de la Literatura y Literatura Comparada. Con una dilatada carrera dedicada a la Filología y a los Estudios Culturales, tiene entre sus principales intereses las relaciones de alteridad cultural y los procesos de transformación semántica e ideológica de nuestras imágenes del mundo. Fruto de este trabajo son, La imagen de la Antigüedad en tiempos de la Revolución Francesa (2015) o, en esta misma colección, Del ágora al caos (2013) y Postfascismos (2015). Actualmente compagina su labor crítica e investigadora con la docencia en la Universidad Carlos III de Madrid.",
     "books": ["postfascismos", "fronteras"]
   },
   {
     "id": "jose-luis-ferreira",
     "name": "José Luis Ferreira",
-    "image": "example.com",
-    "biography": "...",
+    "image": "/static/img/authors/jose-luis-ferreira.png",
+    "biography": "José Luis Ferreira (1961) es un economista con una brillante carrera: doctor en economía por Northwestern University y actualmente profesor en el Departamento de Economía de la Universidad Carlos III de Madrid. Especialista en Teoría de Juegos y Metodología, dirige diversos proyectos de investigación sobre estos temas. Pero la característica que mejor le define es su escepticismo ante todo lo que no se sostenga mediante evidencias probadas, desvelando con su trabajo los numerosos errores y ardides empleados en el debate económico para sostener discursos en ocasiones más relacionados con intereses privados o con las pseudociencias que con la ciencia económica en sí.",
     "books": ["economia-y-pseudociencia"]
   },
   {
     "id": "jorge-riechmann",
     "name": "Jorge Riechmann",
-    "image": "example.com",
-    "biography": "...",
+    "image": "/static/img/authors/jorge-riechmann.jpg",
+    "biography": "Jorge Riechmann (1962) es filósofo, poeta, traductor y matemático. Su condición de incansable agitador intelectual le ha llevado a ser redactor de la revista Mientras tanto (1990-2003), así como a desarrollar una inmensa obra ensayística, realizando notables aportaciones a diversas cuestiones relacionadas con el pensamiento político, y muy especialmente sus vínculos con lo ecológico. Entre sus numerosas obras cabe destacar Un mundo vulnerable. Ensayos sobre ecología, ética y tecnociencia (2000) o Todo tiene un límite. Ecología y transformación social (2001).",
     "books": ["moderar-extremistan"]
   },
   {
     "id": "fernando-gaja-i-diaz",
     "name": "Fernando Gaja i Díaz",
-    "image": "example.com",
-    "biography": "...",
+    "image": "/static/img/authors/gaja-i-diaz.png",
+    "biography": "Fernando Gaja i Díaz, arquitecto urbanista y urbanólogo, profesional de la práctica del Planeamiento y el Diseño Urbano, y teórico analista de los procesos de transformación de las ciudades. Sus trabajos toman en consideración el desafío que para las ciudades supone la hipótesis del no crecimiento, entre otros: Revolución Informacional, Crisis Ecológica y Urbanismo (2005) o Urbanismo Estacionario (2013). Actualmente es profesor de Urbanística y Ordenación del Territorio en la Escuela Técnica Superior de Arquitectura de la Universidad Politécnica de Valencia.",
     "books": ["futuropolis"]
   },
   {
     "id": "oriol-nel-lo",
     "name": "Oriol Nel·lo",
-    "image": "example.com",
-    "biography": "...",
+    "image": "/static/img/oriol-nel-lo.jpgauthors/",
+    "biography": "Oriol Nel·lo es geógrafo especializado en estudios urbanos, campo en el que ha publicado un buen número de libros y artículos. En su trayectoria se combinan la investigación, la docencia universitaria, el compromiso cívico y el servicio en la administración pública. Ha estudiado la forma como las transformaciones urbanas inciden en las desigualdades sociales y ha impulsado investigaciones y actuaciones para conocerlas y hacerles frente. Actualmente es profesor de geografía urbana y planeamiento en la Universidad Autònoma de Barcelona.",
     "books": ["la-ciudad-en-movimiento"]
   },
   {
     "id": "espido-freire",
     "name": "Espido Freire",
-    "image": "example.com",
-    "biography": "...",
+    "image": "/static/img/espido-freire.jpgauthors/",
+    "biography": "Espido Freire (Bilbao, 1974) es escritora. Además de su obra literaria, ha abordado los trastornos de la alimentación en dos ensayos, Cuando comer es un infierno (2002) y Quería volar (2014), que son en la actualidad empleados en consulta por especialistas y asociaciones. Involucrada de manera activa en la lucha contra los tcas, ha sido premiada en varias ocasiones por su esfuerzo en desmitificar y denunciar estas enfermedades.",
     "books": ["la-vida-frente-al-espejo"]
   },
   {
     "id": "manuel-toharia",
     "name": "Manuel Toharia",
-    "image": "example.com",
-    "biography": "...",
+    "image": "/static/img/authors/manuel-toharia.jpg",
+    "biography": "Físico ampliamente conocido por su faceta como divulgador científico, Manuel Toharia ha realizado numerosas colaboraciones para prensa y televisión, así como ha sido promotor de diversas publicaciones, entre ellas las revistas Muy interesante o Conocer. Ha sido director de diversas instituciones, como el Museo de Ciencias de La Caixa o la Ciudad de las Artes y las Ciencias de Valencia, así como cuenta con numerosas publicaciones, entre las que se encuentran Micromegas: del dinosaurio amaestrado al agujero de ozono (1995) o El clima, calentamiento global y futuro del planeta (2006).",
     "books": ["la-sociedad-del-desperdicio"]
   },
   {
     "id": "antonio-valdecantos",
     "name": "Antonio Valdecantos",
-    "image": "example.com",
-    "biography": "...",
+    "image": "/static/img/authors/antonio-valdecantos.jpg",
+    "biography": "Antonio Valdecantos es autor de una amplia obra filosófica y ensayística. Durante la pasada década emprendió una demolición cuidadosa de los principales conceptos de la moral moderna y ahora se ocupa de intentar otro tanto con la política, la historia y la cultura. Es autor, entre otras obras, de El saldo del espíritu (2014), La clac y el apuntador (2011) y La fábrica del bien (2008). Desde 1996 enseña en la Universidad Carlos III de Madrid.",
     "books": ["la-excepcion-permanente"]
+  },
+  {
+    "id": "enrique-alonso",
+    "name": "Enrique Alonso",
+    "image": "/static/img/authors/enrique-alonso.png",
+    "biography": "....",
+    "books": ["el-nuevo-leviathan"]
   }
 ]
