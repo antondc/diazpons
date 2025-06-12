@@ -10,8 +10,6 @@ use axum::response::Html;
 #[derive(Template)]
 #[template(path = "views/serie/serie.html")]
 pub struct SerieTemplate {
-  current_path: String,
-  current_slug: String,
   language: Language,
   twitter_svg: String,
   facebook_svg: String,
@@ -24,8 +22,6 @@ pub async fn serie_view(view_data: ViewData<()>) -> SerieTemplate {
   let instagram_svg = fs::read_to_string("src/presentation/assets/svg/instagram-logo.svg").unwrap();
 
   let template = SerieTemplate {
-    current_path: view_data.current_path,
-    current_slug: view_data.current_slug,
     language: view_data.language,
     twitter_svg,
     facebook_svg,

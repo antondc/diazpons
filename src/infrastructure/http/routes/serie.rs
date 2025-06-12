@@ -9,8 +9,8 @@ use rocket::response::{Responder, Response};
 use rocket::{http::ContentType, Request};
 use std::sync::Arc;
 
-#[get("/<slug>/serie/<serie_id>", rank = 7)]
-pub async fn serie_route_with_lang(slug: String, serie_id: String, current_path: CurrentPath) -> HtmlTemplate<SerieTemplate, ServerErrorTemplate> {
+#[get("/serie/<serie_id>")]
+pub async fn serie_route_with_lang(serie_id: String, current_path: CurrentPath) -> HtmlTemplate<SerieTemplate, ServerErrorTemplate> {
   let language_repository = FileSystemLanguageRepository {};
   let serie_repository = FileSystemSerieRepository {};
   let book_repository = FileSystemBookRepository {};
@@ -23,7 +23,7 @@ pub async fn serie_route_with_lang(slug: String, serie_id: String, current_path:
     language_get_one_or_default_use_case,
   );
   let serie_http_adapter = SerieHttpAdapter::new(serie_use_case);
-  let serie_data_result = serie_http_adapter.execute(Some(slug), serie_id, current_path.0).await;
+  let serie_data_result = serie_http_adapter.execute(None, serie_id, current_path.0).await;
 
   HtmlTemplate::new(serie_data_result)
 }

@@ -14,21 +14,5 @@
       "not_found": "Not Found",
       "server_error": "Server Error"
     }
-  },
-  {
-    "id": "en",
-    "slug": "en",
-    "name": "English",
-    "is_default": true,
-    "glossary": {
-      "home": "Home",
-      "catalog": "Books",
-      "authors": "Authors",
-      "about_us": "About",
-      "press": "Press",
-      "series": "Series",
-      "not_found": "Not Found",
-      "server_error": "Server Error"
-    }
   }
 ]

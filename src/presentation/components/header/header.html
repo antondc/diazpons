@@ -1,32 +1,28 @@
 <header class="Header">
   <div class="Header-logo">
-    <a class="Hover" href="/{{current_slug}}/">
+    <a class="Hover" href="/">
       <img class="Header-logoRegular" src="/static/img/logo/logo.png" />
       <img class="Header-logoSmall" src="/static/img/logo/logo-small.png" />
     </a>
   </div>
   <div class="Header-logoText">
-    <a class="Hover" href="/{{current_slug}}/">
+    <a class="Hover" href="/">
       <img src="/static/img/logo/logo-text.png" />
     </a>
   </div>
   <ul class="Header-list">
     <li class="Header-item">
-      <a class="Hover" href="/{{current_slug}}/books">{{language.glossary.catalog}}</a>
+      <a class="Hover" href="/books">{{language.glossary.catalog}}</a>
     </li>
     <li class="Header-item">
-      <a class="Hover" href="/{{current_slug}}/authors">{{language.glossary.authors}}</a>
+      <a class="Hover" href="/authors">{{language.glossary.authors}}</a>
     </li>
     <li class="Header-item">
-      <a class="Hover" href="/{{current_slug}}/about">{{language.glossary.about_us}}</a>
+      <a class="Hover" href="/about">{{language.glossary.about_us}}</a>
     </li>
     <li class="Header-item">
-      <span class="Header-email">
-        <a href="/en{{ current_path }}" class="Hover">en</a>
-        <span class="Header-separator">|</span>
-        <a href="/es{{ current_path }}" class="Hover">es</a>
-      </span>
-      <a class="Hover" href="/{{current_slug}}/press">{{language.glossary.press}}</a>
+      <a class="Hover Header-email" href="mailto:info@diazpons.es">info@diazpons.es</a>
+      <a class="Hover" href="/press">{{language.glossary.press}}</a>
     </li>
   </ul>
   <div class="Header-menu">

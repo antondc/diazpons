@@ -11,8 +11,6 @@ use axum::response::Html;
 #[template(path = "views/home/home.html")]
 pub struct HomeTemplate {
   books_with_authors: Vec<BookWithAuthor>,
-  current_path: String,
-  current_slug: String,
   language: Language,
   twitter_svg: String,
   facebook_svg: String,
@@ -26,8 +24,6 @@ pub async fn home_view(view_data: ViewData<Vec<BookWithAuthor>>) -> HomeTemplate
 
   let template = HomeTemplate {
     books_with_authors: view_data.data,
-    current_path: view_data.current_path,
-    current_slug: view_data.current_slug,
     language: view_data.language,
     twitter_svg,
     facebook_svg,

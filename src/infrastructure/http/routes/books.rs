@@ -10,8 +10,8 @@ use rocket::response::{Responder, Response};
 use rocket::{http::ContentType, Request};
 use std::sync::Arc;
 
-#[get("/<slug>/books", rank = 5)]
-pub async fn books_route_with_lang(slug: String, current_path: CurrentPath) -> HtmlTemplate<BooksTemplate, ServerErrorTemplate> {
+#[get("/books")]
+pub async fn books_route_with_lang(current_path: CurrentPath) -> HtmlTemplate<BooksTemplate, ServerErrorTemplate> {
   let language_repository = FileSystemLanguageRepository {};
   let book_repository = FileSystemBookRepository {};
   let author_repository = FileSystemAuthorRepository {};
@@ -19,7 +19,7 @@ pub async fn books_route_with_lang(slug: String, current_path: CurrentPath) -> H
   let book_use_case =
     BooksGetDataUseCase::<LanguageGetOneOrDefaultUseCase>::new(Arc::new(book_repository), Arc::new(author_repository), language_get_one_or_default_use_case);
   let books_http_adapter = BooksHttpAdapter::new(book_use_case);
-  let book_data_result = books_http_adapter.execute(Some(slug), current_path.0).await;
+  let book_data_result = books_http_adapter.execute(None, current_path.0).await;
 
   HtmlTemplate::new(book_data_result)
 }

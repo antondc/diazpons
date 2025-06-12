@@ -10,8 +10,8 @@ use rocket::response::{Responder, Response};
 use rocket::{http::ContentType, Request};
 use std::sync::Arc;
 
-#[get("/<slug>/authors", rank = 4)]
-pub async fn authors_route_with_lang(slug: String, current_path: CurrentPath) -> HtmlTemplate<AuthorsTemplate, ServerErrorTemplate> {
+#[get("/authors")]
+pub async fn authors_route_with_lang( current_path: CurrentPath) -> HtmlTemplate<AuthorsTemplate, ServerErrorTemplate> {
   let language_repository = FileSystemLanguageRepository {};
   let authors_repository = FileSystemBookRepository {};
   let author_repository = FileSystemAuthorRepository {};
@@ -22,7 +22,7 @@ pub async fn authors_route_with_lang(slug: String, current_path: CurrentPath) ->
     language_get_one_or_default_use_case,
   );
   let authors_http_adapter = AuthorsHttpAdapter::new(authors_use_case);
-  let authors_data_result = authors_http_adapter.execute(Some(slug), current_path.0).await;
+  let authors_data_result = authors_http_adapter.execute(None, current_path.0).await;
 
   HtmlTemplate::new(authors_data_result)
 }

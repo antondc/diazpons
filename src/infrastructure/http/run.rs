@@ -39,7 +39,6 @@ pub async fn main() {
     .mount(
       "/",
       routes![
-        home::domain_to_home_route,
         home::home_route_with_lang,
         book::book_route_with_lang,
         books::books_route_with_lang,
