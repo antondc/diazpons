@@ -1,4 +1,5 @@
 mod about_get_data_use_case;
+mod author_get_data_use_case;
 mod authors_get_data_use_case;
 mod book_get_data_use_case;
 mod books_get_data_use_case;
@@ -7,6 +8,7 @@ mod language_get_one_or_default_use_case;
 mod press_get_data_use_case;
 mod serie_get_data_use_case;
 pub use about_get_data_use_case::{AboutGetDataUseCase, IAboutGetDataUseCase};
+pub use author_get_data_use_case::{AuthorGetDataUseCase, IAuthorGetDataUseCase};
 pub use authors_get_data_use_case::{AuthorsGetDataUseCase, IAuthorsGetDataUseCase};
 pub use book_get_data_use_case::{BookGetDataUseCase, IBookGetDataUseCase};
 pub use books_get_data_use_case::{BooksGetDataUseCase, IBooksGetDataUseCase};

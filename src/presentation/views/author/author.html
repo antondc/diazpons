@@ -1,0 +1,15 @@
+{% extends "layouts/layout_five_columns/layout_five_columns.html" %}
+{% block title %}Libros{% endblock %}
+
+{% block content %}
+  <div class="Author">
+    <ul class="Author-books">
+      {{author_with_books.author.name}}
+      <br />
+      <br />
+      {% for book in author_with_books.books %}
+        {{book.title}}<br />
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

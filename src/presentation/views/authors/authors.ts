@@ -1,3 +1,3 @@
 import "./authors.less";
 
-console.log("Books JavaScript loaded.");
+console.log("Authors JavaScript loaded.");

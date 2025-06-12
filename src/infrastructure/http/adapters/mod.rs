@@ -1,4 +1,5 @@
 mod about_http_adapter;
+mod author_http_adapter;
 mod authors_http_adapter;
 mod book_http_adapter;
 mod books_http_adapter;
@@ -6,6 +7,7 @@ mod home_http_adapter;
 mod press_http_adapter;
 mod serie_http_adapter;
 pub use about_http_adapter::AboutHttpAdapter;
+pub use author_http_adapter::AuthorHttpAdapter;
 pub use authors_http_adapter::AuthorsHttpAdapter;
 pub use book_http_adapter::BookHttpAdapter;
 pub use books_http_adapter::BooksHttpAdapter;

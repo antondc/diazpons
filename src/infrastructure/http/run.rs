@@ -1,7 +1,7 @@
 use super::constants::{HTTP_PORT, IP_STRING, TLS_CERTIFICATE_PATH, TLS_KEY_PATH};
 use super::routes;
 use crate::constants::STATIC_FILES_PATH;
-use crate::infrastructure::http::routes::{about, authors, book, books, catchers, home, press, serie};
+use crate::infrastructure::http::routes::{about, authors,author, book, books, catchers, home, press, serie};
 use crate::shared::utils::parse_ip;
 use rocket::config::{CipherSuite, Config, TlsConfig};
 extern crate dotenv;
@@ -43,6 +43,7 @@ pub async fn main() {
         book::book_route_with_lang,
         books::books_route_with_lang,
         authors::authors_route_with_lang,
+        author::author_route_with_lang,
         about::about_route_with_lang,
         press::press_route_with_lang,
         serie::serie_route_with_lang,

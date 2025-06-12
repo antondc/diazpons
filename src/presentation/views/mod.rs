@@ -1,4 +1,5 @@
 mod about;
+mod author;
 mod authors;
 mod book;
 mod books;
@@ -7,6 +8,7 @@ mod press;
 mod serie;
 mod server_error;
 pub use about::{about_view, AboutTemplate};
+pub use author::{author_view, AuthorTemplate};
 pub use authors::{authors_view, AuthorsTemplate};
 pub use book::{book_view, BookTemplate};
 pub use books::{books_view, BooksTemplate};
