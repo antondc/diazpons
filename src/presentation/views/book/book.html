@@ -3,7 +3,27 @@
 {% block title %}Libros{% endblock %}
 
 {% block content %}
-<div class="Book">
-  {{book_with_author.book.title}}
-</div>
+  <div class="Book">
+    <img
+      class="Book-image"
+      src="{{ book_with_author.book.image_vertical }}"
+      alt="{{ book_with_author.book.image_vertical }}"
+    />
+    <div class="Book-mainInfo">
+      <h3 class="Book-title Hover">{{ book_with_author.book.title }}</h3>
+      <h4 class="Book-subtitle">{{ book_with_author.book.subtitle }}</h4>
+      <div class="Book-author">
+        <a class="Hover" href="/authors/{{ book_with_author.author.id }}">{{ book_with_author.author.name }}</a>
+      </div>
+    </div>
+    <div class="Book-details">
+      <div>
+        Col.: <a class="Hover" href="/serie/{{ book_with_author.serie.id }}">{{ book_with_author.serie.name }}</a>
+      </div>
+      <div>{{ book_with_author.book.pages }} páginas.</div>
+      <div>Formato: {{ book_with_author.book.format }}</div>
+      <div>ISBN: {{ book_with_author.book.isbn }}</div>
+    </div>
+    <div class="Book-description">{{ book_with_author.book.description_long|safe }}</div>
+  </div>
 {% endblock %}

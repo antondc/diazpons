@@ -1,7 +1,7 @@
 use std::fs;
 
 use crate::{
-  domain::{BookWithAuthor, Language},
+  domain::{BookWithAuthorSerie, Language},
   presentation::types::ViewData,
 };
 use askama::Template;

@@ -1,12 +1,12 @@
 mod author;
 mod author_with_books;
 mod book;
-mod book_with_author;
+mod book_with_author_series;
 mod language;
 mod serie;
 pub use author::{Author, IAuthorRepository};
 pub use author_with_books::AuthorWithBooks;
 pub use book::{Book, IBookRepository};
-pub use book_with_author::BookWithAuthor;
+pub use book_with_author_series::BookWithAuthorSerie;
 pub use language::{Glossary, ILanguageRepository, Language};
 pub use serie::{ISerieRepository, Serie};

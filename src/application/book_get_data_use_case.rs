@@ -1,6 +1,6 @@
 use crate::{
   application::ILanguageGetOneOrDefaultUseCase,
-  domain::{BookWithAuthor, IAuthorRepository, IBookRepository, ILanguageRepository},
+  domain::{BookWithAuthorSerie, IAuthorRepository, IBookRepository, ILanguageRepository, ISerieRepository},
   infrastructure::http::DataWithLanguage,
   types::{Errors, Result},
 };
@@ -12,14 +12,16 @@ pub trait IBookGetDataUseCase {
   fn new<K: ILanguageGetOneOrDefaultUseCase>(
     book_repository: Arc<dyn IBookRepository>,
     author_repository: Arc<dyn IAuthorRepository>,
+    serie_repository: Arc<dyn ISerieRepository>,
     language_get_one_or_default_use_case: K,
   ) -> BookGetDataUseCase<K>;
-  async fn execute(&self, slug: Option<String>, book_id: String) -> Result<DataWithLanguage<BookWithAuthor>>;
+  async fn execute(&self, slug: Option<String>, book_id: String) -> Result<DataWithLanguage<BookWithAuthorSerie>>;
 }
 
 pub struct BookGetDataUseCase<K> {
   book_repository: Arc<dyn IBookRepository>,
   author_repository: Arc<dyn IAuthorRepository>,
+  serie_repository: Arc<dyn ISerieRepository>,
   language_get_one_or_default_use_case: K,
 }
 
@@ -28,18 +30,21 @@ impl<K: ILanguageGetOneOrDefaultUseCase> IBookGetDataUseCase for BookGetDataUseC
   fn new<K2: ILanguageGetOneOrDefaultUseCase>(
     book_repository: Arc<dyn IBookRepository>,
     author_repository: Arc<dyn IAuthorRepository>,
+    serie_repository: Arc<dyn ISerieRepository>,
     language_get_one_or_default_use_case: K2,
   ) -> BookGetDataUseCase<K2> {
     BookGetDataUseCase {
       book_repository,
       author_repository,
+      serie_repository,
       language_get_one_or_default_use_case,
     }
   }
 
-  async fn execute(&self, slug: Option<String>, book_id: String) -> Result<DataWithLanguage<BookWithAuthor>> {
+  async fn execute(&self, slug: Option<String>, book_id: String) -> Result<DataWithLanguage<BookWithAuthorSerie>> {
     let (_, books) = self.book_repository.book_get_all().await.unwrap();
     let (_, authors) = self.author_repository.author_get_all().await.unwrap();
+    let (_, series) = self.serie_repository.serie_get_all().await.unwrap();
 
     // Get language from slug, or default if it doesnt exists
     // TODO: select books by language
@@ -49,15 +54,16 @@ impl<K: ILanguageGetOneOrDefaultUseCase> IBookGetDataUseCase for BookGetDataUseC
       .await
       .map_err(|_| Errors::new(Errors::NotFound, Some(String::from("Language not found"))))?;
 
-    let book_data: BookWithAuthor = books
+    let book_data: BookWithAuthorSerie = books
       .iter()
-      .map(|item| BookWithAuthor {
+      .map(|item| BookWithAuthorSerie {
         book: item.clone(),
         author: authors
           .iter()
           .find(|authors| authors.id == item.author_id)
           .expect("Author not found") // We know there will be an author for this book
           .clone(),
+        serie: series.iter().find(|serie| serie.id == item.serie_id).expect("Serie not found").clone(),
       })
       .find(|item| item.book.id == book_id)
       .unwrap();

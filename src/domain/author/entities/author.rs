@@ -1,5 +1,7 @@
+use serde::Deserialize;
+
 #[allow(dead_code)]
-#[derive(serde::Deserialize, Clone)]
+#[derive(Deserialize, Clone, Debug)]
 pub struct Author {
   pub count: Option<i64>,
   pub id: String,

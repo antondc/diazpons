@@ -1,5 +1,5 @@
 use crate::application::{AuthorsGetDataUseCase, IAuthorsGetDataUseCase, ILanguageGetOneOrDefaultUseCase, LanguageGetOneOrDefaultUseCase};
-use crate::domain::{Author, Book, BookWithAuthor};
+use crate::domain::{Author, Book, BookWithAuthorSerie};
 use crate::infrastructure::http::adapters::AuthorsHttpAdapter;
 use crate::infrastructure::http::middlewares::CurrentPath;
 use crate::infrastructure::http::types::HtmlTemplate;
@@ -11,7 +11,7 @@ use rocket::{http::ContentType, Request};
 use std::sync::Arc;
 
 #[get("/authors")]
-pub async fn authors_route_with_lang( current_path: CurrentPath) -> HtmlTemplate<AuthorsTemplate, ServerErrorTemplate> {
+pub async fn authors_route_with_lang(current_path: CurrentPath) -> HtmlTemplate<AuthorsTemplate, ServerErrorTemplate> {
   let language_repository = FileSystemLanguageRepository {};
   let authors_repository = FileSystemBookRepository {};
   let author_repository = FileSystemAuthorRepository {};
