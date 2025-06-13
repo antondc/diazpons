@@ -8,21 +8,23 @@
   gap: 12px;
 
   &-item {
-    display: flex;
-    gap: 8px;
+    a {
+      display: flex;
+      gap: 8px;
 
-    &:hover {
-      cursor: pointer;
+      &:hover {
+        cursor: pointer;
 
-      @{c}-itemText {
-        letter-spacing: unset;
-        opacity: 1;
-      }
+        @{c}-itemText {
+          letter-spacing: unset;
+          opacity: 1;
+        }
 
-      @{c}-itemImage {
-        svg {
-          fill: @c-accent;
-          transition: fill @td-fast ease;
+        @{c}-itemImage {
+          svg {
+            fill: @c-accent;
+            transition: fill @td-fast ease;
+          }
         }
       }
     }
