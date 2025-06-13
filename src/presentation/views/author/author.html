@@ -1,15 +1,22 @@
-{% extends "layouts/layout_five_columns/layout_five_columns.html" %}
-{% block title %}Libros{% endblock %}
-
-{% block content %}
-  <div class="Author">
+{% extends "layouts/layout_five_columns/layout_five_columns.html" %} {% block title %}Libros{% endblock %} {% block
+content %}
+<div class="Author">
+  <img
+    class="Book-image"
+    src="{{ author_with_books.author.image }}"
+    alt="{{ author_with_books.author.image }}"
+  />
+  <div class="Author-mainInfo">
+    <div class="Author-title">{{author_with_books.author.name}}</div>
+  </div>
+  <div class="Author-bottom">
+    <div class="Author-description">{{author_with_books.author.biography}}</div>
+    <div class="Author-booksTitle">Libros en Díaz & Pons:</div>
     <ul class="Author-books">
-      {{author_with_books.author.name}}
-      <br />
-      <br />
       {% for book in author_with_books.books %}
-        {{book.title}}<br />
+        <li><a class="Hover" href="/books/{{book.id}}"><i>{{book.title}}</i>, Díaz & Pons, {{book.year}}.</a></li>
       {% endfor %}
     </ul>
   </div>
+</div>
 {% endblock %}

@@ -30,21 +30,21 @@
   {
     "id": "fernando-gaja-i-diaz",
     "name": "Fernando Gaja i Díaz",
-    "image": "/static/img/authors/gaja-i-diaz.png",
+    "image": "/static/img/authors/fernando-gaja-i-diaz.png",
     "biography": "Fernando Gaja i Díaz, arquitecto urbanista y urbanólogo, profesional de la práctica del Planeamiento y el Diseño Urbano, y teórico analista de los procesos de transformación de las ciudades. Sus trabajos toman en consideración el desafío que para las ciudades supone la hipótesis del no crecimiento, entre otros: Revolución Informacional, Crisis Ecológica y Urbanismo (2005) o Urbanismo Estacionario (2013). Actualmente es profesor de Urbanística y Ordenación del Territorio en la Escuela Técnica Superior de Arquitectura de la Universidad Politécnica de Valencia.",
     "books": ["futuropolis"]
   },
   {
     "id": "oriol-nel-lo",
     "name": "Oriol Nel·lo",
-    "image": "/static/img/oriol-nel-lo.jpgauthors/",
+    "image": "/static/img/authors/oriol-nel-lo.jpg",
     "biography": "Oriol Nel·lo es geógrafo especializado en estudios urbanos, campo en el que ha publicado un buen número de libros y artículos. En su trayectoria se combinan la investigación, la docencia universitaria, el compromiso cívico y el servicio en la administración pública. Ha estudiado la forma como las transformaciones urbanas inciden en las desigualdades sociales y ha impulsado investigaciones y actuaciones para conocerlas y hacerles frente. Actualmente es profesor de geografía urbana y planeamiento en la Universidad Autònoma de Barcelona.",
     "books": ["la-ciudad-en-movimiento"]
   },
   {
     "id": "espido-freire",
     "name": "Espido Freire",
-    "image": "/static/img/espido-freire.jpgauthors/",
+    "image": "/static/img/authors/espido-freire.jpg",
     "biography": "Espido Freire (Bilbao, 1974) es escritora. Además de su obra literaria, ha abordado los trastornos de la alimentación en dos ensayos, Cuando comer es un infierno (2002) y Quería volar (2014), que son en la actualidad empleados en consulta por especialistas y asociaciones. Involucrada de manera activa en la lucha contra los tcas, ha sido premiada en varias ocasiones por su esfuerzo en desmitificar y denunciar estas enfermedades.",
     "books": ["la-vida-frente-al-espejo"]
   },
@@ -66,7 +66,7 @@
     "id": "enrique-alonso",
     "name": "Enrique Alonso",
     "image": "/static/img/authors/enrique-alonso.png",
-    "biography": "....",
+    "biography": "Enrique Alonso es especialista en lógica y computación en la Universidad Autónoma de Madrid, donde ejerce docencia y dirige el grupo de investigación Sociedad digital y conocimiento. Ha trabajado sobre las relaciones entre hombre y máquina en contextos digitales y en la experiencia del usuario en la Red. Entre sus diversos textos cabe destacar La quimera del usuario: resistencia y exclusión en la era digital (2014).",
     "books": ["el-nuevo-leviathan"]
   }
 ]

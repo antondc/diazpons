@@ -9,6 +9,7 @@ pub struct Book {
   pub subtitle: String,
   pub author_id: String,
   pub serie_id: String,
+  pub year: i32,
   pub pages: i32,
   pub format: String,
   pub isbn: String,
