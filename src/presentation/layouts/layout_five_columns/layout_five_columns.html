@@ -1,13 +1,16 @@
-{% extends "../../index.html" %}
-
-{% block layout %}
+{% extends "../../index.html" %} {% block layout %}
 <div class="LayoutFiveColumns" id="LayoutFiveColumns">
   {% block header %} {% include "components/header/header.html" %}{% endblock %}
+
   <div class="LayoutFiveColumns-columns">
     <div class="LayoutFiveColumns-sidebarLeft">
       {% block sidebarLeft %} {% include "components/sidebarLeft/sidebarLeft.html" %}{% endblock %}
     </div>
-    <div class="LayoutFiveColumns-main">{% block content %}{% endblock %}</div>
+
+    <div class="LayoutFiveColumns-main">
+      {% block content %}{% endblock %}
+    </div>
+
     <div class="LayoutFiveColumns-sidebarRight">
       {% block sidebarRight %} {% include "components/sidebarRight/sidebarRight.html" %}{% endblock %}
     </div>

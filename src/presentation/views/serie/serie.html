@@ -1,4 +1,9 @@
-{% extends "layouts/layout_five_columns/layout_five_columns.html" %} {% block title %}Libros{% endblock %} {% block
-content %}
-<div class="Serie">Serie</div>
+{% extends "layouts/layout_five_columns/layout_five_columns.html" %}
+{% block title %}Libros{% endblock %}
+
+{% block content %}
+  <div class="Serie">
+    Serie<br/>
+    {% include "components/doubleArrowUp/doubleArrowUp.html" %}
+  </div>
 {% endblock %}

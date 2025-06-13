@@ -1,7 +1,7 @@
 use std::fs;
 
 use crate::{
-  domain::{AuthorWithBooks, Language},
+  domain::{Author, Language},
   infrastructure::http::DataWithLanguage,
   presentation::types::ViewData,
 };
@@ -11,20 +11,20 @@ use axum::response::Html;
 #[derive(Template)]
 #[template(path = "views/authors/authors.html")]
 pub struct AuthorsTemplate {
-  authors_with_books: Vec<AuthorWithBooks>,
+  authors: Vec<Author>,
   language: Language,
   twitter_svg: String,
   facebook_svg: String,
   instagram_svg: String,
 }
 
-pub async fn authors_view(view_data: ViewData<Vec<AuthorWithBooks>>) -> AuthorsTemplate {
+pub async fn authors_view(view_data: ViewData<Vec<Author>>) -> AuthorsTemplate {
   let twitter_svg = fs::read_to_string("src/presentation/assets/svg/twitter-logo.svg").unwrap();
   let facebook_svg = fs::read_to_string("src/presentation/assets/svg/facebook-logo.svg").unwrap();
   let instagram_svg = fs::read_to_string("src/presentation/assets/svg/instagram-logo.svg").unwrap();
 
   let template = AuthorsTemplate {
-    authors_with_books: view_data.data,
+    authors: view_data.data,
     language: view_data.language,
     twitter_svg,
     facebook_svg,

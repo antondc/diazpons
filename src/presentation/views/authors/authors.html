@@ -1,11 +1,22 @@
-{% extends "layouts/layout_five_columns/layout_five_columns.html" %} {% block title %}Libros{% endblock %} {% block
-content %}
-<div class="Authors">
-  <ul class="Authors-books">
-    Authors <br />
-    {% for author_with_books in authors_with_books %}
-      {{author_with_books.author.name}}
+{% extends "layouts/layout_five_columns/layout_five_columns.html" %}
+
+{% block title %}Libros{% endblock %}
+
+{% block content %}
+  <ul class="Authors">
+    {% for author in authors %}
+    <li class="Authors-author">
+        <h2 class="Authors-name Hover">
+          <a class="Hover" href="/authors/{{ author.id }}">{{ author.name }}</a>
+        </h2>
+        <img
+          class="Authors-image"
+          src="{{ author.image }}"
+          alt="{{ author.image }}"
+        />
+        <div class="Authors-description">{{author.biography|safe}}</div>
+      </li>
     {% endfor %}
   </ul>
-</div>
+  {% include "components/doubleArrowUp/doubleArrowUp.html" %}
 {% endblock %}
