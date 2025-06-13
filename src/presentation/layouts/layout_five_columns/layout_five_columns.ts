@@ -1,6 +1,6 @@
-console.log("LayoutFiveColumnsLoaded JavaScript loaded.");
+console.log('LayoutFiveColumnsLoaded JavaScript loaded.');
 
-const element = document.getElementById("body");
+const element = document.getElementById('body');
 if (element) {
-  element.style.opacity = "1";
+  element.classList.add('isLoaded');
 }
