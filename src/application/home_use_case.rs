@@ -5,6 +5,7 @@ use crate::{
   types::{Errors, Result},
 };
 use async_trait::async_trait;
+use itertools::Itertools;
 use std::sync::Arc;
 
 #[async_trait]
@@ -56,6 +57,7 @@ impl<K: ILanguageGetOneOrDefaultUseCase> IHomeGetDataUseCase for HomeGetDataUseC
 
     let home_data: Vec<BookWithAuthorSerie> = books
       .iter()
+      .sorted_by_key(|item| item.year)
       .map(|item| BookWithAuthorSerie {
         book: item.clone(),
         author: authors
