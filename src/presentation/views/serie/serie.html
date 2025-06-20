@@ -1,9 +1,27 @@
 {% extends "layouts/layout_five_columns/layout_five_columns.html" %}
+
 {% block title %}Libros{% endblock %}
 
 {% block content %}
-  <div class="Serie">
-    Serie<br/>
-    {% include "components/doubleArrowUp/doubleArrowUp.html" %}
-  </div>
+<div class="Serie">
+  <h2 class="Serie-serie">{{ serie_name }}</h2>
+  <ul class="Serie-books">
+    {% for book_with_author in books_with_authors_serie %}
+    <li class="Serie-book">
+      <h3 class="Serie-title">
+        <a class="Hover" href="/books/{{ book_with_author.book.id }}">{{ book_with_author.book.title }}</a>
+      </h3>
+      <h4 class="Serie-subtitle">{{ book_with_author.book.subtitle }}</h4>
+      <div class="Serie-author">
+        <a class="Hover" href="/authors/{{ book_with_author.author.id }}">{{ book_with_author.author.name }}</a>
+      </div>
+      <a class="Hover Serie-image" href="/books/{{ book_with_author.book.id }}">
+        <img src="{{ book_with_author.book.image_vertical }}" alt="{{ book_with_author.book.image_vertical }}" />
+      </a>
+      <div class="Serie-description">{{ book_with_author.book.description_short }}</div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% include "components/doubleArrowUp/doubleArrowUp.html" %}
+</div>
 {% endblock %}

@@ -1,10 +1,11 @@
 use crate::{
   application::ILanguageGetOneOrDefaultUseCase,
-  domain::{IAuthorRepository, IBookRepository, ILanguageRepository, ISerieRepository},
+  domain::{Book, BookWithAuthorSerie, IAuthorRepository, IBookRepository, ILanguageRepository, ISerieRepository},
   infrastructure::http::DataWithLanguage,
   types::{Errors, Result},
 };
 use async_trait::async_trait;
+use itertools::Itertools;
 use std::sync::Arc;
 
 #[async_trait]
@@ -15,7 +16,7 @@ pub trait ISerieGetDataUseCase {
     author_repository: Arc<dyn IAuthorRepository>,
     language_get_one_or_default_use_case: K,
   ) -> SerieGetDataUseCase<K>;
-  async fn execute(&self, slug: Option<String>, serie_id: String) -> Result<DataWithLanguage<()>>;
+  async fn execute(&self, slug: Option<String>, serie_id: String) -> Result<DataWithLanguage<Vec<BookWithAuthorSerie>>>;
 }
 
 pub struct SerieGetDataUseCase<K> {
@@ -41,10 +42,26 @@ impl<K: ILanguageGetOneOrDefaultUseCase> ISerieGetDataUseCase for SerieGetDataUs
     }
   }
 
-  async fn execute(&self, slug: Option<String>, _serie_id: String) -> Result<DataWithLanguage<()>> {
-    let (_, _books) = self.book_repository.book_get_all().await.unwrap();
-    let (_, _authors) = self.author_repository.author_get_all().await.unwrap();
-    let (_, _series) = self.serie_repository.serie_get_all().await.unwrap();
+  async fn execute(&self, slug: Option<String>, serie_id: String) -> Result<DataWithLanguage<Vec<BookWithAuthorSerie>>> {
+    let (_, books) = self.book_repository.book_get_all().await.unwrap();
+    let (_, authors) = self.author_repository.author_get_all().await.unwrap();
+    let (_, series) = self.serie_repository.serie_get_all().await.unwrap();
+
+    let books_authors_by_serie: Vec<BookWithAuthorSerie> = books
+      .iter()
+      .cloned()
+      .filter(|item| item.serie_id == serie_id) // Get books by collection
+      .sorted_by_key(|item| item.year) // Sort by year
+      .map(|item| BookWithAuthorSerie {
+        book: item.clone(),
+        author: authors // Add author
+          .iter()
+          .find(|author| author.id == item.author_id)
+          .expect("Author not found") // We know there will be an author for this book
+          .clone(),
+        serie: series.iter().find(|item| item.id == serie_id).expect("Serie not found").clone(),
+      })
+      .collect();
 
     // Get language from slug, or default if it doesnt exists
     // TODO: select series by language
@@ -56,7 +73,7 @@ impl<K: ILanguageGetOneOrDefaultUseCase> ISerieGetDataUseCase for SerieGetDataUs
 
     Ok(DataWithLanguage {
       language: language_or_default,
-      data: (),
+      data: books_authors_by_serie,
     })
   }
 }
