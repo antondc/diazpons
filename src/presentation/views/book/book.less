@@ -7,7 +7,7 @@
   column-gap: 10px;
   row-gap: 40px;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-rows: repeat(5, 1fr);
 
   @media @br-tablet {
     display: flex;
@@ -67,13 +67,45 @@
 
   &-description {
     grid-column: 1 / span 2;
-    grid-row: 3 / span 3;
+    grid-row: 3 / span 5;
     font-family: @ff-sans;
     font-size: @fs-normal;
     line-height: @fh-normal;
 
     @media @br-tablet {
       order: 4;
+    }
+  }
+
+  &-reviewsTitle {
+    padding-top: 20px;
+    font-family: @ff-sans-display--condensed;
+    font-size: @fs-big;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+
+  &-reviews {
+    list-style: none;
+    padding-top: 20px;
+    padding-left: 1.5em;
+
+    @media @br-mobile {
+      padding-left: 0;
+    }
+  }
+
+  &-review {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 1em;
+    font-weight: @fw-medium;
+
+    &:before {
+      content: '-';
+      position: absolute;
+      left: 0;
+      line-height: 1;
     }
   }
 }

@@ -11,7 +11,7 @@
     />
     <div class="Book-mainInfo">
       <h3 class="Book-title Hover">{{ book_with_author.book.title }}</h3>
-      <h4 class="Book-subtitle">{{ book_with_author.book.subtitle }}</h4>
+     {% if book_with_author.book.subtitle != "" %}<h4 class="Book-subtitle">{{ book_with_author.book.subtitle }}</h4>{% endif %}
       <div class="Book-author">
         <a class="Hover" href="/authors/{{ book_with_author.author.id }}">{{ book_with_author.author.name }}</a>
       </div>
@@ -24,6 +24,14 @@
       <div>Formato: {{ book_with_author.book.format }}</div>
       <div>ISBN: {{ book_with_author.book.isbn }}</div>
     </div>
-    <div class="Book-description">{{ book_with_author.book.description_long|safe }}</div>
+    <div class="Book-description">
+      {{ book_with_author.book.description_long|safe }}
+      {% if book_with_author.reviews.len() > 0 %}<div class="Book-reviewsTitle">Reseñas:</div>{% endif %}
+      <ul class="Book-reviews">
+        {% for review in book_with_author.reviews %}
+          <li class="Book-review">{% if review.author != "" %}{{ review.author }}: {% endif %}<a class="Hover" href="{{review.url}}" target="_blank">«{{review.title}}»</a>, {{review.media}}, {{review.date}}.</li>
+      {% endfor %}
+      </ul>
+    </div>
   </div>
 {% endblock %}

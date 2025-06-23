@@ -14,7 +14,7 @@ content %}
     <div class="Author-booksTitle">Libros en Díaz & Pons:</div>
     <ul class="Author-books">
       {% for book in author_with_books.books %}
-        <li><a class="Hover" href="/books/{{book.id}}"><i>{{book.title}}</i>, Díaz & Pons, {{book.year}}.</a></li>
+        <li class="Author-book"><a class="Hover" href="/books/{{book.id}}"><i>{{book.title}}</i>, Díaz & Pons, {{book.year}}.</a></li>
       {% endfor %}
     </ul>
   </div>

@@ -1,5 +1,5 @@
 use crate::application::{AuthorsGetDataUseCase, IAuthorsGetDataUseCase, ILanguageGetOneOrDefaultUseCase, LanguageGetOneOrDefaultUseCase};
-use crate::domain::{Author, Book, BookWithAuthorSerie};
+use crate::domain::{Author, Book, BookWithAuthorSerieReviews};
 use crate::infrastructure::http::adapters::AuthorsHttpAdapter;
 use crate::infrastructure::http::middlewares::CurrentPath;
 use crate::infrastructure::http::types::HtmlTemplate;

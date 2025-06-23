@@ -68,5 +68,26 @@
     "image": "/static/img/authors/enrique-alonso.png",
     "biography": "Enrique Alonso es especialista en lógica y computación en la Universidad Autónoma de Madrid, donde ejerce docencia y dirige el grupo de investigación Sociedad digital y conocimiento. Ha trabajado sobre las relaciones entre hombre y máquina en contextos digitales y en la experiencia del usuario en la Red. Entre sus diversos textos cabe destacar La quimera del usuario: resistencia y exclusión en la era digital (2014).",
     "books": ["el-nuevo-leviathan"]
+  },
+  {
+    "id": "gloria-duran",
+    "name": "Gloria Durán",
+    "image": "/static/img/authors/gloria-duran.jpg",
+    "biography": "Gloria G. Durán (Madrid, 1971) es investigadora del Departamento de Antropología Social y Cultural de la Universidad Nacional de Educación a Distancia. Ha publicado diversas obras sobre el Dandysmo, especialmente Dandysmo y Contragénero —CENDEAC, Murcia, 2010— y Dandys Extrafinos —Papel de Fumar, Madrid, 2012—. Además, ha trabajado sobre la figura del artista, los salones del XVII y XVIII y el arte de la conversación. Colaboradora habitual de Medialab-Prado, donde se desarrolla el Máster de Cultura, Comunicación y Ciudadanía Digital de la Universidad Juan Carlos I, ha participado activamente en el desarrollo del Centro Social Autogestionado La Tabacalera de Lavapiés, y desarrolla proyectos con el colectivo Toxic Lesbian.",
+    "books": ["baronesa-dandy"]
+  },
+  {
+    "id": "gilles-tiberghien",
+    "name": "Gilles A. Tiberghien",
+    "image": "/static/img/authors/gilles-tiberghien.jpg",
+    "biography": "Gilles A. Tiberghien es profesor titular de la universidad París I —Pantheón-Sorbonne—, en la que es docente especializado en estética. Reconocido autor especializado en Land Art, es también miembro del comité de redacción de la revista Cahiers du Musée National d’Art Moderne, editada por el centro Pompidou, y de Les Carnets du Paysage, editada por la École Nationale Supérieure du Paysage.<br />Asesor de la colección «Arts et esthétique» en Dominique Carré Editeur, es también colaborador de las editoriales Hoëbeke y Desclée de Brouwer, en la que apareció la primera edición de Amistar.",
+    "books": ["amistar"]
+  },
+  {
+    "id": "karl-gottlob-schelle",
+    "name": "Karl Gottlob Schelle",
+    "image": "/static/img/authors/karl-gottlob-schelle.jpg",
+    "biography": "Karl Gottlob Schelle nació en Altweiler en 1777, muriendo hacia 1825 en algún manicomio sajón. Antes profesó en Halle, fue preceptor en Leipzig y llegó a subdirector en el Liceo de Freiberg. Además de este Arte de pasear (1802), también en Leipzig publicó un texto sobre la filosofía popular de Garve (1800), un libro sobre el filósofo Karl Heinrich Heydenreich (1802), un ensayo Sobre la alegría (1804) y editó la Geografía física de Immanuel Kant para la instrucción de jóvenes (1807).",
+    "books": ["el-arte-de-pasear"]
   }
 ]

@@ -1,6 +1,6 @@
 use crate::{
   application::ILanguageGetOneOrDefaultUseCase,
-  domain::{BookWithAuthorSerie, IAuthorRepository, IBookRepository, ILanguageRepository, ISerieRepository},
+  domain::{BookWithAuthorSerieReviews, IAuthorRepository, IBookRepository, ILanguageRepository, ISerieRepository},
   infrastructure::http::DataWithLanguage,
   types::{Errors, Result},
 };
@@ -15,7 +15,7 @@ pub trait IBooksGetDataUseCase {
     serie_repository: Arc<dyn ISerieRepository>,
     language_get_one_or_default_use_case: K,
   ) -> BooksGetDataUseCase<K>;
-  async fn execute(&self, slug: Option<String>) -> Result<DataWithLanguage<Vec<BookWithAuthorSerie>>>;
+  async fn execute(&self, slug: Option<String>) -> Result<DataWithLanguage<Vec<BookWithAuthorSerieReviews>>>;
 }
 
 pub struct BooksGetDataUseCase<K> {
@@ -41,7 +41,7 @@ impl<K: ILanguageGetOneOrDefaultUseCase> IBooksGetDataUseCase for BooksGetDataUs
     }
   }
 
-  async fn execute(&self, slug: Option<String>) -> Result<DataWithLanguage<Vec<BookWithAuthorSerie>>> {
+  async fn execute(&self, slug: Option<String>) -> Result<DataWithLanguage<Vec<BookWithAuthorSerieReviews>>> {
     let (_, books) = self.book_repository.book_get_all().await.unwrap();
     let (_, authors) = self.author_repository.author_get_all().await.unwrap();
     let (_, series) = self.serie_repository.serie_get_all().await.unwrap();
@@ -54,9 +54,9 @@ impl<K: ILanguageGetOneOrDefaultUseCase> IBooksGetDataUseCase for BooksGetDataUs
       .await
       .map_err(|_| Errors::new(Errors::NotFound, Some(String::from("Language not found"))))?;
 
-    let books_data: Vec<BookWithAuthorSerie> = books
+    let books_data: Vec<BookWithAuthorSerieReviews> = books
       .iter()
-      .map(|item| BookWithAuthorSerie {
+      .map(|item| BookWithAuthorSerieReviews {
         book: item.clone(),
         author: authors
           .iter()
@@ -64,6 +64,7 @@ impl<K: ILanguageGetOneOrDefaultUseCase> IBooksGetDataUseCase for BooksGetDataUs
           .expect("Author not found") // We know there will be an author for this book
           .clone(),
         serie: series.iter().find(|serie| serie.id == item.serie_id).expect("Serie not found").clone(),
+        reviews: vec![],
       })
       .collect();
 

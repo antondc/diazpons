@@ -1,7 +1,7 @@
 use std::fs;
 
 use crate::{
-  domain::{BookWithAuthorSerie, Language},
+  domain::{BookWithAuthorSerieReviews, Language},
   presentation::types::ViewData,
 };
 use askama::Template;
@@ -10,14 +10,14 @@ use axum::response::Html;
 #[derive(Template)]
 #[template(path = "views/book/book.html")]
 pub struct BookTemplate {
-  book_with_author: BookWithAuthorSerie,
+  book_with_author: BookWithAuthorSerieReviews,
   language: Language,
   twitter_svg: String,
   facebook_svg: String,
   instagram_svg: String,
 }
 
-pub async fn book_view(view_data: ViewData<BookWithAuthorSerie>) -> BookTemplate {
+pub async fn book_view(view_data: ViewData<BookWithAuthorSerieReviews>) -> BookTemplate {
   let twitter_svg = fs::read_to_string("src/presentation/assets/svg/twitter-logo.svg").unwrap();
   let facebook_svg = fs::read_to_string("src/presentation/assets/svg/facebook-logo.svg").unwrap();
   let instagram_svg = fs::read_to_string("src/presentation/assets/svg/instagram-logo.svg").unwrap();
