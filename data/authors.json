@@ -89,5 +89,12 @@
     "image": "/static/img/authors/karl-gottlob-schelle.jpg",
     "biography": "Karl Gottlob Schelle nació en Altweiler en 1777, muriendo hacia 1825 en algún manicomio sajón. Antes profesó en Halle, fue preceptor en Leipzig y llegó a subdirector en el Liceo de Freiberg. Además de este Arte de pasear (1802), también en Leipzig publicó un texto sobre la filosofía popular de Garve (1800), un libro sobre el filósofo Karl Heinrich Heydenreich (1802), un ensayo Sobre la alegría (1804) y editó la Geografía física de Immanuel Kant para la instrucción de jóvenes (1807).",
     "books": ["el-arte-de-pasear"]
+  },
+  {
+    "id": "ivan-illich",
+    "name": "Iván Illich",
+    "image": "/static/img/authors/ivan-illich.jpg",
+    "biography": "Ivan Illich (1926-2002) fue un pensador austriaco cuyo trabajo abarcó numerosas disciplinas y temáticas contemporáneas. Con una capacidad inusitada para el análisis social y cultural, su trabajo hace especial referencia a las relaciones entre el individuo y la sociedad, así como las perversiones de la ciencia y la tecnología en la sociedad contemporánea.",
+    "books": ["el-derecho-al-desempleo-util", "energia-y-equidad"]
   }
 ]

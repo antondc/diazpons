@@ -15,6 +15,5 @@ pub struct Book {
   pub isbn: String,
   pub image_vertical: String,
   pub image_horizontal: String,
-  pub description_short: String,
-  pub description_long: String,
+  pub description: String,
 }

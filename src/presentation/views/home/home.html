@@ -1,8 +1,5 @@
-{% extends "layouts/layout_five_columns/layout_five_columns.html" %}
-
-{% block title %}Libros{% endblock %}
-
-{% block content %}
+{% extends "layouts/layout_five_columns/layout_five_columns.html" %} {% block title %}Libros{% endblock %} {% block
+content %}
 <div class="Home">
   <ul class="Home-books">
     {% for book_with_author in books_with_authors %}
@@ -10,14 +7,16 @@
       <h3 class="Home-title">
         <a class="Hover" href="/books/{{ book_with_author.book.id }}">{{ book_with_author.book.title }}</a>
       </h3>
-      {% if book_with_author.book.subtitle != "" %}<h4 class="Books-subtitle">{{ book_with_author.book.subtitle }}</h4>{% endif %}
+      {% if book_with_author.book.subtitle != "" %}
+      <h4 class="Books-subtitle">{{ book_with_author.book.subtitle }}</h4>
+      {% endif %}
       <div class="Home-author">
         <a class="Hover" href="/authors/{{ book_with_author.author.id }}">{{ book_with_author.author.name }}</a>
       </div>
       <a class="Hover Home-image" href="/books/{{ book_with_author.book.id }}">
         <img src="{{ book_with_author.book.image_vertical }}" alt="{{ book_with_author.book.image_vertical }}" />
       </a>
-      <div class="Home-description">{{ book_with_author.book.description_short }}</div>
+      <div class="Home-description">{{ book_with_author.book.description }}</div>
     </li>
     {% endfor %}
   </ul>

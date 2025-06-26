@@ -25,7 +25,9 @@
       <div>ISBN: {{ book_with_author.book.isbn }}</div>
     </div>
     <div class="Book-description">
-      {{ book_with_author.book.description_long|safe }}
+      {{ book_with_author.book.description|safe }}
+      <br /><br />
+      {{ book_with_author.author.biography|safe }}
       {% if book_with_author.reviews.len() > 0 %}<div class="Book-reviewsTitle">Reseñas:</div>{% endif %}
       <ul class="Book-reviews">
         {% for review in book_with_author.reviews %}
