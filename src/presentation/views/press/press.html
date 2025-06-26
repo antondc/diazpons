@@ -1,6 +1,13 @@
-{% extends "layouts/layout_five_columns/layout_five_columns.html" %} {% block title %}Libros{% endblock %} {% block
-content %}
-<div class="Press">Prensa</div>
+{% extends "layouts/layout_five_columns/layout_five_columns.html" %}
+{% block title %}Libros{% endblock %}
 
-
+{% block content %}
+  <div class="Press">
+    <div class="Press-title">Artículos en prensa</div>
+    <ul class="Press-reviews">
+      {% for review in reviews %}
+        <li class="Press-review">{% if review.author != "" %}{{ review.author }}: {% endif %}<a class="Hover" href="{{review.url}}" target="_blank">«{{review.title}}»</a>, {{review.media}}, {{review.date}}.</li>
+      {% endfor %}
+    </ul>
+  </div>
 {% endblock %}

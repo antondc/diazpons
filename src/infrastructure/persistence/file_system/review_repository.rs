@@ -29,4 +29,21 @@ impl IReviewRepository for FileSystemReviewRepository {
 
     Ok((meta, book_reviews))
   }
+
+  async fn review_get_all(&self) -> Result<(Meta, Vec<Review>)> {
+    let json_reviews = get_file_content("data/reviews.json")
+      .map_err(|error| Errors::new(Errors::Database, Some(error.to_string())))
+      .unwrap();
+    let reviews: Vec<Review> = serde_json::from_str(&json_reviews).expect("Invalid JSON");
+    let count = reviews.first().map(|item| item.count.unwrap_or(0));
+
+    let meta = Meta {
+      total_items: count,
+      offset: None,
+      size: None,
+      sort: None,
+    };
+
+    Ok((meta, reviews))
+  }
 }

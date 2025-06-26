@@ -1,7 +1,7 @@
 use std::fs;
 
 use crate::{
-  domain::{BookWithAuthorSerieReviews, Language},
+  domain::{BookWithAuthorSerieReviews, Language, Review},
   presentation::types::ViewData,
 };
 use askama::Template;
@@ -11,18 +11,20 @@ use axum::response::Html;
 #[template(path = "views/press/press.html")]
 pub struct PressTemplate {
   language: Language,
+  reviews: Vec<Review>,
   twitter_svg: String,
   facebook_svg: String,
   instagram_svg: String,
 }
 
-pub async fn press_view(view_data: ViewData<()>) -> PressTemplate {
+pub async fn press_view(view_data: ViewData<Vec<Review>>) -> PressTemplate {
   let twitter_svg = fs::read_to_string("src/presentation/assets/svg/twitter-logo.svg").unwrap();
   let facebook_svg = fs::read_to_string("src/presentation/assets/svg/facebook-logo.svg").unwrap();
   let instagram_svg = fs::read_to_string("src/presentation/assets/svg/instagram-logo.svg").unwrap();
 
   let template = PressTemplate {
     language: view_data.language,
+    reviews: view_data.data,
     twitter_svg,
     facebook_svg,
     instagram_svg,
