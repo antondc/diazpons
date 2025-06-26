@@ -14,7 +14,11 @@ content %}
         <a class="Hover" href="/authors/{{ book_with_author.author.id }}">{{ book_with_author.author.name }}</a>
       </div>
       <a class="Hover Books-image" href="/books/{{ book_with_author.book.id }}">
-        <img src="{{ book_with_author.book.image_vertical }}" alt="{{ book_with_author.book.image_vertical }}" />
+        <img
+          class="Image"
+          src="{{ book_with_author.book.image_vertical }}"
+          alt="{{ book_with_author.book.image_vertical }}"
+        />
       </a>
       <div class="Books-description">{{ book_with_author.book.description }}</div>
     </li>

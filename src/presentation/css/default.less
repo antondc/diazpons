@@ -48,4 +48,13 @@ html {
     color: @c-accent;
     cursor: pointer;
   }
+
+  .Image {
+    opacity: 0;
+    transition: opacity @td-fastest ease;
+
+    &-loaded {
+      opacity: 1;
+    }
+  }
 }
