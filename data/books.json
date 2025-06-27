@@ -10,7 +10,7 @@
     "format": "11 x 17",
     "isbn": "...",
     "image_horizontal": "",
-    "image_vertical": "/static/img/books/m16/m16.png",
+    "image_vertical": "/static/img/books/M16/M16.png",
     "description": "¡Fronteras! es un recorrido por los laberintos de la identidad social e individual que se adentra en el significado actual de términos como «nación» o «estado». De la inevitabilidad de Europa a los nacionalismos postconstitucionales y de los contextos políticos de la posguerra fría a los energéticos y religiosos que dibujan el Nuevo Oriente Próximo y el terror en Europa."
   },
   {
@@ -24,7 +24,7 @@
     "format": "11 x 17",
     "isbn": "978-84-944522-4-6",
     "image_horizontal": "",
-    "image_vertical": "/static/img/books/m15/m15.png",
+    "image_vertical": "/static/img/books/M15/M15.png",
     "description": "Futurópolis propone una mirada a las alternativas de evolución para las ciudades contraponiendo dos horizontes aparente-mente antagónicos: la utopía tecnológica que se articula sobre la extensión y dominio de las tecnologías de la información y la comunicación, y la distopía que se vaticina desde el escenario de la crisis ecológica global."
   },
   {
@@ -38,7 +38,7 @@
     "format": "11 x 17",
     "isbn": "978-84-944522-1-5",
     "image_horizontal": "",
-    "image_vertical": "/static/img/books/m14/m14.jpg",
+    "image_vertical": "/static/img/books/M14/M14.jpg",
     "description": "La vida frente al espejo aborda la relación entre los trastornos de alimentación y la influencia que sobre ellos ejerce el canon de belleza contemporáneo. Un libro en el que la autora dirige su análisis no sólo hacia la vivencia de quien ha sufrido o sufre la enfermedad, sino también hacia quienes le rodean, y aborda de igual manera la influencia que determinados contextos ejercen en esta situación."
   },
   {
@@ -52,7 +52,7 @@
     "format": "11 x 17",
     "isbn": "978-84-944522-0-8",
     "image_horizontal": "",
-    "image_vertical": "/static/img/books/m13/m13.png",
+    "image_vertical": "/static/img/books/M13/M13.png",
     "description": "La ciudad en movimiento trata sobre aquellos movimientos urbanos contemporáneos que, pese a las circunstancias adversas, buscan la reconstrucción de la vida en común en la sociedad. Un fenómeno especialmente notable en los países del sur de Europa, que lejos de consistir en meros intentos de defensa ante la crisis y las políticas que la acompañan, plantea alternativas ambientales, económicas y sociales."
   },
   {
@@ -66,7 +66,7 @@
     "format": "11 x 17",
     "isbn": "978-84-942496-3-1",
     "image_horizontal": "",
-    "image_vertical": "/static/img/books/m11/m11.jpg",
+    "image_vertical": "/static/img/books/M11/M11.jpg",
     "description": "Economía y pseudociencia trata de la ciencia Económica, así como de los usos interesados que en numerosas ocasiones se hacen de ella, más relacionados con las falacias pseudocientíficas que con el estudio de la creación y distribución de los recursos, objeto final de esta disciplina. Con un lenguaje certero José Luis Ferreira acomete la ardua tarea de desenmascarar algunas tendencias imperantes en el debate económico contemporáneo, evidenciando los diagnósticos y las recomendaciones parciales y utilitaristas que en numerosas ocasiones contaminan a la opinión pública."
   },
   {
@@ -80,7 +80,7 @@
     "format": "11 x 17",
     "isbn": "978-84-942496-6-2",
     "image_horizontal": "",
-    "image_vertical": "/static/img/books/m12/m12.jpg",
+    "image_vertical": "/static/img/books/M12/M12.jpg",
 
     "description": "Economía, poder y política se solapan a diario, violando las artificiales fronteras académicas que tratan de segregarlos en mundos separados y ocultando que el poder es la bisagra que conecta habitualmente a la economía y la política. En este libro se denuncia la función mistificadora de los enfoques parcelarios propios de la ideología dominante, que desembocan en divorcios tan sonados como los que enfrentan economía y ecología, especie humana y naturaleza, o individuo y sociedad."
   },
@@ -95,7 +95,7 @@
     "format": "11 x 17",
     "isbn": "978-84-942496-5-5",
     "image_horizontal": "",
-    "image_vertical": "/static/img/books/m10/m10.jpg",
+    "image_vertical": "/static/img/books/M10/M10.jpg",
     "description": "En Postfascismos José Manuel Querol analiza los numerosos elementos propios de los fascismos que se encuentran infiltrados en las sociedades actuales. Trazando un arco desde el romanticismo, y pasando por el auge de los totalitarismos a principios del siglo xx, evidencia los elementos sobre los que se sustenta el auge de los movimientos ultraconservadores y nacionalistas en el seno de los sistemas democráticos contemporáneos."
   },
   {
@@ -109,7 +109,7 @@
     "format": "11 x 17",
     "isbn": "978-84-942496-4-8",
     "image_horizontal": "",
-    "image_vertical": "/static/img/books/m09/m09.jpg",
+    "image_vertical": "/static/img/books/M09/M09.jpg",
     "description": "En La excepción permanente se sostiene que el estado de excepción es la forma política propia de la modernidad tardía. Pero, contrariamente a otras defensas de la misma tesis, aquí se afirma que la excepción característica de nuestra época se funda en la ideología del desencadenamiento compulsivo de una «vida» plena: momentos irrepetibles, experiencias únicas e identidades transgresoras que, alterando formidablemente las nociones clásicas de soberanía, autoridad y emancipación, producen una construcción política del tiempo cuya verdadera naturaleza necesita ocultarse celosamente."
   },
   {
@@ -123,7 +123,7 @@
     "format": "11 x 17",
     "isbn": "978-84-942496-2-4",
     "image_horizontal": "",
-    "image_vertical": "/static/img/books/m08/m08.jpg",
+    "image_vertical": "/static/img/books/M08/M08.jpg",
     "description": "En La sociedad del desperdicio Manuel Toharia aborda el problema que el desarrollo desbocado supone para el ecosistema, pero también para las sociedades de las economías de países en vías de desarrollo. La extracción de recursos naturales y los residuos generados por su manufactura y consumo tienen numerosas repercusiones para terceros países que, sin participar de los beneficios de estas economías, sufren las consecuencias."
   },
   {
@@ -137,7 +137,7 @@
     "format": "11 x 17",
     "isbn": "978-84-942496-1-7",
     "image_horizontal": "",
-    "image_vertical": "/static/img/books/m07/m07.jpg",
+    "image_vertical": "/static/img/books/M07/M07.jpg",
     "description": "Las dinámicas económicas y culturales que conforman el mundo contemporáneo se tornan cada vez más extremas y complejas, quedando en demasiadas ocasiones fuera de control. En Moderar extremistán Jorge Riechmann indaga sobre la necesidad de redimensionar fenómenos como lo económico o lo social hacia una medida más humana, teniendo presentes además los límites biofísicos del planeta."
   },
   {
