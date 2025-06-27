@@ -17,33 +17,39 @@ deploy_production:
   only:
     - master
   script:
-    - ssh {SERVER_USER}@${SERVER_ADDRESS} "cd {SERVER_PATH}
+    - ssh ${SERVER_USER}@${SERVER_ADDRESS} "
+        cd ${SERVER_PATH}
         && git pull origin master
       "
-    - ssh {SERVER_USER}@${SERVER_ADDRESS} "source ~/.bash_profile
+    - ssh ${SERVER_USER}@${SERVER_ADDRESS} "
+        source ~/.bash_profile
         && source ~/.cargo/env
-        && cd {SERVER_PATH}
+        && cd ${SERVER_PATH}
         && git checkout master
         && cargo build --release
       "
-    - ssh {SERVER_USER}@${SERVER_ADDRESS} "source ~/.bash_profile
+    - ssh ${SERVER_USER}@${SERVER_ADDRESS} "
+        source ~/.bash_profile
         && source ~/.cargo/env
-        && cd {SERVER_PATH}
+        && cd ${SERVER_PATH}
         && cargo sweep -t 1
       "
-    - ssh {SERVER_USER}@${SERVER_ADDRESS} "source ~/.bash_profile
+    - ssh ${SERVER_USER}@${SERVER_ADDRESS} "
+        source ~/.bash_profile
         && source ~/.cargo/env
-        && cd {SERVER_PATH}
+        && cd ${SERVER_PATH}
         && npm ci --verbose
       "
-    - ssh {SERVER_USER}@${SERVER_ADDRESS} "source ~/.bash_profile
+    - ssh ${SERVER_USER}@${SERVER_ADDRESS} "
+        source ~/.bash_profile
         && source ~/.cargo/env
-        && cd {SERVER_PATH}
+        && cd ${SERVER_PATH}
         && npm run build::js
       "
-    - ssh {SERVER_USER}@${SERVER_ADDRESS} "source ~/.bash_profile
+    - ssh ${SERVER_USER}@${SERVER_ADDRESS} "
+        source ~/.bash_profile
         && source ~/.cargo/env
-        && cd {SERVER_PATH}
+        && cd ${SERVER_PATH}
         && export ENVIRONMENT=${ENVIRONMENT}
         && cargo build --release
         && pm2 stop diazpons --silent || true
