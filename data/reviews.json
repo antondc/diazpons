@@ -1,6 +1,69 @@
 [
   {
     "count": 1,
+    "book_id": "economia-y-pseudociencia",
+    "author": "Joaquín Estefanía",
+    "title": "El economista y las manos sucias",
+    "media": "El País",
+    "date": "29 de marzo de 2015",
+    "url": "/static/file/estefania-joaquin-el-economista-y-las-manos-sucias.png"
+  },
+  {
+    "count": 1,
+    "book_id": "economia-y-pseudociencia",
+    "author": "John Muller",
+    "title": "El fichaje",
+    "media": "El Mundo",
+    "date": "1 de abril de 2015",
+    "url": "https://www.elmundo.es/madrid/2015/03/31/551b022fca47410d2c8b456e.html"
+  },
+  {
+    "count": 1,
+    "book_id": "moderar-extremistan",
+    "author": "José Abelda",
+    "title": "La naturalización del capitalismo",
+    "media": "El Diario.es",
+    "date": "16 de marzo de 2015",
+    "url": "https://web.archive.org/web/20160828115102/http://www.eldiario.es/ultima-llamada/Crisis_civilizacion-capitalismo-ecosocialismo_6_367173302.html"
+  },
+  {
+    "count": 1,
+    "book_id": "baronesa-dandy",
+    "author": "Begoña Huertas",
+    "title": "Hace un siglo fuimos modernos",
+    "media": "El Diario.es",
+    "date": "16 de enero de 2014",
+    "url": "https://www.eldiario.es/opinion/zona-critica/hace-siglo-modernos_129_5078396.html"
+  },
+  {
+    "count": 1,
+    "book_id": "el-arte-de-pasear",
+    "author": "Manuel Hidalgo",
+    "title": "Vamos a dar un paseo",
+    "media": "El Cultural",
+    "date": "17 de julio de 2014",
+    "url": "https://www.elespanol.com/el-cultural/blogs/tengo_una_cita/20140717/vamos-dar-paseo/20367966_12.html"
+  },
+  {
+    "count": 1,
+    "book_id": "la-sociedad-del-desperdicio",
+    "author": "Pepa Fernández (ent.)",
+    "title": "La sociedad del desperdicio",
+    "media": "No es un día cualquiera, RTVE",
+    "date": "27 de diciembre de 2014",
+    "url": "https://www.rtve.es/play/audios/no-es-un-dia-cualquiera/no-dia-cualquiera-sociedad-del-desperdicio/2929855/"
+  },
+  {
+    "count": 1,
+    "book_id": "economia-y-pseudociencia",
+    "author": "Diego Moreno",
+    "title": "Crítica de las falacias económicas imperantes",
+    "media": "El Diario.es",
+    "date": "19 de noviembre de 2013",
+    "url": "https://www.eldiario.es/agendapublica/impacto_social/critica-falacias-economicas-imperantes_1_5162249.html"
+  },
+  {
+    "count": 1,
     "book_id": "moderar-extremistan",
     "author": "Salvador López Arnal",
     "title": "Una llamada urgente y documentada a favor de (un más necesario que nunca) Mesuristán.",
@@ -17,15 +80,7 @@
     "date": "02 de marzo de 2015",
     "url": "https://larepublicacultural.es/article9902"
   },
-  {
-    "count": 1,
-    "book_id": "moderar-extremistan",
-    "author": "José Abelda",
-    "title": "La naturalización del capitalismo",
-    "media": "El Diario.es",
-    "date": "16 de marzo de 2015",
-    "url": "https://web.archive.org/web/20160828115102/http://www.eldiario.es/ultima-llamada/Crisis_civilizacion-capitalismo-ecosocialismo_6_367173302.html"
-  },
+
   {
     "count": 1,
     "book_id": "economia-poder-y-politica",
@@ -53,24 +108,7 @@
     "date": "25 de septiembre de 2013.",
     "url": "https://www.galde.eu/wp-content/uploads/2013/11/G3TodoWeb.pdf"
   },
-  {
-    "count": 1,
-    "book_id": "economia-y-pseudociencia",
-    "author": "John Muller",
-    "title": "El fichaje",
-    "media": "El Mundo",
-    "date": "1 de abril de 2015",
-    "url": "https://www.elmundo.es/madrid/2015/03/31/551b022fca47410d2c8b456e.html"
-  },
-  {
-    "count": 1,
-    "book_id": "economia-y-pseudociencia",
-    "author": "Joaquín Estefanía",
-    "title": "El economista y las manos sucias",
-    "media": "El País",
-    "date": "29 de marzo de 2015",
-    "url": "https://elpais.com/economia/2015/03/29/actualidad/1427646073_315191.html"
-  },
+
   {
     "count": 1,
     "book_id": "economia-y-pseudociencia",
@@ -97,15 +135,6 @@
     "media": "Nada es gratis",
     "date": "2 de diciembre de 2013",
     "url": "https://nadaesgratis.es/cabrales/recomendaciones-de-lectura-economia-y-pseudociencia"
-  },
-  {
-    "count": 1,
-    "book_id": "economia-y-pseudociencia",
-    "author": "Diego Moreno",
-    "title": "Crítica de las falacias económicas imperantes",
-    "media": "El Diario.es",
-    "date": "19 de noviembre de 2013",
-    "url": "https://www.eldiario.es/agendapublica/impacto_social/critica-falacias-economicas-imperantes_1_5162249.html"
   },
   {
     "count": 1,
@@ -173,15 +202,6 @@
   {
     "count": 1,
     "book_id": "la-sociedad-del-desperdicio",
-    "author": "Pepa Fernández (ent.)",
-    "title": "La sociedad del desperdicio",
-    "media": "No es un día cualquiera, RTVE",
-    "date": "27 de diciembre de 2014",
-    "url": "https://www.rtve.es/play/audios/no-es-un-dia-cualquiera/no-dia-cualquiera-sociedad-del-desperdicio/2929855/"
-  },
-  {
-    "count": 1,
-    "book_id": "la-sociedad-del-desperdicio",
     "author": "Vladimir López Alcañiz",
     "title": "En el atardecer de la modernidad",
     "media": "Concepto|s e historia|s",
@@ -227,15 +247,6 @@
   {
     "count": 1,
     "book_id": "baronesa-dandy",
-    "author": "Begoña Huertas",
-    "title": "Hace un siglo fuimos modernos",
-    "media": "El Diario.es",
-    "date": "16 de enero de 2014",
-    "url": "https://www.eldiario.es/opinion/zona-critica/hace-siglo-modernos_129_5078396.html"
-  },
-  {
-    "count": 1,
-    "book_id": "baronesa-dandy",
     "author": "Enrique Vila-Matas",
     "title": "Ella fue Dadá",
     "media": "El País",
@@ -249,15 +260,6 @@
     "title": "Dandies optimizados",
     "media": "Página/12",
     "date": "29 de noviembre de 2013",
-    "url": "https://www.pagina12.com.ar/diario/suplementos/las12/13-8477-2013-11-29.html"
-  },
-  {
-    "count": 1,
-    "book_id": "el-arte-de-pasear",
-    "author": "Manuel Hidalgo",
-    "title": "Vamos a dar un paseo",
-    "media": "El Cultural",
-    "date": "17 de julio de 2014",
     "url": "https://www.pagina12.com.ar/diario/suplementos/las12/13-8477-2013-11-29.html"
   },
   {
