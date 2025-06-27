@@ -1,0 +1,17 @@
+<!-- static/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Default Title{% endblock %}</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/static/favicon/site.webmanifest" />
+  <script defer src="/static/client-124b.js"></script><link href="/static/main-124b.css" rel="stylesheet"></head>
+  <body id="body" style="opacity: 0">
+    {% block layout %} {% block content %} {% endblock %} {% endblock %}
+  </body>
+  <script src="http://localhost:35729/livereload.js?snipver=1"></script>
+</html>
