@@ -17,9 +17,36 @@ deploy_production:
   only:
     - master
   script:
-    - ssh xum35s@ec2-3-123-3-198.eu-central-1.compute.amazonaws.com "cd /var/www/html/diazpons && git pull origin master"
-    - ssh xum35s@ec2-3-123-3-198.eu-central-1.compute.amazonaws.com "source ~/.bash_profile && source ~/.cargo/env && cd /var/www/html/diazpons && git checkout master && cargo build --release"
-    - ssh xum35s@ec2-3-123-3-198.eu-central-1.compute.amazonaws.com "source ~/.bash_profile && source ~/.cargo/env && cd /var/www/html/diazpons && cargo sweep -t 1"
-    - ssh xum35s@ec2-3-123-3-198.eu-central-1.compute.amazonaws.com "source ~/.bash_profile && source ~/.cargo/env && cd /var/www/html/diazpons && npm ci --verbose"
-    - ssh xum35s@ec2-3-123-3-198.eu-central-1.compute.amazonaws.com "source ~/.bash_profile && source ~/.cargo/env && cd /var/www/html/diazpons && npm run build::js"
-    - ssh xum35s@ec2-3-123-3-198.eu-central-1.compute.amazonaws.com "source ~/.bash_profile && source ~/.cargo/env && cd /var/www/html/diazpons && cargo build --release && pm2 stop diazpons --silent || true && pm2 delete diazpons --silent || true && pm2 start target/release/diazpons --name diazpons --update-env"
+    - ssh {SERVER_USER}@${SERVER_ADDRESS} "cd {SERVER_PATH}
+        && git pull origin master
+      "
+    - ssh {SERVER_USER}@${SERVER_ADDRESS} "source ~/.bash_profile
+        && source ~/.cargo/env
+        && cd {SERVER_PATH}
+        && git checkout master
+        && cargo build --release
+      "
+    - ssh {SERVER_USER}@${SERVER_ADDRESS} "source ~/.bash_profile
+        && source ~/.cargo/env
+        && cd {SERVER_PATH}
+        && cargo sweep -t 1
+      "
+    - ssh {SERVER_USER}@${SERVER_ADDRESS} "source ~/.bash_profile
+        && source ~/.cargo/env
+        && cd {SERVER_PATH}
+        && npm ci --verbose
+      "
+    - ssh {SERVER_USER}@${SERVER_ADDRESS} "source ~/.bash_profile
+        && source ~/.cargo/env
+        && cd {SERVER_PATH}
+        && npm run build::js
+      "
+    - ssh {SERVER_USER}@${SERVER_ADDRESS} "source ~/.bash_profile
+        && source ~/.cargo/env
+        && cd {SERVER_PATH}
+        && export ENVIRONMENT=${ENVIRONMENT}
+        && cargo build --release
+        && pm2 stop diazpons --silent || true
+        && pm2 delete diazpons --silent || true
+        && pm2 start target/release/diazpons --name diazpons --update-env
+      "
