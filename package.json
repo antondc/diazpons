@@ -9,7 +9,7 @@
     "webpack": "webpack --config ./webpack/webpack.config.js",
     "build::js": "npm run linker && npm run webpack",
     "hmr": "node ./scripts/hmr.js",
-    "build::all": "concurrently \"npm run hmr\" \"cargo watch -w src/ -s 'npm run build::js && cargo run'\""
+    "run::dev": "concurrently \"npm run hmr\" \"cargo watch -w src/ -s 'npm run build::js && cargo run'\""
   },
   "author": "",
   "license": "ISC",
