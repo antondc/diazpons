@@ -6,15 +6,17 @@
   display: grid;
   align-items: center;
   grid-template-columns: repeat(5, 1fr);
+  height: 60px;
   user-select: none;
   gap: 10px;
 
   @media @br-mobile {
-    gap: 0;
-    column-gap: 10px;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 50px 0 0;
+    height: unset;
     transition: grid-template-rows @td-fast ease @td-fast;
+    gap: 0;
+    column-gap: 10px;
 
     @{c}-list,
     @{c}-socialMedia {
