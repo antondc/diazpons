@@ -23,6 +23,7 @@
       </div>
       <div>{{ book_with_author.book.pages }} páginas.</div>
       <div>Formato: {{ book_with_author.book.format }}</div>
+      <div>{% if book_with_author.book.designer != "" %}Diseño: {{ book_with_author.book.designer }}{% endif %}</div>
       <div>ISBN: {{ book_with_author.book.isbn }}</div>
     </div>
     <div class="Book-description">

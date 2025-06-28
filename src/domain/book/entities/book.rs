@@ -12,6 +12,7 @@ pub struct Book {
   pub year: i32,
   pub pages: i32,
   pub format: String,
+  pub designer: String,
   pub isbn: String,
   pub image_vertical: String,
   pub image_horizontal: String,
