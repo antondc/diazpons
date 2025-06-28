@@ -1,17 +1,17 @@
 <header class="Header" id="header">
   <div class="Header-logo">
     <a class="Hover" href="/">
-      <img class="Header-logoRegular" src="/static/img/logo/logo.png" />
-      <img class="Header-logoSmall" src="/static/img/logo/logo-small.png" />
+      <img class="Header-logoRegular" src="/static/img/logo/logo.png" rel="preload" />
+      <img class="Header-logoSmall" src="/static/img/logo/logo-small.png" rel="preload" />
     </a>
   </div>
   <div class="Header-logoText">
     <a class="Hover" href="/">
-      <img class="Image" src="/static/img/logo/logo-text.png" />
+      <img class="Image" src="/static/img/logo/logo-text.png" rel="preload" />
     </a>
   </div>
   <ul class="Header-list" id="header-list">
-    <li class="Header-item">
+    <li class="Header-item" draggable="false">
       <a class="Hover" href="/books">{{language.glossary.catalog}}</a>
     </li>
     <li class="Header-item">

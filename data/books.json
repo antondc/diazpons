@@ -183,9 +183,9 @@
     "description": "El arte de pasear, obra del filósofo alemán Karl Gottlob Schelle, es un alegre tratado que nos enseña a orientarnos en nuestros paseos diarios. Traducido por primera vez al castellano, se trata de un inteligente viático que advierte a los despistados: no se trata sólo de aprender a decantarse por la cuesta empinada o el llano, sino de adaptar recorrido y compañía a nuestros estados de ánimo."
   },
   {
-    "id": "el-nuevo-leviathan",
-    "title": "El nuevo leviathan",
-    "subtitle": "",
+    "id": "el-nuevo-leviatan",
+    "title": "El nuevo leviatan",
+    "subtitle": "Una historia política de la Red",
     "author_id": "enrique-alonso",
     "serie_id": "critik",
     "year": 2016,

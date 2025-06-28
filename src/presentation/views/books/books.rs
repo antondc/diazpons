@@ -8,7 +8,7 @@ use askama::Template;
 use axum::response::Html;
 
 #[derive(Template)]
-#[template(path = "views/home/home.html")]
+#[template(path = "views/books/books.html")]
 pub struct BooksTemplate {
   books_with_authors: Vec<BookWithAuthorSerieReviews>,
   language: Language,

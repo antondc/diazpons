@@ -3,7 +3,10 @@
     "target": "ES6",
     "module": "ESNext",
     "moduleResolution": "Node",
-    "strict": true
+    "strict": true,
+    "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true,
+    "composite": true
   },
   "include": ["src/**/*"]
 }

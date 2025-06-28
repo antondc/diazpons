@@ -1,24 +1,35 @@
-console.log('LayoutFiveColumnsLoaded JavaScript loaded.');
+import { onDomReady } from '../../utils/onDomReady.ts';
 
-const element = document.getElementById('body');
-if (element) {
-  element.classList.add('isLoaded');
-}
+onDomReady(() => {
+  console.log('LayoutFiveColumnsLoaded JavaScript loaded.');
+  const element = document.getElementById('body');
+  if (element) {
+    element.classList.add('isLoaded');
+  }
 
-const images = document.querySelectorAll('img');
+  // Load images
+  const images = document.querySelectorAll('img');
 
-images.forEach((img) => {
-  if (img.complete) {
-    // Already loaded
-    img.classList.add('Image-loaded');
-  } else {
-    // Wait for the load event
-    img.addEventListener('load', () => {
+  images.forEach((img) => {
+    if (img.complete) {
+      // Already loaded
       img.classList.add('Image-loaded');
-    });
+    } else {
+      // Wait for the load event
+      img.addEventListener('load', () => {
+        img.classList.add('Image-loaded');
+      });
 
-    img.addEventListener('error', () => {
-      console.warn('Image failed to load:', img.src);
-    });
+      img.addEventListener('error', () => {
+        console.warn('Image failed to load:', img.src);
+      });
+    }
+  });
+
+  // Avoid HTMl5 Drag events
+  const noDragElement = document.querySelector('*');
+
+  if (noDragElement) {
+    noDragElement.addEventListener('dragstart', (event) => event.preventDefault());
   }
 });

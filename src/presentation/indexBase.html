@@ -10,8 +10,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png" />
     <link rel="manifest" href="/static/favicon/site.webmanifest" />
   </head>
-  <body id="body" style="opacity: 0; transition: opacity .0s ease .05s">
+  <body id="body" style="opacity: 0; transition: opacity .0s ease .s">
+    <script>0</script>
     {% block layout %} {% block content %} {% endblock %} {% endblock %}
+
+    <noscript><style>body { visibility: visible; }</style></noscript>
   </body>
   <script src="http://localhost:35729/livereload.js?snipver=1"></script>
 </html>
