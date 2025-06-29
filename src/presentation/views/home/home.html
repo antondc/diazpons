@@ -1,6 +1,18 @@
 {% extends "layouts/layout_five_columns/layout_five_columns.html" %} {% block title %}Libros{% endblock %} {% block
 content %}
 <div class="Home">
+
+  <div class="Home-slider">
+    {% for book in slider_books %}
+      <img
+        class="Home-slide Image"
+        src="{{ book.image_horizontal }}"
+        alt="{{ book.image_horizontal }}"
+        rel="preload"
+      />
+    {% endfor %}
+  </div>
+
   <ul class="Home-books">
     {% for book_with_author in books_with_authors %}
     <li class="Home-book">

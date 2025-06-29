@@ -3,6 +3,28 @@
 @c: .Home;
 
 @{c} {
+  &-slider {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    aspect-ratio: 53 / 35;
+
+    @media @br-mobile {
+      display: none;
+    }
+  }
+
+  &-slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity @td-sluggish ease;
+
+    &--shown {
+      opacity: 1;
+    }
+  }
+
   &-books {
     display: flex;
     flex-direction: column;

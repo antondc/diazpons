@@ -1,11 +1,13 @@
 use crate::{
   application::ILanguageGetOneOrDefaultUseCase,
-  domain::{BookWithAuthorSerieReviews, IAuthorRepository, IBookRepository, ILanguageRepository, ISerieRepository, Language},
+  domain::{Book, BookWithAuthorSerieReviews, IAuthorRepository, IBookRepository, ILanguageRepository, ISerieRepository, Language},
   infrastructure::http::DataWithLanguage,
   types::{Errors, Result},
 };
 use async_trait::async_trait;
 use itertools::Itertools;
+use rand::rng;
+use rand::seq::SliceRandom;
 use std::sync::Arc;
 
 #[async_trait]
@@ -16,7 +18,7 @@ pub trait IHomeGetDataUseCase {
     serie_repository: Arc<dyn ISerieRepository>,
     language_get_one_or_default_use_case: K,
   ) -> HomeGetDataUseCase<K>;
-  async fn execute(&self, slug: Option<String>) -> Result<DataWithLanguage<Vec<BookWithAuthorSerieReviews>>>;
+  async fn execute(&self, slug: Option<String>) -> Result<DataWithLanguage<(Vec<BookWithAuthorSerieReviews>, Vec<Book>)>>;
 }
 
 pub struct HomeGetDataUseCase<K> {
@@ -42,7 +44,7 @@ impl<K: ILanguageGetOneOrDefaultUseCase> IHomeGetDataUseCase for HomeGetDataUseC
     }
   }
 
-  async fn execute(&self, slug: Option<String>) -> Result<DataWithLanguage<Vec<BookWithAuthorSerieReviews>>> {
+  async fn execute(&self, slug: Option<String>) -> Result<DataWithLanguage<(Vec<BookWithAuthorSerieReviews>, Vec<Book>)>> {
     let (_, books) = self.book_repository.book_get_all().await.unwrap();
     let (_, authors) = self.author_repository.author_get_all().await.unwrap();
     let (_, series) = self.serie_repository.serie_get_all().await.unwrap();
@@ -54,6 +56,10 @@ impl<K: ILanguageGetOneOrDefaultUseCase> IHomeGetDataUseCase for HomeGetDataUseC
       .execute(slug)
       .await
       .map_err(|_| Errors::new(Errors::NotFound, Some(String::from("Language not found"))))?;
+
+    let mut slider_books: Vec<Book> = books.iter().cloned().filter(|item| !item.image_horizontal.is_empty()).collect();
+    let mut rng = rng();
+    slider_books.shuffle(&mut rng);
 
     let home_data: Vec<BookWithAuthorSerieReviews> = books
       .iter()
@@ -72,7 +78,7 @@ impl<K: ILanguageGetOneOrDefaultUseCase> IHomeGetDataUseCase for HomeGetDataUseC
 
     Ok(DataWithLanguage {
       language: language_or_default,
-      data: home_data,
+      data: (home_data, slider_books),
     })
   }
 }
