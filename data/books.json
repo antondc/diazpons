@@ -6,13 +6,14 @@
     "author_id": "jose-manuel-querol",
     "serie_id": "modelos-para-armar",
     "year": 2016,
-    "pages": 0,
+    "pages": 122,
     "format": "11 x 17",
     "designer": "Luis Vassallo",
     "designer_url": "https://luisvassallo.gd",
     "isbn": "978-84-944522-3-9",
     "image_horizontal": "",
     "image_vertical": "/static/img/books/M16/M16.png",
+    "events": [],
     "description": "¡Fronteras! es un recorrido por los laberintos de la identidad social e individual que se adentra en el significado actual de términos como «nación» o «estado». De la inevitabilidad de Europa a los nacionalismos postconstitucionales y de los contextos políticos de la posguerra fría a los energéticos y religiosos que dibujan el Nuevo Oriente Próximo y el terror en Europa."
   },
   {
@@ -29,6 +30,7 @@
     "isbn": "978-84-944522-4-6",
     "image_horizontal": "",
     "image_vertical": "/static/img/books/M15/M15.png",
+    "events": [],
     "description": "Futurópolis propone una mirada a las alternativas de evolución para las ciudades contraponiendo dos horizontes aparente-mente antagónicos: la utopía tecnológica que se articula sobre la extensión y dominio de las tecnologías de la información y la comunicación, y la distopía que se vaticina desde el escenario de la crisis ecológica global."
   },
   {
@@ -45,6 +47,7 @@
     "isbn": "978-84-944522-1-5",
     "image_horizontal": "",
     "image_vertical": "/static/img/books/M14/M14.jpg",
+    "events": [],
     "description": "La vida frente al espejo aborda la relación entre los trastornos de alimentación y la influencia que sobre ellos ejerce el canon de belleza contemporáneo. Un libro en el que la autora dirige su análisis no sólo hacia la vivencia de quien ha sufrido o sufre la enfermedad, sino también hacia quienes le rodean, y aborda de igual manera la influencia que determinados contextos ejercen en esta situación."
   },
   {
@@ -61,6 +64,7 @@
     "isbn": "978-84-944522-0-8",
     "image_horizontal": "",
     "image_vertical": "/static/img/books/M13/M13.png",
+    "events": ["/static/img/books/M13/2016-03-01M13.png"],
     "description": "La ciudad en movimiento trata sobre aquellos movimientos urbanos contemporáneos que, pese a las circunstancias adversas, buscan la reconstrucción de la vida en común en la sociedad. Un fenómeno especialmente notable en los países del sur de Europa, que lejos de consistir en meros intentos de defensa ante la crisis y las políticas que la acompañan, plantea alternativas ambientales, económicas y sociales."
   },
   {
@@ -77,6 +81,7 @@
     "isbn": "978-84-942496-3-1",
     "image_horizontal": "",
     "image_vertical": "/static/img/books/M11/M11.jpg",
+    "events": [],
     "description": "Economía y pseudociencia trata de la ciencia Económica, así como de los usos interesados que en numerosas ocasiones se hacen de ella, más relacionados con las falacias pseudocientíficas que con el estudio de la creación y distribución de los recursos, objeto final de esta disciplina. Con un lenguaje certero José Luis Ferreira acomete la ardua tarea de desenmascarar algunas tendencias imperantes en el debate económico contemporáneo, evidenciando los diagnósticos y las recomendaciones parciales y utilitaristas que en numerosas ocasiones contaminan a la opinión pública."
   },
   {
@@ -93,6 +98,7 @@
     "isbn": "978-84-942496-6-2",
     "image_horizontal": "",
     "image_vertical": "/static/img/books/M12/M12.jpg",
+    "events": [],
 
     "description": "Economía, poder y política se solapan a diario, violando las artificiales fronteras académicas que tratan de segregarlos en mundos separados y ocultando que el poder es la bisagra que conecta habitualmente a la economía y la política. En este libro se denuncia la función mistificadora de los enfoques parcelarios propios de la ideología dominante, que desembocan en divorcios tan sonados como los que enfrentan economía y ecología, especie humana y naturaleza, o individuo y sociedad."
   },
@@ -110,6 +116,7 @@
     "isbn": "978-84-942496-5-5",
     "image_horizontal": "",
     "image_vertical": "/static/img/books/M10/M10.jpg",
+    "events": ["/static/img/books/M10/M10Pres.png"],
     "description": "En Postfascismos José Manuel Querol analiza los numerosos elementos propios de los fascismos que se encuentran infiltrados en las sociedades actuales. Trazando un arco desde el romanticismo, y pasando por el auge de los totalitarismos a principios del siglo xx, evidencia los elementos sobre los que se sustenta el auge de los movimientos ultraconservadores y nacionalistas en el seno de los sistemas democráticos contemporáneos."
   },
   {
@@ -126,6 +133,7 @@
     "isbn": "978-84-942496-4-8",
     "image_horizontal": "",
     "image_vertical": "/static/img/books/M09/M09.jpg",
+    "events": [],
     "description": "En La excepción permanente se sostiene que el estado de excepción es la forma política propia de la modernidad tardía. Pero, contrariamente a otras defensas de la misma tesis, aquí se afirma que la excepción característica de nuestra época se funda en la ideología del desencadenamiento compulsivo de una «vida» plena: momentos irrepetibles, experiencias únicas e identidades transgresoras que, alterando formidablemente las nociones clásicas de soberanía, autoridad y emancipación, producen una construcción política del tiempo cuya verdadera naturaleza necesita ocultarse celosamente."
   },
   {
@@ -142,6 +150,7 @@
     "isbn": "978-84-942496-2-4",
     "image_horizontal": "",
     "image_vertical": "/static/img/books/M08/M08.jpg",
+    "events": [],
     "description": "En La sociedad del desperdicio Manuel Toharia aborda el problema que el desarrollo desbocado supone para el ecosistema, pero también para las sociedades de las economías de países en vías de desarrollo. La extracción de recursos naturales y los residuos generados por su manufactura y consumo tienen numerosas repercusiones para terceros países que, sin participar de los beneficios de estas economías, sufren las consecuencias."
   },
   {
@@ -158,6 +167,7 @@
     "isbn": "978-84-942496-1-7",
     "image_horizontal": "",
     "image_vertical": "/static/img/books/M07/M07.jpg",
+    "events": [],
     "description": "Las dinámicas económicas y culturales que conforman el mundo contemporáneo se tornan cada vez más extremas y complejas, quedando en demasiadas ocasiones fuera de control. En Moderar extremistán Jorge Riechmann indaga sobre la necesidad de redimensionar fenómenos como lo económico o lo social hacia una medida más humana, teniendo presentes además los límites biofísicos del planeta."
   },
   {
@@ -174,6 +184,7 @@
     "isbn": "978-84-940844-2-3",
     "image_horizontal": "",
     "image_vertical": "/static/img/books/VA02/VA02.jpg",
+    "events": [],
     "description": "Baronesa dandy, reina dadá cuenta una vida, la de Elsa von Freytag-Loringhoven. Fue considerada por Duchamp y Man Ray la única artista puramente dadá, la única que realmente logró demoler toda lógica, que amó, vistió, bailó y vivió dadá. Se ha prestado poca atención a su «vida-obra», siendo pocos los libros sobre el dadaísmo que la nombran; quizá por ir demasiado lejos pocos capturaron la trascendencia de sus acciones cotidianas. Fue la suya una vida al límite y en el límite, una vida de dandy consumada de manifiesta despreocupación que este libro quiere rescatar."
   },
   {
@@ -190,6 +201,7 @@
     "isbn": "978-84-940844-1-6",
     "image_horizontal": "",
     "image_vertical": "/static/img/books/VA01/VA01.jpg",
+    "events": [],
     "description": "«Amistar» es quizás una de las acciones más espontáneas del ser humano y, sin embargo, pasa por ser uno de los verbos menos utilizados en español. Apenas recordamos su existencia, que apela a algo tan universal —la amistad–, como conceptualmente complejo. ¿Qué quiere decir «amistar»? Partiendo de la historia del pensamiento y de la propia experiencia, y apoyándose en ejemplos extraídos de la literatura y el cine, esta obra se enfrenta con elegancia y tacto a uno de los temas más reconocibles y menos evidentes en el devenir cotidiano, llenando con hermosas ideas un silencioso pero enorme vacío bibliográfico."
   },
   {
@@ -206,6 +218,7 @@
     "isbn": "978-84-940844-9-2",
     "image_horizontal": "",
     "image_vertical": "/static/img/books/VA03/VA03.jpg",
+    "events": [],
     "description": "El arte de pasear, obra del filósofo alemán Karl Gottlob Schelle, es un alegre tratado que nos enseña a orientarnos en nuestros paseos diarios. Traducido por primera vez al castellano, se trata de un inteligente viático que advierte a los despistados: no se trata sólo de aprender a decantarse por la cuesta empinada o el llano, sino de adaptar recorrido y compañía a nuestros estados de ánimo."
   },
   {
@@ -222,6 +235,7 @@
     "isbn": "978-84-942496-9-3",
     "image_horizontal": "",
     "image_vertical": "/static/img/books/Kr01/Kr01.jpg",
+    "events": ["/static/img/books/Kr01/2016-03-01Kr01.png"],
     "description": "El nuevo leviatán aborda los diversos procesos mediante los cuales se realizó la constitución política de la Red, y que desembocaron en el modo en que actualmente esta es gestionada. Una tupida trama de fundaciones e instituciones de diverso tipo en la que se imbrican intereses individuales, empresariales y gubernamentales, y cuyo esclarecimiento es fundamental para poder entender las tensiones e intereses que se producen en torno a este espacio."
   },
   {
@@ -238,6 +252,7 @@
     "isbn": "978-84-942496-8-6",
     "image_horizontal": "",
     "image_vertical": "/static/img/books/Kr03/Kr03.jpg",
+    "events": [],
     "description": "Energía y equidad habla de la crisis energética, del transporte y del reparto injusto de la riqueza, pero sobre todo de la manera en que la sociedad industrial moldea las relaciones sociales y la percepción que tenemos de nuestro espacio y nuestro cuerpo, así como desmenuza la adoración tan extendida a la velocidad, a la ilusa aceleración de la vida a través de los medios técnicos. Originariamente publicado en 1974, esta edición cuenta con una introducción de Alfonso Sanz, quien muestra hasta qué punto las tesis que aquí se defienden siguen siendo vigentes, innovadoras y necesarias."
   },
   {
@@ -254,6 +269,7 @@
     "isbn": "978-84-942496-7-9",
     "image_horizontal": "",
     "image_vertical": "/static/img/books/Kr02/Kr02.jpg",
+    "events": [],
     "description": "El derecho al desempleo útil sintetiza la denuncia de aspectos y mecanismos que siguen amenazando a nuestra sociedad sin que nos demos cuenta de ello, arrastrándola, en nombre de la libertad y de la democracia, hacia situaciones cada vez más opresivas y destructivas. Las ideas que formula Ivan Illich en este libro son de una enorme pertinencia para desvelar tendencias y problemas actuales, sobre todo cuando los tiempos de crisis de los años setenta a los que se refiere el autor muestran marcados paralelismos con los tiempos actuales. Esta edición cuenta con una valiosa introducción de José Manuel Naredo que nos introduce en la pertinencia del pensamiento de Illich en la contemporaneidad."
   }
 ]

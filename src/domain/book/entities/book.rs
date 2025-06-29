@@ -17,5 +17,6 @@ pub struct Book {
   pub isbn: String,
   pub image_vertical: String,
   pub image_horizontal: String,
+  pub events: Vec<String>,
   pub description: String,
 }

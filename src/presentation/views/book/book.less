@@ -3,16 +3,22 @@
 @c: .Book;
 
 @{c} {
-  display: grid;
-  column-gap: 10px;
-  row-gap: 40px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(5, 1fr);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
-  @media @br-tablet {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  &-book {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    @media @br-tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 
   &-image {
@@ -25,6 +31,11 @@
     @media @br-tablet {
       grid-row: 3 / span 1;
     }
+  }
+
+  &-event {
+    width: 100%;
+    margin-top: 20px;
   }
 
   &-mainInfo {
@@ -67,15 +78,9 @@
   }
 
   &-description {
-    grid-column: 1 / span 2;
-    grid-row: 3 / span 5;
     font-family: @ff-sans;
     font-size: @fs-normal;
     line-height: @fh-normal;
-
-    @media @br-tablet {
-      order: 4;
-    }
   }
 
   &-reviewsTitle {
@@ -100,7 +105,10 @@
     position: relative;
     margin-bottom: 10px;
     padding-left: 1em;
+    font-family: @ff-sans;
+    font-size: @fs-normal;
     font-weight: @fw-medium;
+    line-height: @fh-normal;
 
     &:before {
       content: '-';
