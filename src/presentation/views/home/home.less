@@ -16,13 +16,26 @@
 
   &-slide {
     position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+
+    &--shown {
+      pointer-events: unset;
+
+      @{c}-slideImage {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-slideImage {
+    position: absolute;
     width: 100%;
     opacity: 0;
     transition: opacity @td-sluggish ease;
-
-    &--shown {
-      opacity: 1;
-    }
   }
 
   &-books {

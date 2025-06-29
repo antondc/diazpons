@@ -4,12 +4,14 @@ content %}
 
   <div class="Home-slider">
     {% for book in slider_books %}
-      <img
-        class="Home-slide Image"
-        src="{{ book.image_horizontal }}"
-        alt="{{ book.image_horizontal }}"
-        rel="preload"
-      />
+      <a class="Home-slide" href="/books/{{ book.id }}">
+        <img
+          class="Home-slideImage Image"
+          src="{{ book.image_horizontal }}"
+          alt="{{ book.image_horizontal }}"
+          rel="preload"
+        />
+      </a>
     {% endfor %}
   </div>
 
