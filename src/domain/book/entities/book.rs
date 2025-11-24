@@ -15,6 +15,7 @@ pub struct Book {
   pub designer: String,
   pub designer_url: String,
   pub isbn: String,
+  pub pdf: String,
   pub image_vertical: String,
   pub image_horizontal: String,
   pub events: Vec<String>,

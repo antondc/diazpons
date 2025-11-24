@@ -30,6 +30,9 @@
           >{{ book_with_author.book.designer }}</a
         >{% endif %}
       </div>
+      {% if book_with_author.book.pdf != "" %}
+        <div>Download: <a class="Hover" target="_blank" href="{{ book_with_author.book.pdf }}">{{ book_with_author.book.title }}</a></div>
+      {% endif %}
       <div>ISBN: {{ book_with_author.book.isbn }}</div>
     </div>
   </div>

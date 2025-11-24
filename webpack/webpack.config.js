@@ -83,6 +83,10 @@ module.exports = {
           to: path.join(WEBPACK_DIST, 'img'),
         },
         {
+          from: path.join(WEBPACK_ASSETS, 'pdf'),
+          to: path.join(WEBPACK_DIST, 'pdf'),
+        },
+        {
           from: path.join(WEBPACK_ASSETS, 'svg'),
           to: path.join(WEBPACK_DIST, 'svg'),
         },
