@@ -7,11 +7,11 @@ before_script:
   # Create SSH directory
   - mkdir -p ~/.ssh
   - chmod 700 ~/.ssh
-  - 
-  # Start ssh-agent once
+
+  # Start ssh-agent ONCE
   - eval $(ssh-agent -s)
 
-  # Add SERVER_KEY (base64) for SSH to your deploy server
+  # Add SERVER_KEY (base64)
   - echo "$SERVER_KEY" | base64 -d > ~/.ssh/id_rsa_server
   - chmod 600 ~/.ssh/id_rsa_server
   - ssh-add ~/.ssh/id_rsa_server
@@ -21,8 +21,7 @@ before_script:
   - chmod 600 ~/.ssh/id_rsa_github
   - ssh-add ~/.ssh/id_rsa_github
 
-  # Disable strict host key checking inside CI
-  - mkdir -p ~/.ssh
+  # Disable strict host key checking
   - echo -e "Host *\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
 
 
