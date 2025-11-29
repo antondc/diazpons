@@ -2,4 +2,9 @@
 dist/*
 .env
 webpack/index.js
-node_modules/
+node_modules
+
+# Ignore all SSL/TLS certificates and keys
+*.crt
+*.csr
+*.key
