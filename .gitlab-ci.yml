@@ -33,9 +33,11 @@ deploy_production:
   only:
     - master
   script:
+    # Clone to GitHub
     - git remote remove github || true
     - git remote add github "git@github.com:antondc/diazpons.git"
     - git push github HEAD:master
+    # Deploy to server
     - ssh ${SERVER_USER}@${SERVER_ADDRESS} "
       cd ${SERVER_PATH}
       && git add .
