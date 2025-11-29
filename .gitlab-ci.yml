@@ -7,7 +7,7 @@ before_script:
   # Create SSH directory
   - mkdir -p ~/.ssh
   - chmod 700 ~/.ssh
-  -
+  - 
   # Start ssh-agent once
   - eval $(ssh-agent -s)
 
