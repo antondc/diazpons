@@ -1,3 +1,7 @@
+default:
+  git:
+    depth: 0
+
 image: rust:latest
 
 before_script:
@@ -17,26 +21,32 @@ before_script:
   - ssh-add ~/.ssh/id_rsa_server
 
   # Add GitHub deploy key (base64)
-  - echo "$GITHUB_ANTONDC" | base64 -d > ~/.ssh/id_rsa_github
+  - echo "$GITHUB_KEY" | base64 -d > ~/.ssh/id_rsa_github
   - chmod 600 ~/.ssh/id_rsa_github
   - ssh-add ~/.ssh/id_rsa_github
 
   # Disable strict host key checking
   - echo -e "Host *\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
 
-
 stages:
+  - github_clone
   - deploy_production
+
+github_clone:
+  stage: github_clone
+  script:
+    - git fetch --all --tags
+    - git checkout -B "$CI_COMMIT_REF_NAME"
+    - git remote remove github || true
+    - git remote add github "git@github.com:${GITHUB_ACCOUNT}/${GITHUB_PROJECT}.git"
+    - git push github --all
+    - git push github --tags
 
 deploy_production:
   stage: deploy_production
   only:
     - master
   script:
-    # Clone to GitHub
-    - git remote remove github || true
-    - git remote add github "git@github.com:antondc/diazpons.git"
-    - git push github HEAD:master
     # Deploy to server
     - ssh ${SERVER_USER}@${SERVER_ADDRESS} "
       cd ${SERVER_PATH}
