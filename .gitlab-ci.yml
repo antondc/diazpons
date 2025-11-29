@@ -35,7 +35,7 @@ deploy_production:
   script:
     - git remote remove github || true
     - git remote add github "git@github.com:antondc/diazpons.git"
-    - git push github master
+    - git push github HEAD:master
     - ssh ${SERVER_USER}@${SERVER_ADDRESS} "
       cd ${SERVER_PATH}
       && git add .
