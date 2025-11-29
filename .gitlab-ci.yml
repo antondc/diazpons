@@ -2,12 +2,25 @@ image: rust:latest
 
 before_script:
   - apt-get update -qq
-  - apt-get install -qq git
-  - "which ssh-agent || ( apt-get install -qq openssh-client )"
+  - apt-get install -qq git openssh-client
+
+  # Start ssh-agent once
   - eval $(ssh-agent -s)
-  - ssh-add <(echo "$SERVER_KEY" | base64 -d)
+
+  # Add SERVER_KEY (base64) for SSH to your deploy server
+  - echo "$SERVER_KEY" | base64 -d > ~/.ssh/id_rsa_server
+  - chmod 600 ~/.ssh/id_rsa_server
+  - ssh-add ~/.ssh/id_rsa_server
+
+  # Add GitHub deploy key (base64)
+  - echo "$GITHUB_ANTONDC" | base64 -d > ~/.ssh/id_rsa_github
+  - chmod 600 ~/.ssh/id_rsa_github
+  - ssh-add ~/.ssh/id_rsa_github
+
+  # Disable strict host key checking inside CI
   - mkdir -p ~/.ssh
-  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  - echo -e "Host *\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+
 
 stages:
   - deploy_production
@@ -17,45 +30,48 @@ deploy_production:
   only:
     - master
   script:
+    - git remote remove github || true
+    - git remote add github "git@github.com:antondc/diazpons.git"
+    - git push github master
     - ssh ${SERVER_USER}@${SERVER_ADDRESS} "
-        cd ${SERVER_PATH}
-        && git add .
-        && git stash
-        && git stash clear
-        && git pull origin master
+      cd ${SERVER_PATH}
+      && git add .
+      && git stash
+      && git stash clear
+      && git pull origin master
       "
     - ssh ${SERVER_USER}@${SERVER_ADDRESS} "
-        source ~/.bash_profile
-        && source ~/.cargo/env
-        && cd ${SERVER_PATH}
-        && git checkout master
-        && cargo build --release
+      source ~/.bash_profile
+      && source ~/.cargo/env
+      && cd ${SERVER_PATH}
+      && git checkout master
+      && cargo build --release
       "
     - ssh ${SERVER_USER}@${SERVER_ADDRESS} "
-        source ~/.bash_profile
-        && source ~/.cargo/env
-        && cd ${SERVER_PATH}
-        && cargo sweep -t 1
+      source ~/.bash_profile
+      && source ~/.cargo/env
+      && cd ${SERVER_PATH}
+      && cargo sweep -t 1
       "
     - ssh ${SERVER_USER}@${SERVER_ADDRESS} "
-        source ~/.bash_profile
-        && source ~/.cargo/env
-        && cd ${SERVER_PATH}
-        && npm ci --verbose
+      source ~/.bash_profile
+      && source ~/.cargo/env
+      && cd ${SERVER_PATH}
+      && npm ci --verbose
       "
     - ssh ${SERVER_USER}@${SERVER_ADDRESS} "
-        source ~/.bash_profile
-        && source ~/.cargo/env
-        && cd ${SERVER_PATH}
-        && ENVIRONMENT=${ENVIRONMENT} npm run build::js
+      source ~/.bash_profile
+      && source ~/.cargo/env
+      && cd ${SERVER_PATH}
+      && ENVIRONMENT=${ENVIRONMENT} npm run build::js
       "
     - ssh ${SERVER_USER}@${SERVER_ADDRESS} "
-        source ~/.bash_profile
-        && source ~/.cargo/env
-        && cd ${SERVER_PATH}
-        && export ENVIRONMENT=${ENVIRONMENT}
-        && cargo build --release
-        && pm2 stop diazpons --silent || true
-        && pm2 delete diazpons --silent || true
-        && pm2 start target/release/diazpons --name diazpons --update-env
+      source ~/.bash_profile
+      && source ~/.cargo/env
+      && cd ${SERVER_PATH}
+      && export ENVIRONMENT=${ENVIRONMENT}
+      && cargo build --release
+      && pm2 stop diazpons --silent || true
+      && pm2 delete diazpons --silent || true
+      && pm2 start target/release/diazpons --name diazpons --update-env
       "
