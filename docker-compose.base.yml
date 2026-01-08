@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+    restart: unless-stopped
+    environment:
+      IP: ${IP}
+      PORT_HTTP: ${PORT_HTTP}
+    ports:
+      - "${PORT_HTTP}:${PORT_HTTP}"

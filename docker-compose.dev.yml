@@ -1,0 +1,11 @@
+services:
+  app:
+    env_file:
+      - .env
+    build:
+      target: development
+    environment:
+      ENVIRONMENT: Development
+    volumes:
+      - ./:/app
+      - /app/target

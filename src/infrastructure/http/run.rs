@@ -1,4 +1,4 @@
-use super::constants::{HTTP_PORT, IP_STRING, TLS_CERTIFICATE_PATH, TLS_KEY_PATH};
+use super::constants::{TLS_CERTIFICATE_PATH, TLS_KEY_PATH};
 use super::routes;
 use crate::constants::STATIC_FILES_PATH;
 use crate::infrastructure::http::routes::{about, author, authors, book, books, catchers, home, press, serie};
@@ -13,7 +13,8 @@ use std::path::Path;
 #[rocket::main]
 pub async fn main() {
   let environment = dotenv::var("ENVIRONMENT").unwrap_or_else(|_| Environments::Development.to_string());
-  let parsed_ip = parse_ip(IP_STRING).unwrap();
+  let ip_string = dotenv::var("IP").unwrap_or_else(|ip| ip.to_string());
+  let parsed_ip = parse_ip(&ip_string).unwrap();
 
   // Check that the TLS certificate and key files exists to run on https;
   let tls_certificate_path = Path::new(TLS_CERTIFICATE_PATH);
@@ -34,8 +35,11 @@ pub async fn main() {
     None
   };
 
+  let http_port_string = dotenv::var("PORT_HTTP").unwrap_or_else(|res| res.to_string());
+  let parsed_http_port: u16 = http_port_string.parse().unwrap();
+
   let config = Config {
-    port: HTTP_PORT,
+    port: parsed_http_port,
     address: parsed_ip,
     tls: tls_config,
     ..Config::debug_default()
